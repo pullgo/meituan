@@ -1,0 +1,39 @@
+body, html
+  line-height: 1
+  font-weight: 200
+  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif
+  
+.clearfix
+  display: inline-block
+  &:after
+    display: block
+    content: '.'
+    height: 0
+    line-height: 0
+    clear: both
+    visibility: hidden
+.h1
+  font-size: 18px
+  margin-left: 10px
+  font-weight: bold
+.i
+  display: inline-block
+  //font-size: 20px
+  padding-bottom: 10px
+  //padding-top: 4px
+.fl
+  float: left
+.fr
+  float: right
+  
+@media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
+  .border-1px
+  &::after
+     -webkit-transform: scaleY(0.3)
+     transform: scaleY(0.3)
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2)
+   .border-1px
+   &::afteru
+     -webkit-transform: scaleY(0.5)
+     transform: scaleY(0.5)     
+
