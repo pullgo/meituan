@@ -18,6 +18,7 @@ var goods = appData.goods
 var ratings = appData.ratings
 var slider = appData.slider
 var classifications = appData.classifications
+var messages = appData.messages
 
 var apiRoutes = express.Router()
 
@@ -51,6 +52,12 @@ apiRoutes.get('/classifications', function(req, res) {
   res.json({
     errno: 0,
     data:classifications
+  });
+});
+apiRoutes.get('/messages', function(req, res) {
+  res.json({
+    errno: 0,
+    data:messages
   });
 });
 

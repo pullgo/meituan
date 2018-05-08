@@ -56,7 +56,7 @@ import {addClass} from 'common/js/dom'
     methods: {//将mounted方法封装进来
       _setSliderWidth(isResize) {//横向滚动的一个宽度 isResize标志位窗口事件
           this.children = (this.$refs.sliderGroup.children) / 10 //获得列表的元素个数
-          console.log(this.children.length)  //20
+          //console.log(this.children.length)  //20
           let width = 0
           let sliderWidth = this.$refs.slider.clientWidth//父元素的宽度
           for(let i=0; i< this.children.length; i++){

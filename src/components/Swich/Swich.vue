@@ -14,7 +14,6 @@
       </div>
     </scroll>
     <!--分类end-->
-
   </div>
 </template>
 
@@ -66,7 +65,6 @@
             height: 58px  
             margin: 10px 10px 20px 10px
             float: right
-
           .text
             display: inline-block
             text-align: center

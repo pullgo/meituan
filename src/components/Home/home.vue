@@ -5,7 +5,7 @@
       <div class="head_address">
         <i class="iconfont icon-ziyuan address_icon"></i>
         <span class="address">日立汽车系统(广州)有限公司(...</span>
-        <span class="iconfont icon-xiaoxi fr"></span>
+        <span class="iconfont icon-xiaoxi fr" @click="showDetail"></span>
       </div>
       <div class="search">
         <input type="text" class="input" placeholder="请输入商家或商品名称">
@@ -18,6 +18,23 @@
         </fieldset>
       </form>-->
     </div>
+    <!--messages打开页面-->
+    <transition class="hide">
+      <div class="messages-wrapper" v-show="detailShow">
+        <div class="messages-header">
+          <span class="iconfont return icon-fanhui" @click="hideDetail"></span>
+          <span class="title">消息中心</span>
+        </div>
+        <div class="messages-content">
+          <ul>
+            <li v-for="mess in messages" class="mess">
+              <img class="img" :src="mess.image" width="70" height="70">
+              <span class="text">{{mess.title}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </transition>
     <!--背景图片随轮播图切换-->
     <!--<div class="background" >
       <img :src="recommends.picUrl" width="100%" height="100%"/>
@@ -120,7 +137,14 @@
     </div>
     <goods></goods>
     <!--商家end--> 
-
+    <!--购物车start-->
+    <touch>
+      <div class="shopcart">
+        <span class="iconfont icon-gouwucheman icon"></span>
+        <span class="num" v-show="totalCount>0">{{totalCount}}</span>
+      </div>
+    </touch>
+    <!--购物车end-->
   </div>
 </template>
 
@@ -130,7 +154,8 @@
   import Scroll from 'base/Scroll/scroll'
   import axios from 'axios'
   import Swich from 'components/Swich/Swich'
-  import goods from 'components/goods/goods'
+  import Goods from 'components/goods/goods'
+  import Touch from 'base/Touch/touch'
 
   export default {
     props: {
@@ -141,25 +166,46 @@
     data() {
       return {
         recommends: [],
-
+        detailShow: false
+      }
+    },
+    //购物车有商品的时候
+    computd: {
+      totalCount() {
+        let count = 0;
+ 
+      }
+    },
+    methods: {
+      showDetail() {
+        this.detailShow = true
+      },
+      hideDetail() {
+        this.detailShow = false
       }
     },
     created() {
       axios.get('../data.json').then((res) => {
         this.recommends = res.data.slider
+        this.messages = res.data.messages
+        //console.log(this.messages)
       })
     },
     components: {
       Slider,
       Scroll,
       Swich,
-      goods
+      goods,
+      Touch
     },
   };
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
 //@import "../../common/stylus/mixin"
+.home
+  position: relative
+  //background: #fff
   .head
     width: 100%
     height: 70px
@@ -374,4 +420,73 @@
       font-size: 12px
       height: 20px
       line-height: 20px
+  .messages-wrapper
+    width: 100%
+    height: 100%
+    background: #f6f6f6
+    position: absolute
+    top: 0px
+    left: 0px
+    z-index: 10
+    .hide-enter-active, .hide-leave-active
+      transition: opacity 10s
+    .hide-enter, .hide-leave-to       
+      opacity: 0
+    /*&.hide-enter-active 
+      transition: all .3s ease
+    &.hide-leave-active 
+      transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0)
+    &.hide-enter, .hide-leave-to
+      transform: translateX(10px)
+      opacity: 0*/
+    .messages-header
+      background: #f6f6f6
+      border-bottom: 1px solid #ededed
+      height: 76px
+      width: 100%
+      box-sizing: border-box
+      .return
+        float: left
+        text-align: left
+        margin-left: 14px
+        margin-top: 20px
+        color: #727272
+        font-size: 25px
+        padding: 6px
+      .title
+        display: flex
+        font-size: 20px
+        color: #3c3c3c
+        //align-items: center
+        justify-content: center
+        line-height: 76px
+    .messages-content
+      background: #ffffff
+      text-align: left
+      padding-left: 20px
+      .mess
+        height: 112px
+        width: 100%
+        border-bottom: 1px solid #ededed
+        box-sizing: border-box
+        .img
+          margin-top: 22px
+          margin-bottom: 22px
+          vertical-align: middle
+        .text
+          margin-left: 18px
+          color: #050505
+  .shopcart
+    position: fixed
+    bottom: 68px
+    right: 20px
+    border-radius: 50%
+    border: 1px solid #727272
+    width: 28px
+    height: 28px
+    padding: 6px
+    .icon
+      position: relative
+      top: 5px
+      left: 5px
 </style> 

@@ -1,53 +1,51 @@
 <template>
   <div class="goods">
-  	<scroll class="foods-wrapper" :data="items">
-      <div>
-        <ul>
-          <li v-for="item in items" class="item">
-            <ul>
-              <li v-for="ele in item.foods" class="ele">
-                <div class="icon">
-                    <img v-lazy="ele.icon" height="100" width="114">
+  	<div class="foods-wrapper" :data="items">
+      <ul>
+        <li v-for="item in items" class="item">
+          <ul>
+            <li v-for="ele in item.foods" class="ele">
+              <div class="icon">
+                  <img v-lazy="ele.icon" height="100" width="114">
+              </div>
+              <div class="text-wrapper">
+                <div class="title">
+                  <h3 class="h3 fl">{{ele.name}}</h3>
+                  <span class="iconfont icon-gengduo fr"></span>
                 </div>
-                <div class="text-wrapper">
-                  <div class="title">
-                    <h3 class="h3 fl">{{ele.name}}</h3>
-                    <span class="iconfont icon-gengduo fr"></span>
-                  </div>
-                  <!--star行-->
-                  <div class="description">
-                    <star :size="36" :score="seller.score" class="star fl"></star>
-                    <span class="score">{{seller.score}}</span>
-                    <span class="btext">月售{{ele.sellCount}}</span>
-                  </div> 
-                  <!--起送行-->  
-                  <div class="price">
-                    <span class="charging">起送<span class="money">¥{{ele.charging}}</span></span>
-                    <span class="distribution">配送<span class="money">¥{{ele.distribution}}</span></span>
-                    <span class="average">人均<span class="money">¥{{ele.average}}</span></span>
-                  </div>
-                  <div class="foods-type">
-                    <span class="iconfont icon-store icon"></span>
-                    <span class="text">{{ele.classifications}}</span>
-                  </div>
-                  <!--type开始
-                  <div class="type">
-                    <ul v-if="seller.supports" class="supports">
-                      <li class="support-supp" v-for="supp
-             in seller.supports">
-                        <span class="icon" :class="classMap[seller.supports[0].type]"></span>
-                        <span class="text">{{seller.supports[0].description}}</span>
-                      </li>
-                    </ul>
-                  </div>
-                  type开始-->
+                <!--star行-->
+                <div class="description">
+                  <star :size="36" :score="seller.score" class="star fl"></star>
+                  <span class="score">{{seller.score}}</span>
+                  <span class="btext">月售{{ele.sellCount}}</span>
+                </div> 
+                <!--起送行-->  
+                <div class="price">
+                  <span class="charging">起送<span class="money">¥{{ele.charging}}</span></span>
+                  <span class="distribution">配送<span class="money">¥{{ele.distribution}}</span></span>
+                  <span class="average">人均<span class="money">¥{{ele.average}}</span></span>
                 </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-  	</scroll>
+                <div class="foods-type">
+                  <span class="iconfont icon-store icon"></span>
+                  <span class="text">{{ele.classifications}}</span>
+                </div>
+                <!--type开始
+                <div class="type">
+                  <ul v-if="seller.supports" class="supports">
+                    <li class="support-supp" v-for="supp
+           in seller.supports">
+                      <span class="icon" :class="classMap[seller.supports[0].type]"></span>
+                      <span class="text">{{seller.supports[0].description}}</span>
+                    </li>
+                  </ul>
+                </div>
+                type开始-->
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+  	</div>
     <div class="loading-content" v-show="!items.length">
       <loading></loading>
     </div>

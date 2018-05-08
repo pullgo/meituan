@@ -35,7 +35,7 @@
     height: 50px
     font-size: 16px
     align-items: center//上下居中
-    border: 1px solid #ccc
+    border-top: 1px solid #ccc
     background: #fff
     z-index: 100
     a//子元素直接写a就可以了 

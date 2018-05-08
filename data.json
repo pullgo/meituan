@@ -107,6 +107,28 @@
       "title":"全部分类"
     }
   ],
+  "messages": [
+    {
+    "image":"/static/image/商家代金券.jpg",
+    "title":"商家代金券"     
+    },
+    {
+    "image":"/static/image/好友互动消息.jpg",
+    "title":"好友互动消息"     
+    },
+    {
+    "image":"/static/image/客服消息.jpg",
+    "title":"客服消息"     
+    },
+    {
+    "image":"/static/image/售后通知.jpg",
+    "title":"售后通知"     
+    },
+    {
+    "image":"/static/image/系统通知.jpg",
+    "title":"系统通知"     
+    }
+  ],
   "seller": {
     "name": "粥品香坊（回龙观）",
     "description": "蜂鸟专送",
