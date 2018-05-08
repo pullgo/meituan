@@ -52,12 +52,12 @@
           probeType: this.probeType,
           click: this.click
         })
-        /*if (this.listenScroll) {
+        if (this.listenScroll) {
           let me = this
           this.scroll.on('scroll', (pos) => {//pos位置
             me.$emit('scroll', pos)//派发scroll事件
           })
-        }*/
+        }
       //   if (this.pullup) {
       //     this.scroll.on('scrollEnd', () => {
       //       if (this.scroll.y <= (this.scroll.maxScrollY + 50)) {
@@ -94,9 +94,10 @@
           this.refresh()
         }, 20)
       }
-    }
+    },
   }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
+
 </style>

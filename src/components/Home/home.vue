@@ -150,11 +150,11 @@
 
 <script type="text/ecmascript-6">
 
-  import Slider from 'base/Slider/Slider'
+  import Slider from 'base/Slider/slider'
   import Scroll from 'base/Scroll/scroll'
   import axios from 'axios'
   import Swich from 'components/Swich/Swich'
-  import Goods from 'components/goods/goods'
+  import Goods from 'components/Goods/goods'
   import Touch from 'base/Touch/touch'
 
   export default {
@@ -195,7 +195,7 @@
       Slider,
       Scroll,
       Swich,
-      goods,
+      Goods,
       Touch
     },
   };

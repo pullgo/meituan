@@ -56,7 +56,7 @@
   import axios from 'axios'
   import star from 'components/star/star'
   import loading from 'base/loading/loading'
-  import Scroll from 'base/scroll/scroll'
+  import Scroll from 'base/Scroll/scroll'
 
   export default {
   	props: {
