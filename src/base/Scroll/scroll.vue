@@ -9,7 +9,7 @@
   
   export default {
     props: {
-      probeType: {
+      probeType: {//什么情况下都可以监听到
         type: Number,
         default: 1
       },
@@ -38,17 +38,17 @@
         // default: 20
       // }
     },
-    mounted() {
+    mounted() {//初始化后调用地方
       setTimeout(() => {
         this._initScroll()
       }, 20)
     },
     methods: {
-      _initScroll() {
-        if (!this.$refs.wrapper) {
+      _initScroll() {//初始化
+        if (!this.$refs.wrapper) {//this.$refs.wrapper无值是返回
           return
         }
-        this.scroll = new BScroll(this.$refs.wrapper, {
+        this.scroll = new BScroll(this.$refs.wrapper, {//初始化
           probeType: this.probeType,
           click: this.click
         })
@@ -77,7 +77,7 @@
       enable() {
         this.scroll && this.scroll.enable()
       },
-      refresh() {//刷新 重新计算高度
+      refresh() {//刷新scroll 重新计算高度
         this.scroll && this.scroll.refresh()
       },
       scrollTo() {//A-Z滚动条 滚动到相对应的位置

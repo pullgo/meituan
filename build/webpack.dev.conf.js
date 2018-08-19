@@ -13,12 +13,15 @@ const express = require('express')
 const app = express()
 
 var appData = require('../data.json')
+//首页商家数据
+//var restaurantList = require('../mock/restaurant-list.json')
 var seller = appData.seller
 var goods = appData.goods
 var ratings = appData.ratings
 var slider = appData.slider
 var classifications = appData.classifications
 var messages = appData.messages
+var poilist = appData.poilist
 
 var apiRoutes = express.Router()
 
@@ -58,6 +61,13 @@ apiRoutes.get('/messages', function(req, res) {
   res.json({
     errno: 0,
     data:messages
+  });
+});
+
+apiRoutes.get("/poilist", function (req, res) {
+  res.json({
+    errno: 0,
+    data:poilist
   });
 });
 

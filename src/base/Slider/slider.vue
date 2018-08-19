@@ -127,7 +127,7 @@ import {addClass} from 'common/js/dom'
       .slider-item
         float: left
         box-sizing: border-box
-        overflow: hidden
+        //overflow: hidden
         text-align: center
         a
           display: block

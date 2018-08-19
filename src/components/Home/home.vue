@@ -1,44 +1,22 @@
 <template>
   <div class="home">
     <!--头部开始-->
-    <div class="head">
-      <div class="head_address">
+    <div class="head" ref="head">
+      <div class="head_address" ref="headAddress">
         <i class="iconfont icon-ziyuan address_icon"></i>
-        <span class="address">日立汽车系统(广州)有限公司(...</span>
-        <span class="iconfont icon-xiaoxi fr" @click="showDetail"></span>
+        <span class="address">日立汽车系统(广州)有限公司(...</span>      
+        <router-link :to="{path:'/home/massage'}">
+          <span class="iconfont icon-xiaoxi fr"></span>
+        </router-link> 
+        <transition name="hide">
+          <router-view></router-view>       
+        </transition> 
       </div>
-      <div class="search">
-        <input type="text" class="input" placeholder="请输入商家或商品名称">
+      <div id="fixedSearch" :class="fixedSearch?isFixed:noFixed" ref="fixedSearch" >
+        <input type="text" class="input" placeholder="面包鲜花">
         <span class="iconfont icon-search icon"></span>
       </div>
-      <!--<form method="get">
-        <fieldset class="search clearfix">
-          <button class="btn fl"></button>
-          <input type="text" class="box fr" placeholder="请输入商家或商品名称">
-        </fieldset>
-      </form>-->
     </div>
-    <!--messages打开页面-->
-    <transition class="hide">
-      <div class="messages-wrapper" v-show="detailShow">
-        <div class="messages-header">
-          <span class="iconfont return icon-fanhui" @click="hideDetail"></span>
-          <span class="title">消息中心</span>
-        </div>
-        <div class="messages-content">
-          <ul>
-            <li v-for="mess in messages" class="mess">
-              <img class="img" :src="mess.image" width="70" height="70">
-              <span class="text">{{mess.title}}</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </transition>
-    <!--背景图片随轮播图切换-->
-    <!--<div class="background" >
-      <img :src="recommends.picUrl" width="100%" height="100%"/>
-    </div>-->
     <!--头部end-->
     <!--轮播图组件开始-->
     <scroll ref="scroll" class="slider-content">
@@ -137,25 +115,25 @@
     </div>
     <goods></goods>
     <!--商家end--> 
-    <!--购物车start-->
-    <touch>
-      <div class="shopcart">
-        <span class="iconfont icon-gouwucheman icon"></span>
-        <span class="num" v-show="totalCount>0">{{totalCount}}</span>
-      </div>
-    </touch>
+    <!--购物车start
+    <shopcart ref="shopcart" @touch="touthes"
+    ></shopcart>-->
     <!--购物车end-->
+    <!--店铺页面start-->
+    <!--店铺页面start-->
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-
+  
   import Slider from 'base/Slider/slider'
   import Scroll from 'base/Scroll/scroll'
   import axios from 'axios'
   import Swich from 'components/Swich/Swich'
   import Goods from 'components/Goods/goods'
-  import Touch from 'base/Touch/touch'
+  import Massage from 'components/Massage/massage'
+  import Shopcart from 'components/Shopcart/shopcart'
+
 
   export default {
     props: {
@@ -166,54 +144,101 @@
     data() {
       return {
         recommends: [],
-        detailShow: false
+        isFixed:'isFixed',
+        noFixed:'noFixed',
+        fixedSearch: false,
       }
     },
     //购物车有商品的时候
     computd: {
-      totalCount() {
-        let count = 0;
- 
-      }
-    },
-    methods: {
-      showDetail() {
-        this.detailShow = true
-      },
-      hideDetail() {
-        this.detailShow = false
-      }
+      //totalCount() {
+        //let count = 0; 
+      //}
     },
     created() {
       axios.get('../data.json').then((res) => {
         this.recommends = res.data.slider
-        this.messages = res.data.messages
+        //this.messages = res.data.messages
         //console.log(this.messages)
       })
+    },
+    mounted() {
+      window.addEventListener('scroll', this.handleScroll)//添加滚动监听事件
+    },
+    methods: {
+      //滑动搜索框特效
+      handleScroll () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop || 
+        document.body.scrollTop;
+        if (scrollTop > 0) {
+          this.fixedSearch = true;
+          this.$refs.headAddress.style="display:none";
+          //this.$refs.head.style.tranform = `translate3d(0,40px,0)`
+        } else{
+          this.fixedSearch = false;
+          this.$refs.headAddress.style="display:block";
+        }
+          return ''        
+        //console.log(offsetTop)
+      },
+      touthes(event) {
+        this.$emit('touchStart','touchMove','touchEnd', event)      
+      },
+    },
+    destroyed () {//销毁
+      window.removeEventListener('scroll', this.handleScroll);
     },
     components: {
       Slider,
       Scroll,
       Swich,
       Goods,
-      Touch
+      Massage
+      //Shopcart
     },
   };
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style scoped lang="stylus" rel="stylesheet/stylus">
 //@import "../../common/stylus/mixin"
 .home
   position: relative
-  //background: #fff
+  height: 100%
+  overflow-y: auto
+  background: #fff
   .head
     width: 100%
-    height: 70px
+    height: 80px
     position: relative
     background: #ffc847
     .head_address
-      padding: 10px
-    .search
+      padding: 15px
+      .icon-xiaoxi
+        font-size: 18px
+    .isFixed
+      position: fixed
+      top: 0
+      left: 0
+      background: #fff
+      width: 100%
+      padding-top: 5px
+      padding-bottom: 5px
+      z-index: 500
+      .input
+        width: 88%
+        height: 30px
+        padding-left: 25px
+        margin-left: 10px
+        background: #e1e1e1
+        border-radius: 3px
+      .icon
+        position: absolute
+        top: 12px
+        left: 15px
+        width: 15px
+        height: 15px 
+        background: #e1e1e1     
+    .noFixed
       position: relative
       text-aglin: center
       .input
@@ -227,13 +252,6 @@
         left: 15px
         width: 15px
         height: 15px
-  /*.background
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    z-index: -1*/
   .FavorableZone
     width: 100% 
     padding-top: 10px
@@ -420,73 +438,9 @@
       font-size: 12px
       height: 20px
       line-height: 20px
-  .messages-wrapper
-    width: 100%
-    height: 100%
-    background: #f6f6f6
-    position: absolute
-    top: 0px
-    left: 0px
-    z-index: 10
-    .hide-enter-active, .hide-leave-active
-      transition: opacity 10s
-    .hide-enter, .hide-leave-to       
-      opacity: 0
-    /*&.hide-enter-active 
-      transition: all .3s ease
-    &.hide-leave-active 
-      transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0)
-    &.hide-enter, .hide-leave-to
-      transform: translateX(10px)
-      opacity: 0*/
-    .messages-header
-      background: #f6f6f6
-      border-bottom: 1px solid #ededed
-      height: 76px
-      width: 100%
-      box-sizing: border-box
-      .return
-        float: left
-        text-align: left
-        margin-left: 14px
-        margin-top: 20px
-        color: #727272
-        font-size: 25px
-        padding: 6px
-      .title
-        display: flex
-        font-size: 20px
-        color: #3c3c3c
-        //align-items: center
-        justify-content: center
-        line-height: 76px
-    .messages-content
-      background: #ffffff
-      text-align: left
-      padding-left: 20px
-      .mess
-        height: 112px
-        width: 100%
-        border-bottom: 1px solid #ededed
-        box-sizing: border-box
-        .img
-          margin-top: 22px
-          margin-bottom: 22px
-          vertical-align: middle
-        .text
-          margin-left: 18px
-          color: #050505
-  .shopcart
-    position: fixed
-    bottom: 68px
-    right: 20px
-    border-radius: 50%
-    border: 1px solid #727272
-    width: 28px
-    height: 28px
-    padding: 6px
-    .icon
-      position: relative
-      top: 5px
-      left: 5px
+  //打开massgae消息页面的动画 因为是属于路由里面的动画 应该在router-view外一层做 否则无效果
+  .hide-enter-active, .hide-leave-active 
+    transition: opacity .5s
+  .hide-enter, .hide-leave-active
+    opacity: 0
 </style> 

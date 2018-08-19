@@ -42,8 +42,8 @@
   };
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
-    .slider-content
+<style scoped lang="stylus" rel="stylesheet/stylus">
+    .swich
       width: 100%
       height: 100%
     .classifications-content
@@ -71,4 +71,5 @@
             line-height: 12px
             font-size: 12px
             padding-top: 80px
+            color: #000
 </style> 
