@@ -1,60 +1,18 @@
 <template>
-  <div class="shopcart" ref="shopcart"
-    @touchstart.prevent='touchStart'
-    @touchmove.prevent='touchMove'
-    @touchsend.prevent='touchEnd'
-  >
-    <div class="shopcart-wrapper" ref="remove">
-      <div ref="shopcart-content" class="shopcart-content"">   
-        <span class="iconfont icon-gouwucheman"></span>
-        <!--购物车选择多少个 v-show="totalCount>0"{{totalCount}}-->
-        <div class="num"></div>
-      </div>      
-    </div>
-    <!--购物车详情页--> 
-    <div class="shopcart-list">
-      <!--购物车头部--> 
-      <div class="list-header">
-        <div class="list-left">
-          <span class="iconfont return icon-fanhui"></span>
-          <span class="text">购物车</span>
+  <div class="shopcart">
+    <div class="shopcart-wrapper">
+      <div class="wrapper-left">
+        <div class="icon-wrapper">
+          <div class="logo" :class="{'highlight':totalCount>0}">
+            <i class="iconfont icon-gouwuchekong" :class="{'highlight':totalCount>0}"></i>
+          </div>
+          <div class="num">{{totalCount}}</div>
         </div>
-        <div class="list-right">
-          <span class="text">编辑</span>
-        </div>
+        <div class="price" :class="{'highlight':totalPrice>0}">￥{{totalPrice}}</div>
+        <div class="desc">另需配送费￥{{seller.deliveryPrice}}</div>
       </div>
-      <!--购物车内容部分--> 
-      <!--<div class="list-content">
-        <ul>
-          <li v-for="item in items" class="item">
-            <ul>
-              <li v-for="ele in item.foods" class="ele">
-                <div class="address">
-                  <span class="text">{{seller.name}}</span>
-                </div>
-                <div class="content">
-                  <img  v-lazy="ele.icon" height="100" width="114"/>
-                  <span class="title">{{ele.name}}</span>
-                  <span class="count">数量 待     </span>
-                   {{totalPrice}}--> 
-                  <!--<span class="price">￥</span>
-                </div>
-                <div class="other-price">
-                  <span>包装费 待</span>
-                  <!--{{deliveryPrice}}--> 
-                  <!--<span class="desc">另需配送费￥元</span>
-                </div>
-                <div class="ZPrice-wrapper">
-                  <span class="ZPrice"></span>
-                  <span>去结算</span>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>--> 
+      <div class="wrapper-right"></div>
     </div>
-    <!--购物车详情页-->
   </div>
 </template>
 
@@ -63,88 +21,121 @@
   
   export default {
     props: {
-      touch: 'touthes',
+      selectFoods: {
+        type: Array,//为object/Array时default是个函数
+        default() {
+          return [
+            {
+              price: 10,
+              count: 1
+            }
+          ];
+        }
+      },
     },
     data() {
       return {
-        items: [],
-        startX: 0,//开始触摸的位置
-        moveX: 0,//滑动时的位置
-        endX: 0,//结束触摸的位置
-        disX: 0,//移动的位置
+        seller: []
       }
     },
     created() {
       axios.get('../data.json').then((res) => {
-        this.items = res.data.goods
         this.seller = res.data.seller
-        //console.log(this.item.foods)
+        //console.log(this.seller.deliveryPrice)
       })
     },
     methods: {
-      //购物车动效
-      touchStart:function(ev) {
-        ev = ev || event;
-        //ev.preventDefault();
-        //console.log(ev.targetTouches);
-        //console.log(ev.changedTouches);  
-        if (ev.touches.length == 1) {
-          this.startY = ev.touches[0].clientY; // 记录开始位置 clientY Y轴坐标的位置  x=event.screenX 相对于屏幕的 x 和 y 坐标
-        //console.log(this.startY)
-        this.$emit('touch-start', event)
-        }      
+
+    },
+    computed: {
+      totalPrice() {//所选商品的价格
+        let tolal = 0;
+        this.selectFoods.forEach((food) => {
+          tolal += food.price * food.count;
+        });
+        return tolal;
       },
-      touchMove:function(ev) {
-        ev = ev || event;
-        //ev.preventDefault();//阻止事件相关的的默认行为
-        //console.log(ev.targetTouches);
-        //console.log(ev.changedTouches);
-        if(ev.touches.length == 1) {
-          //滑动时距离浏览器的距离
-          this.moveY = ev.touches[0].clientY;
-          //console.log(this.moveY);
-          //实时的滑动的距离-起始位置=实时移动的位置
-          this.disY = this.moveY-this.startY;
-          //console.log(this.disY);往上滑是负数  往下滑是正数
-          if(this.disY < 0) {
-            this.$refs.shopcart.style ="display:none";
-            //transform:translateX(-30px)
-          this.$emit('touch-move', event)
-          }
-        }
-      },
-      touchEnd:function(ev) {
-        ev = ev || event;
-        //ev.preventDefault();
-        //console.log(ev.changedTouches);
-        if(ev.changedTouches.length == 1) {
-          let endY = ev.changedTouches[0].clientY;
-          this.disY = endY-this.startY;
-          //console.log(this.disY,'this.disY')
-          if(this.disY < 0) {
-            this.$refs.shopcart.style = 'transform:translateX(30px)';
-            this.$emit('touch-end', event)
-          }
-        }
-      }      
+      totalCount() {//所选商品的总和
+        let count = 0;
+        this.selectFoods.forEach((food) => {
+          count += food.count;
+        });
+        return count
+      }
     },
   }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-  .shopcart-wrapper
+  .shopcart
     position: fixed
-    bottom: 68px
-    right: 20px
-    border-radius: 50%
-    border: 1px solid #727272
-    background: #fff
-    width: 28px
-    height: 28px
-    padding: 6px
-    .shopcart-content
-      position: relative
-      top: 5px
-      left: 5px
-
+    bottom: 0px
+    left: 0px
+    width: 100%
+    height: 58px
+    z-index: 156
+    .shopcart-wrapper
+      background: #141d27
+      display: flex
+      font-size: 0
+      color: rgba(255, 255, 255, 0.4)
+      .wrapper-left
+        flex: 1
+        .icon-wrapper
+          position: relative
+          top: -10px
+          margin: 0 12px
+          padding: 6px
+          width: 56px
+          height: 56px
+          background: #141d27
+          border-radius: 50%
+          border-sizing: border-box
+          .logo
+            width: 100%
+            height: 100%
+            border-radius: 50%
+            text-align: center
+            background: #2b343c
+            &.highlight
+              background: rgb(0, 160, 220)
+            .icon-gouwuchekong
+              font-size: 28px
+              &.highlight
+                color: #fff
+          .num
+            position: absolute
+            top: 0
+            right: 0
+            width: 24px
+            height: 16px
+            line-height: 16px
+            text-align: center
+            border-radius: 16px
+            font-size: 9px
+            font-weight: 700
+            color: #fff
+            background: rgb(240, 20, 20)
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4)
+        .price
+          display: inline-block
+          vertical-align: top
+          margin-top: 12px
+          line-height: 24px
+          padding-right: 12px
+          box-sizing: border-box
+          border-right: 1px solid rgba(255, 255, 255, 0.1)
+          font-size: 16px
+          font-weight: 700
+          &.highlight
+            color: #fff
+        .desc
+          display: inline-block
+          vertical-align: top
+          margin: 12px 0 0 12px
+          line-height: 24px
+          font-size: 10px
+          color: #fff
+      .wrapper-right
+        flex: 0 0 105px
 </style> 

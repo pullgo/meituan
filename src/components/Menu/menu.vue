@@ -1,10 +1,10 @@
 <template>
   <div class="menu">
   <!--左边-->
-    <div class="menu-left">
+    <div class="menu-wrapper" ref="menuWrapper">
       <ul>
-        <li v-for="(item, index) in items" class="menu-item">
-          <span class="text">
+        <li v-for="(item, index) in items" class="menu-item" :class="{'current':currentIndex===index}" @click="selectMenu(index, $event)" ref="menuList">
+          <span class="text border-1px">
             <div class="icon-wrapper">
             <icon class="icon" :size="12" :class="classMap[item.type]"></icon>{{item.name}}
             </div>
@@ -13,30 +13,38 @@
       </ul>
     </div>
   <!--右边-->
-    <div class="menu-right">
-      <ul>
-        <li v-for="(item,index) in items" class="food-list food-list-hook">
-          <h1 class="title">{{item.name}}</h1>
+    <scroll ref="scroll">
+      <div>
+        <div class="foods-wrapper" ref="foodsWrapper">
           <ul>
-            <li @click="selectFood(food,$event)" v-for="food in item.foods" class="food-item border-1px">
-              <div class="icon" height="57" width="57">
-                <img :src="food.icon">
-              </div>
-              <div class="content">
-                <h2 class="name">{{food.name}}</h2>
-                <p class="desc">{{food.description}}</p>
-                <div class="extra">
-                  <span class="count">月售{{food.sellCount}}份</span><span>好评率{{food.rating}}个</span>
-                </div>
-                <div class="price">
-                  <span class="now">￥{{food.price}}</span><span v-show="food.oldPrice" class="old">￥{{food.oldPrice}}</span>
-                </div>
-              </div>
+            <li v-for="(item,index) in items" class="food-list food-list-hook">
+              <h1 class="title">{{item.name}}</h1>
+              <ul>
+                <li  @click="selectFood(food,$event)" v-for="food in item.foods" class="food-item border-1px">
+                  <div class="icon" height="57" width="57">
+                    <img :src="food.icon">
+                  </div>
+                  <div class="content">
+                    <h2 class="name">{{food.name}}</h2>
+                    <p class="desc">{{food.description}}</p>
+                    <div class="extra">
+                      <span class="count">月售{{food.sellCount}}份</span><span>好评率{{food.rating}}个</span>
+                    </div>
+                    <div class="price">
+                      <span class="now">￥{{food.price}}</span><span class="old" v-show="food.oldPrice">￥{{food.oldPrice}}</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </li>
           </ul>
-        </li>
-      </ul>
-    </div>
+        </div>
+      </div>
+    </scroll>
+    <!--selectFoods传入购物车组件 实现联动  :select-foods="selectFoods" :delivery-price="seller.deliveryPrice" :min-price="seller.minPrice"-->     
+    <Shopcart ref="shopcart"></Shopcart>
+    <!--点击跳转到每个商品详情页面-->          
+    <FoodDetail ref="food" :food="selectedFood"></FoodDetail>
   </div>
 </template>
 
@@ -45,16 +53,20 @@
   import loading from 'base/loading/loading'
   import Scroll from 'base/Scroll/scroll'
   import Icon from 'base/Icon/icon'
+  import BScroll from "better-scroll"
+  import Shopcart from "components/Shopcart/shopcart"
+  import FoodDetail from "components/food-detail/food-detail"
 
   export default {
     props: {
-      goods: {
-        type: Object
-      }
     },
   	data() {
   		return {
-        items: []
+        items: [],
+        goods: [],
+        ListHeight: [],//总区间的高度
+        scrollY: 0,//跟踪变量  需要跟踪就放在data里面
+        selectedFood: {}//data观测的数据不能与methods里面的方法重名
   		}
   	},
   	created() {
@@ -62,15 +74,93 @@
   		axios.get('../data.json').then((res) => {
         this.items = res.data.goods
         this.seller = res.data.seller
-        //console.log(2)
+        //console.log(this.items)
+        //计算 产生滚动
+        this.$nextTick(() => {//渲染后才可以使用 这个是一个接口 改变了DOM 但是数据没有更新需要使用$nextTick 才可以计算高度得到滚动效果
+        this._initScroll();//调用
+        //左右联动
+        this._calculateHeight();//计算高度 相应位置高亮
+        });
   		})
 	  },
+    //计算左侧索引
     computed: {
+      currentIndex() {
+        for(let i=0; i < this.ListHeight.length; i++) {
+          let height1 = this.ListHeight[i];
+          let height2 = this.ListHeight[i + 1];
+          if(!height2 || ( this.scrollY >= height1 && this.scrollY < height2)) {
+            this._followScroll(i);
+            return i;
+          }
+        }
+        return 0;
+      },
+      selectFoods() { //计算属性 观测的是goods变化
+        let foods = []; //首先遍历goods
+        this.goods.forEach((good) => {
+          good.foods.forEach((food) => {//遍历foods
+            if (food.count) {//判断food.count是否大于0 如果大于0 表示被选择过
+              foods.push(food);
+            }
+          });
+        });
+        return foods;
+      }      
+    },
+    methods: {
+      _initScroll() {
+        this.menuScroll = new BScroll(this.$refs.menuWrapper, {
+          click:true,//这样才可以点击 BScroll实现原理是监听了star 与end 阻止了默认事件  但是派发了2次点击事件 造成PC端点击2次 需要传$event
+          probeType: 3//为1时非实时派发滚动事件 为2时屏幕滑动 为 3 的时候，不仅在屏幕滑动的过程中而且在 momentum 滚动动画实时派发
+        });
+        this.foodsScroll = new BScroll(this.$refs.foodsWrapper, {
+          click:true,
+        });
+        //监听滚动位置
+        this.foodsScroll.on('scroll', (pos) => {
+          if (pos.y <= 0) {
+            this.scrollY = Math.abs(Math.round(pos.y));//Math.round转化为整数  Math.abs绝对值 正值  
+          }
+        });
+      },
+      selectMenu(index, event) {
+        if(!event._constructed) {//如果不存在这个属性,则为原生点击事件，不执行下面的函数
+          return;
+        }
+        let foodsList = this.$refs.foodsWrapper;
+        let el = foodsList[index];
+        this.foodsScroll.scrollToElement(el, 300);
+      },
+      selectFood(food, event) {
+        if(!event._constructed) {
+          return;
+        }
+          this.selectedFood = food;
+          this.$refs.food.show();
+      },
+      _calculateHeight() {
+        let foodsList = this.$refs.foodsWrapper.getElementsByClassName('food-list-hook');
+        let height = 0;
+        this.ListHeight.push(height);//pust第一个的高度
+        for(let i = 0;i < foodsList.length;i++){
+          let item = foodsList[i];
+          height += item.clientHeight;//clientHeight接口 对区间的统计 可理解为内部可视区高度,样式的height+上下padding
+          this.ListHeight.push(height);
+        }
+      },      
+      _followScroll(index) {
+        let menuList = this.$refs.menuList;
+        let el = menuList[index];
+        this.menuScroll.scrollToElement(el, 300, 0, -100);
+      },
     },
     components: {
       loading,
       Scroll,
-      Icon
+      Icon,
+      Shopcart,
+      FoodDetail
     }
   };
 </script>
@@ -79,42 +169,48 @@
   @import "../../common/stylus/mixin"
 
   .menu
+    width: 100%
+    height: 100%
     display: flex
     position: absolute
     top: 190px
     bottom: 56px
-    width: 100%
-    overflow: hidden
-    .menu-left
-      flex: 0 0 90px//等分 内容的缩放情况 占位宽度
+    .menu-wrapper
+      height: 490px
       width: 90px//不写这个 在安卓有兼容问题
+      //min-height: 100%
+      flex: 0 0 90px//等分 内容的缩放情况 占位宽度
       background: #f3f5f7
       color: #8b8b8b
+      overflow: hidden
       .menu-item
-        display: table //一行或者多行垂直居中
         height: 54px
-        width: 80px
+        //width: 80px
+        display: table //一行或者多行垂直居中
         line-height: 14px
-        padding: 0 5px//居中
+        padding: 0 12px//居中
         &.current
           position: relative
-          z-index: 10
+          //z-index: 10
           margin-top: -1px//盖住
           background: #fff
           font-weight: 700
         .text
-          border-none()
+          //border-none()
           display: table-cell//格子
           width: 70px
           vertical-align: middle//垂直居中
-          border-1px(rgba(7, 17, 27, 0.1))
+          //border-1px(rgba(7, 17, 27, 0.1))
           font-size: 12px
           .icon-wrapper
             display: inline-block
             vertical-align: top
-    .menu-right
+    .foods-wrapper
       flex: 1
       overflow: hidden
+      background: #fff
+      height: 490px
+      margin: 0//scroll滚动的时候 默认有margin:10 用这个清0
       .title
         padding-left: 14px
         height: 26px
@@ -125,7 +221,7 @@
         background: #f3f5f7
       .food-item
         display: flex
-        margin: 18px
+        margin: 10px
         padding-bottom: 18px//描边不紧贴底部
         border-1px(rgba(7, 17, 27, 0.1))
         &:last-child
@@ -150,13 +246,15 @@
             color: rgb(147, 153, 159)
           .desc
             display: inline-block
-            margin: 3px 0px 3px 1px
+            margin: 3px 0px 3px 3px
           .extra
+            margin-top: 5px
             .count
               margin-right: 10px
           .price
             font-weight: 700
             line-height: 24px
+            margin-top: 20px
             .now
               margin-right: 8px
               font-size: 14px 

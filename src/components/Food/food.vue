@@ -91,10 +91,11 @@
   .food
     width: 100%
     height: 100%
-    position: fixed
+    position: absolute
     top: 0
     left: 0
     background: #fff
+    z-index: 110
     .activity
       padding: 2px
       //height: 20px
@@ -103,7 +104,7 @@
       margin-left: 15px
       height: 300px
       .icon-wrapper
-        position: relative
+        //position: relative
         margin-bottom: 30px
         color: #343434
         .icons

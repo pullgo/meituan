@@ -1,5 +1,5 @@
 <template>
-  <div class="ratings">评价
+  <div class="ratings">
   </div>
 </template>
 

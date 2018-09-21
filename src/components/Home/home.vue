@@ -204,7 +204,7 @@
 .home
   position: relative
   height: 100%
-  overflow-y: auto
+  //overflow-y: auto
   background: #fff
   .head
     width: 100%
@@ -223,7 +223,7 @@
       width: 100%
       padding-top: 5px
       padding-bottom: 5px
-      z-index: 500
+      z-index: 105
       .input
         width: 88%
         height: 30px
@@ -231,6 +231,7 @@
         margin-left: 10px
         background: #e1e1e1
         border-radius: 3px
+        z-index: 3s
       .icon
         position: absolute
         top: 12px

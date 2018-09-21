@@ -8,10 +8,10 @@
         </router-link>
       </div>
       <div class="fr foodheader-right">
-        <span class="iconfont icons icon-search"></span>
+        <span class="iconfont iconfonticons icon-search"></span>
         <span class="iconfont icons icon-star1"></span>
         <span class="iconfont icons icon-gengduopintuan"></span>
-        <span class="iconfont icons icon-gengduo"></span>
+        <span class=" icons icon-gengduo"></span>
       </div>
     </div>
     <!--头像 店铺名称栏-->
@@ -24,7 +24,7 @@
         <div class="bulletin">{{seller.bulletin}}</div>
       </div>
     </div>
-    <div class="icon-wrapper">
+    <div class="icon-wrapper" v-if="seller.supports">
       <icon class="icons" :size="16" :class="classMap[seller.supports[0].type]"></icon>
       <span class="text">{{seller.supports[0].description}}</span>
       <!--共多少活动页面-->
@@ -96,6 +96,8 @@
         display: inline-block
         vertical-align: top
         width: 64px
+        img
+          border-radius: 3px
       .content
         margin-left: 10px
         display: inline-block
