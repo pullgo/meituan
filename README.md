@@ -1,23 +1,4 @@
-app-music
-
-    A Vue.js project
-
-Build Setup
-
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-For a detailed explanation on how things work, check out the guide and docs for vue-loader.
-
+# meituan
 一,touch的使用
 
 以下是四种touch事件
@@ -180,6 +161,33 @@ cover_page.style.height = (clientHeight - cover_page.offsetTop - 60) + "px";
 
 
 
+2.[Vue warn]: Avoid mutating a prop directly since the value will be overwritten whenever the parent component re-renders. Instead, use a data or computed property based on the prop's value. Prop being mutated: "seller"
+原因是在使用组件时，传入的prop，被组件内部又做了一次修改，然后抛的异常
+
+这种情况下就会报这个错，因为传入的prop中的值是不允许改变的。这个在vue更新后才会出现的，网上是这么说的：
+
+在vue2中，直接修改prop是被视作反模式的。由于在新的渲染机制中，每当父组件重新渲染时，子组件都会被覆盖，所以应该把props看做是不可变对象 ^1。
+
+不能更改 quantity prop使其和父组件同步 , 而是让应该这个组件提交个事件给父组件，可以 watch quantity 变量，如果变量发生改变就emit事件，所以这里压根不需要 prop。
+
+在Vue2中组件的props的数据流动改为了只能单向流动，即只能由组件外（调用组件方）通过组件的DOM属性attribute传递props给组件内，组件内只能被动接收组件外传递过来的数据，并且在组件内，不能修改由外层传来的props数据。
+
+
+3.Vue报错笔记（1）vue.js:515 [Vue warn]: Property or method "name" is not defined on the instance but refere....
+
+
+就是你使用了但是在data里面没有定义  需要这样下
+ data() {
+ 	return {
+ 		name: ''
+ 	}
+ }
+
+					 4.[Vue warn]: Error in render: "TypeError: Cannot read property 'foods' of undefined"
+
+					found in....
+
+
  四.知识点的总结
     1.导航栏使用了position 后在我的页面出现了最底下的内容被盖住   滑动也没有效果的情况时
     	解决办法： 被盖住内容增加一个padding-bottom：导航栏的高度即可
@@ -248,7 +256,44 @@ cover_page.style.height = (clientHeight - cover_page.offsetTop - 60) + "px";
 		text-overflow: inherit
 		overflow: visible
 
-	8.
+	8.display: table //一行或者多行垂直居中
+
+
+	9.手机页面点击返回 会返回到上一级页面 我在该项目是用router做的  某一天发现可以这样
+	
+	html:
+	<a @click="goBack"></a>
+
+	script:
+	export default {
+		methods: {
+				goBack () {
+					window.history.back()
+				}
+		}
+	}
+
+	10. @click.stop.prevent="addFrist" 
+
+	事件修饰符在事件处理器中经常需要调用 event.preventDefault() 或 event.stopPropagation()。尽管我们在方法内可以轻松做到，不过让方法是纯粹的数据逻辑而不处理 DOM 事件细节会更好。
+
+	为了解决这个问题，Vue.js 为 v-on 提供两个 事件修饰符：.prevent 与 .stop。你是否还记得修饰符是点号打头的指令后缀？
+
+	<!-- 阻止单击事件冒泡 -->
+	<a v-on:click.stop="doThis"></a>
+
+
+	<!-- 提交事件不再重载页面 -->
+	<form v-on:submit.prevent="onSubmit"></form>
+
+
+	<!-- 修饰符可以串联 -->
+	<a v-on:click.stop.prevent="doThat">
+
+
+	<!-- 只有修饰符 -->
+	<form v-on:submit.prevent></form> 
+
 
 五.webpack学习
     1> 安装 npm install webpak webpak-cli -g

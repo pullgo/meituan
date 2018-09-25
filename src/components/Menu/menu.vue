@@ -3,7 +3,7 @@
   <!--左边-->
     <div class="menu-wrapper" ref="menuWrapper">
       <ul>
-        <li v-for="(item, index) in items" class="menu-item" :class="{'current':currentIndex===index}" @click="selectMenu(index, $event)" ref="menuList">
+        <li v-for="(item,index) in items" class="menu-item" :class="{'current':currentIndex===index}" @click="selectMenu(index,$event)" ref="menuList">
           <span class="text border-1px">
             <div class="icon-wrapper">
             <icon class="icon" :size="12" :class="classMap[item.type]"></icon>{{item.name}}
@@ -44,7 +44,7 @@
     <!--selectFoods传入购物车组件 实现联动  :select-foods="selectFoods" :delivery-price="seller.deliveryPrice" :min-price="seller.minPrice"-->     
     <Shopcart ref="shopcart"></Shopcart>
     <!--点击跳转到每个商品详情页面-->          
-    <FoodDetail ref="food" :food="selectedFood"></FoodDetail>
+    <Detail :food="selectedFood" ref="food"></Detail>
   </div>
 </template>
 
@@ -55,7 +55,7 @@
   import Icon from 'base/Icon/icon'
   import BScroll from "better-scroll"
   import Shopcart from "components/Shopcart/shopcart"
-  import FoodDetail from "components/food-detail/food-detail"
+  import Detail from "components/detail/detail"
 
   export default {
     props: {
@@ -132,11 +132,13 @@
         let el = foodsList[index];
         this.foodsScroll.scrollToElement(el, 300);
       },
+      //点击跳转到每个商品详情页面
       selectFood(food, event) {
         if(!event._constructed) {
           return;
         }
           this.selectedFood = food;
+          //调用子组件detail.vue的show方法跳转到每个商品详情页面
           this.$refs.food.show();
       },
       _calculateHeight() {
@@ -160,7 +162,7 @@
       Scroll,
       Icon,
       Shopcart,
-      FoodDetail
+      Detail
     }
   };
 </script>
