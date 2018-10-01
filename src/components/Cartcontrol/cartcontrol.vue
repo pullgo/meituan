@@ -37,11 +37,11 @@
         if(!this.food.count) {
 
         //点击+的时候-那边无法更新 无法关注到新添加的属性 需要全局使用vue 和set方法 这样就可以观测到dom发生的变化
-
-          Vue.set(this.food,'count', 1); 
-          this.food.count = 1;
+          Vue.set(that.food,'count', 1); 
+          that.food.count = 1;
         }else{
-          this.food.count++;
+          that.food.count++;
+        //console.log(this.food.count)
         }
         //如何找到+-所在俄位置 需要用下代码派发事件 在在good  events接收子组件传入的方法 event.target作为参数传入
 

@@ -72,11 +72,11 @@ export default new VueRouter({
 					component: Setting
 				}
 			]
+		},
+		{//404路由 访问不存在 直接跳转
+			path:'*',
+			redirect: '/home'
 		}
-		//{//404路由 访问不存在 直接跳转
-			//path:'*',
-			//redirect: '/home'
-		//}
 	]
 })
 

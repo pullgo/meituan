@@ -33,6 +33,9 @@
                     <div class="price">
                       <span class="now">￥{{food.price}}</span><span class="old" v-show="food.oldPrice">￥{{food.oldPrice}}</span>
                     </div>
+                    <div class="cartcontrol-wrapper">
+                      <cartcontrol></cartcontrol>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -55,6 +58,7 @@
   import Icon from 'base/Icon/icon'
   import BScroll from "better-scroll"
   import Shopcart from "components/Shopcart/shopcart"
+  import Cartcontrol from "components/Cartcontrol/cartcontrol"
   import Detail from "components/detail/detail"
 
   export default {
@@ -102,11 +106,12 @@
           good.foods.forEach((food) => {//遍历foods
             if (food.count) {//判断food.count是否大于0 如果大于0 表示被选择过
               foods.push(food);
+
             }
           });
         });
         return foods;
-      }      
+      }     
     },
     methods: {
       _initScroll() {
@@ -124,7 +129,7 @@
           }
         });
       },
-      selectMenu(index, event) {
+      selectMenu(index, event) {//无问题
         if(!event._constructed) {//如果不存在这个属性,则为原生点击事件，不执行下面的函数
           return;
         }
@@ -133,7 +138,7 @@
         this.foodsScroll.scrollToElement(el, 300);
       },
       //点击跳转到每个商品详情页面
-      selectFood(food, event) {
+      selectFood(food, event) {//无问题
         if(!event._constructed) {
           return;
         }
@@ -162,6 +167,7 @@
       Scroll,
       Icon,
       Shopcart,
+      Cartcontrol,
       Detail
     }
   };
@@ -235,6 +241,7 @@
         .content
           flex: 1//左右分栏布局
           font-size: 0
+          position: relative
           .name
             display: inline-block
             margin: 2px 0 8px 0
@@ -264,4 +271,11 @@
             .old
               text-decoration: line-through
               font-size: 10px 
-              color: rgb(147, 153, 159)</style> 
+              color: rgb(147, 153, 159)
+          .cartcontrol-wrapper
+            position: absolute
+            right: 0
+            bottom: 0
+            z-index: 300
+
+</style> 
