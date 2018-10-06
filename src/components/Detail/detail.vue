@@ -1,5 +1,5 @@
-<template><!--点击跳到单个商品页面 v-show="showFlag-->
-  <transition class="move">
+﻿<template><!--点击跳到单个商品页面 v-show="showFlag-->
+  <transition class="move" ref="food">
     <div class="detail" v-show="showFlag">
       <div class="detail-content">
         <div class="icon-wrapper">
@@ -24,12 +24,20 @@
           <div class="price">
             <span class="now">￥{{goods[0].foods[0].price}}</span><span v-show="goods[0].foods[0].oldPrice" class="old">￥{{goods[0].foods[0].oldPrice}}</span>
           </div>
+          <Split></Split>
           <div class="cartcontrol-wrapper">
             <Cartcontrol :food="food"></Cartcontrol>
           </div>
           <div  class="buy">加入购物车</div>
         </div>
-        <div class="ratings"></div>
+        <div class="info">
+          <h1 class="title">商品描述</h1>
+          <div class="text">{{goods[0].foods[0].info}}</div>
+        </div>
+        <div class="ratings">
+          <h1 class="title">外卖评价</h1>
+          <Ratingselect :select-type="selectType" :only-content="onlyContent"></Ratingselect>
+        </div>
       </div>
     </div>
   </transition>
@@ -38,8 +46,11 @@
 <script type="text/ecmascript-6">
 
   import Cartcontrol from 'components/Cartcontrol/cartcontrol'
+  import Split from 'components/Split/split'
+  import Ratingselect from 'components/Ratingselect/ratingselect'
   import axios from 'axios'
   import Vue from 'vue'
+  import BScroll from "better-scroll"
 
   export default {
     propos: {
@@ -51,7 +62,14 @@
       return {
         goods: '',
         foods: '',
-        showFlag: false
+        showFlag: false,
+        selectType: ALL,//子传父
+        onlyContent: true,//子传父
+        desc: {
+          all: '全部',
+          positive: '推荐',
+          negative: '吐槽'
+        }
       };
     },
     created() {
@@ -63,7 +81,18 @@
     methods: {
       show() {
         this.showFlag = true;
-      }
+        //this.selectType = ALL;
+        //this.onlyContent = true;
+        this.$nextTick(() => {
+          if(!this.scroll) {
+            this.scroll = new.BScroll(this.$refs.food, {
+              click: true;
+            });
+          } else {
+            this.scroll.refresh();
+          }
+        });
+      },
       /*addFrist(event) {
         if(!event._constructed) {
           return
@@ -71,8 +100,25 @@
         Vue.set(this.food, 'count', 1);
       }*/
     },
+    events: {//子----父 因为选择的都是基础类型改变不了父级的组件
+      'ratingtype.select'(type) {//TYPE 里面的T是小写 与$emit里面的评写一样
+        this.selectType = type;//把子组件的type赋值给父组件selectType
+        //选择筛选后窗口的高度会更改 需要进行下一步的操作this.scroll.refresh()但是没有效果 因为DOM没有更新还是需要nexttick 异步更新DOM
+        this.$nextTick(() => {
+          this.scroll.refresh();
+        });
+      },
+      'content.toggle'(onlyContent) {
+        this.onlyContent = onlyContent;
+        this.$nextTick(() => {
+          this.scroll.refresh();
+        });
+      }
+    },    
     components: {
-      Cartcontrol
+      Cartcontrol,
+      Split,
+      Ratingselect
     },
   };
 </script>
@@ -110,7 +156,12 @@
         img
           width: 100%
           height: 100%
+          transform: scale(2)
           border-radius: 10px
+          border-shadow: -2px 0 3px -1px rgb(7, 17, 27)
+          border-shadow: 0 -2px 3px -1px rgb(7, 17, 27)
+          border-shadow: 0 2px 3px -1px rgb(7, 17, 27)
+          border-shadow: 2px 0 3px -1px rgb(7, 17, 27)
       .content
         position: relative
         .title
@@ -154,6 +205,18 @@
           border-radius: 12px
           color: #fff
           background: rgb(0, 160, 220)
-
+        .info
+          padding-top: 12px
+          .title
+            margin-bottom: 15px
+            margin-top: 15px
+            line-height: 14px
+            font-size: 16px
+            font-weight: 700
+            color: rgb(7, 17, 27)
+          .text
+            font-size: 12px
+            color: rgb(147, 153, 159)
+            line-height: 12px
 
 </style>

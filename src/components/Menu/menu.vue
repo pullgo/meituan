@@ -3,7 +3,7 @@
   <!--左边-->
     <div class="menu-wrapper" ref="menuWrapper">
       <ul>
-        <li v-for="(item,index) in items" class="menu-item" :class="{'current':currentIndex===index}" @click="selectMenu(index,$event)" ref="menuList">
+        <li v-for="(item,index) in items" class="menu-item" :class="{'current':currentIndex===index}" @click="selectMenu(index, $event)" ref="menuList">
           <span class="text border-1px">
             <div class="icon-wrapper">
             <icon class="icon" :size="12" :class="classMap[item.type]"></icon>{{item.name}}
@@ -22,7 +22,7 @@
               <ul>
                 <li  @click="selectFood(food,$event)" v-for="food in item.foods" class="food-item border-1px">
                   <div class="icon" height="57" width="57">
-                    <img :src="food.icon">
+                    <img :src="food.icon" height="57" width="57">
                   </div>
                   <div class="content">
                     <h2 class="name">{{food.name}}</h2>
@@ -89,16 +89,17 @@
 	  },
     //计算左侧索引
     computed: {
-      currentIndex() {
-        for(let i=0; i < this.ListHeight.length; i++) {
-          let height1 = this.ListHeight[i];
-          let height2 = this.ListHeight[i + 1];
+      currentIndex() {//计算左侧索引
+        for(let i = 0;i < this.ListHeight.length; i++) {
+          let height1 = this.ListHeight[i];//当前索引值的高度 高点
+          let height2 = this.ListHeight[i + 1];//下一个索引值的高度  低点
+          //是>= 默认第一个是高亮 向下的闭区间>= 一开始就是o 否则不会跟着滚动
           if(!height2 || ( this.scrollY >= height1 && this.scrollY < height2)) {
-            this._followScroll(i);
-            return i;
+            /*this._followScroll(i);*/
+            return i;//最后一个 或者当前区间则返回索引
           }
         }
-        return 0;
+        return 0;//否则返回0
       },
       selectFoods() { //计算属性 观测的是goods变化
         let foods = []; //首先遍历goods
@@ -106,7 +107,6 @@
           good.foods.forEach((food) => {//遍历foods
             if (food.count) {//判断food.count是否大于0 如果大于0 表示被选择过
               foods.push(food);
-
             }
           });
         });
@@ -117,22 +117,25 @@
       _initScroll() {
         this.menuScroll = new BScroll(this.$refs.menuWrapper, {
           click:true,//这样才可以点击 BScroll实现原理是监听了star 与end 阻止了默认事件  但是派发了2次点击事件 造成PC端点击2次 需要传$event
-          probeType: 3//为1时非实时派发滚动事件 为2时屏幕滑动 为 3 的时候，不仅在屏幕滑动的过程中而且在 momentum 滚动动画实时派发
         });
         this.foodsScroll = new BScroll(this.$refs.foodsWrapper, {
           click:true,
+          probeType: 3//为1时非实时派发滚动事件 为2时屏幕滑动 为 3 的时候，不仅在屏幕滑动的过程中而且在 momentum 滚动动画实时派发 是foodsScroll 里面设置的  否则滚动时左边无高亮效果        
         });
-        //监听滚动位置
+        //监听滚动位置 scroll方法滚动的时候把实时位置暴露出来
         this.foodsScroll.on('scroll', (pos) => {
           if (pos.y <= 0) {
-            this.scrollY = Math.abs(Math.round(pos.y));//Math.round转化为整数  Math.abs绝对值 正值  
+            this.scrollY = Math.abs(Math.round(pos.y));//Math.round转化为整数  Math.abs绝对值 可能是负值转为正值  
           }
         });
       },
-      selectMenu(index, event) {//无问题
+      //点击跳到右侧对应位置 在dom中传入index 
+      //传入event为解决区分是不是本身事件而在dom中传入的event的时候在pc端出现2次点击事件
+      selectMenu(index, event) {
         if(!event._constructed) {//如果不存在这个属性,则为原生点击事件，不执行下面的函数
           return;
         }
+        console.log(index);
         let foodsList = this.$refs.foodsWrapper;
         let el = foodsList[index];
         this.foodsScroll.scrollToElement(el, 300);
@@ -147,11 +150,11 @@
           this.$refs.food.show();
       },
       _calculateHeight() {
-        let foodsList = this.$refs.foodsWrapper.getElementsByClassName('food-list-hook');
+        let foodList = this.$refs.foodsWrapper.getElementsByClassName('food-list-hook');
         let height = 0;
         this.ListHeight.push(height);//pust第一个的高度
-        for(let i = 0;i < foodsList.length;i++){
-          let item = foodsList[i];
+        for(let i = 0;i < foodList.length;i++){
+          let item = foodList[i];//每一个的高度
           height += item.clientHeight;//clientHeight接口 对区间的统计 可理解为内部可视区高度,样式的height+上下padding
           this.ListHeight.push(height);
         }
@@ -199,7 +202,7 @@
         padding: 0 12px//居中
         &.current
           position: relative
-          //z-index: 10
+          z-index: 10
           margin-top: -1px//盖住
           background: #fff
           font-weight: 700

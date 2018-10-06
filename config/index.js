@@ -11,7 +11,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/api': '172.27.35.2:8080',//192.168.2.124
+      '/api': '192.168.0.102:8080',//192.168.2.124
       //加上本机IP以及端口
         target: './data.json',
         changeOrigin: true,  
@@ -21,7 +21,7 @@ module.exports = {
     },
 
     // Various Dev Server settings
-    host: '172.27.35.2',//把这里的localhost替换为本机ip 192.168.2.175  192.168.1.103
+    host: '192.168.0.102',//把这里的localhost替换为本机ip 192.168.2.175  192.168.1.103
      // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
