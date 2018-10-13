@@ -135,17 +135,13 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import Classify from 'base/Classify/classify'
-  import Scroll from 'base/Scroll/scroll'
+  import Classify from 'base/Classify/classify';
+  import Scroll from 'base/Scroll/scroll';
 
   export default {
     data() {
       return {
-      }
-    },
-    mounted () {
-    },
-    methods: {
+      };
     },
     components: {
       Classify

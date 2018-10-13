@@ -41,21 +41,14 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import icon from 'components/icon/icon'
-
+  import icon from 'components/icon/icon';
   export default {
-    // props: {
-    // },
-    // data() {
-    // },
     created() {
-      this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee']
+      this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
     },
-    // methods: {
-    // },
     components: {
       icon
-    },
+    }
   };
 </script>
 

@@ -15,14 +15,12 @@ export default {
       return 'icon-' + this.size;
     }
   },
-
-}
+};
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
 
 @import "../../common/stylus/mixin";
-
   .icon
     font-size: 0
     display: inline-block 

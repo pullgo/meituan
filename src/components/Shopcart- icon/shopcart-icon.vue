@@ -59,7 +59,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import axios from 'axios'
+  import axios from 'axios';
   
   export default {
     props: {
@@ -68,62 +68,62 @@
     data() {
       return {
         items: [],
-        startX: 0,//开始触摸的位置
-        moveX: 0,//滑动时的位置
-        endX: 0,//结束触摸的位置
-        disX: 0,//移动的位置
-      }
+        startX: 0, // 开始触摸的位置
+        moveX: 0, // 滑动时的位置
+        endX: 0, // 结束触摸的位置
+        disX: 0, // 移动的位置
+      };
     },
     created() {
       axios.get('../data.json').then((res) => {
-        this.items = res.data.goods
-        this.seller = res.data.seller
-        //console.log(this.item.foods)
-      })
+        this.items = res.data.goods;
+        this.seller = res.data.seller;
+        // console.log(this.item.foods)
+      });
     },
     methods: {
-      //购物车动效
+      // 购物车动效
       touchStart:function(ev) {
         ev = ev || event;
-        //ev.preventDefault();
-        //console.log(ev.targetTouches);
-        //console.log(ev.changedTouches);  
+        // ev.preventDefault();
+        // console.log(ev.targetTouches);
+        // console.log(ev.changedTouches);  
         if (ev.touches.length == 1) {
           this.startY = ev.touches[0].clientY; // 记录开始位置 clientY Y轴坐标的位置  x=event.screenX 相对于屏幕的 x 和 y 坐标
-        //console.log(this.startY)
-        this.$emit('touch-start', event)
+        // console.log(this.startY)
+        this.$emit('touch-start', event);
         }      
       },
       touchMove:function(ev) {
         ev = ev || event;
-        //ev.preventDefault();//阻止事件相关的的默认行为
-        //console.log(ev.targetTouches);
-        //console.log(ev.changedTouches);
-        if(ev.touches.length == 1) {
-          //滑动时距离浏览器的距离
+        // ev.preventDefault();//阻止事件相关的的默认行为
+        // console.log(ev.targetTouches);
+        // console.log(ev.changedTouches);
+        if (ev.touches.length == 1) {
+          // 滑动时距离浏览器的距离
           this.moveY = ev.touches[0].clientY;
-          //console.log(this.moveY);
-          //实时的滑动的距离-起始位置=实时移动的位置
+          // console.log(this.moveY);
+          // 实时的滑动的距离-起始位置=实时移动的位置
           this.disY = this.moveY-this.startY;
-          //console.log(this.disY);往上滑是负数  往下滑是正数
-          if(this.disY < 0) {
+          // console.log(this.disY);往上滑是负数  往下滑是正数
+          if (this.disY < 0) {
             this.$refs.ShopCartIcon.style ="display:none";
-            //transform:translateX(-30px)
-          this.$emit('touch-move', event)
+            // transform:translateX(-30px)
+          this.$emit('touch-move', event);
           }
         }
       },
       touchEnd:function(ev) {
         ev = ev || event;
-        //ev.preventDefault();
-        //console.log(ev.changedTouches);
-        if(ev.changedTouches.length == 1) {
+        // ev.preventDefault();
+        // console.log(ev.changedTouches);
+        if (ev.changedTouches.length == 1) {
           let endY = ev.changedTouches[0].clientY;
           this.disY = endY-this.startY;
-          //console.log(this.disY,'this.disY')
-          if(this.disY < 0) {
+          // console.log(this.disY,'this.disY')
+          if (this.disY < 0) {
             this.$refs.ShopCartIcon.style = 'transform:translateX(30px)';
-            this.$emit('touch-end', event)
+            this.$emit('touch-end', event);
           }
         }
       }      

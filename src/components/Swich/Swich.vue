@@ -18,23 +18,22 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import Tslider from 'base/Tslider/Tslider'
-  import Scroll from 'base/Scroll/scroll'
-  import axios from 'axios'
+  import Tslider from 'base/Tslider/Tslider';
+  import Scroll from 'base/Scroll/scroll';
+  import axios from 'axios';
 
   export default {
     data() {
       return {
         iconlibrary: []
-      }
+      };
     },
     created() {
       axios.get('../data.json').then((res) => {
-        this.iconlibrary = res.data.classifications
-        //console.log(this.iconlibrary)
-      })
+        this.iconlibrary = res.data.classifications;
+         // console.log(this.iconlibrary)
+      });
     },
-
     components: {
       Tslider,
       Scroll

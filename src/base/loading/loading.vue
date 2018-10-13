@@ -12,7 +12,7 @@
         default: '正在载入...'
       }
     }
-  }
+  };
 </script>
 <style scoped lang="stylus" rel="stylesheet/stylus">
   @import "~common/stylus/variable"

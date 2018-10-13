@@ -36,13 +36,13 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import lableb from 'base/lableb/lableb'
+  import lableb from 'base/lableb/lableb';
 
   export default {
     components: {
       lableb
     }
-  }
+  };
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">

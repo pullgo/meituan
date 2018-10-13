@@ -6,14 +6,45 @@
           <div class="fl foodheader-left">
             <span class="iconfont return icon-xiala"></span>
           </div>
-          <div class="fr foodheader-right">
+          <div class="fr foodheader-right" @click="showList">
             <span class="iconfont icons icon-xiaoxi"></span>
-            <span class="iconfont icons icon-fenxiang"></span>
+            <span class="iconfont icons icon-fenxiang" ></span>
             <span class="iconfont icons icon-gengduo"></span>
+          </div>
+          <!--点击分享弹出的对话框-->
+          <div class="shareBox" v-show="listShow">
+            <div class="top"></div>
+            <span class="text">商家配送范围有限，建议分享给您附近的朋友</span>
+            <div class="box-content">
+              <div class="box">
+                <span class="iconfont icons"></span>
+                <span class="text">微信朋友圈</span>
+              </div>
+              <div class="box">
+                <span class="iconfont icons"></span>
+                <span class="text">微信好友</span>
+              </div>
+              <div class="box">
+                <span class="iconfont icons"></span>
+                <span class="text">QQ好友</span>
+              </div>
+            </div>
+            <span class="cancal">取消</span>
+          </div>
+          <!--点击更多弹出的对话框-->
+          <div class="moreBox">
+            <div class="icons">
+              <i class="iconfont icon-gouwuchekong"></i>
+              <i class="iconfont icon-xiaoxi"></i>
+            </div>
+            <div class="text">
+              <span>我的购物车</span>
+              <span>消息中心</span>
+            </div>
           </div>
         </div>
         <div class="image-wrapper">
-          <img :src="goods[0].foods[0].image"/>
+          <img class="img" :src="goods[0].foods[0].image"/>
         </div>
         <div class="content">
           <h1 class="title">{{goods[0].foods[0].name}}</h1>
@@ -28,11 +59,11 @@
           <div class="cartcontrol-wrapper">
             <Cartcontrol :food="food"></Cartcontrol>
           </div>
-          <div  class="buy">加入购物车</div>
+          <div class="buy">加入购物车</div>
         </div>
         <div class="info">
           <h1 class="title">商品描述</h1>
-          <div class="text">{{goods[0].foods[0].info}}</div>
+          <div class="text" v-show="goods[0].foods[0].info">{{goods[0].foods[0].info}}</div>
         </div>
         <div class="ratings">
           <h1 class="title">外卖评价</h1>
@@ -44,14 +75,13 @@
 </template>
 
 <script type="text/ecmascript-6">
-
-  import Cartcontrol from 'components/Cartcontrol/cartcontrol'
-  import Split from 'components/Split/split'
-  import Ratingselect from 'components/Ratingselect/ratingselect'
-  import axios from 'axios'
-  import Vue from 'vue'
-  import BScroll from "better-scroll"
-
+  import axios from 'axios';
+  import BScroll from 'better-scroll';
+  import Vue from 'vue';
+  import Ratingselect from 'components/Ratingselect/ratingselect';
+  import Split from 'base/Split/split';
+  import Cartcontrol from 'base/Cartcontrol/cartcontrol';
+  const ALL = 2;
   export default {
     propos: {
       food: {
@@ -62,48 +92,55 @@
       return {
         goods: '',
         foods: '',
-        showFlag: false,
-        selectType: ALL,//子传父
-        onlyContent: true,//子传父
+        showFlag: false, // 观测
+        selectType: ALL, // 子传父
+        onlyContent: true, // 子传父
         desc: {
           all: '全部',
           positive: '推荐',
           negative: '吐槽'
         }
       };
+      listShow: false
     },
     created() {
       axios.get('../data.json').then((res) => {
-        this.goods = res.data.goods
-        //console.log(this.goods[0].foods[0].name)
-      })
+        this.goods = res.data.goods;
+         // console.log(this.food)
+      });
+    },
+    watch: {
+      food: {
+        handler(v1) {
+          // console.log(v1);
+        },
+        deep: true // 深度观测
+      }
     },
     methods: {
       show() {
-        this.showFlag = true;
-        //this.selectType = ALL;
-        //this.onlyContent = true;
+        this.showFlag = true; // 父调子
+        this.selectType = ALL;
+        this.onlyContent = true;
         this.$nextTick(() => {
-          if(!this.scroll) {
-            this.scroll = new.BScroll(this.$refs.food, {
-              click: true;
+          if (!this.scroll) {
+            this.scroll = new BScroll(this.$refs.food, {
+              click: true
             });
           } else {
             this.scroll.refresh();
           }
+          // console.log(this.scroll)
         });
       },
-      /*addFrist(event) {
-        if(!event._constructed) {
-          return
-        }
-        Vue.set(this.food, 'count', 1);
-      }*/
+      showList(listShow) {
+        this.listShow = true;
+      }
     },
-    events: {//子----父 因为选择的都是基础类型改变不了父级的组件
-      'ratingtype.select'(type) {//TYPE 里面的T是小写 与$emit里面的评写一样
-        this.selectType = type;//把子组件的type赋值给父组件selectType
-        //选择筛选后窗口的高度会更改 需要进行下一步的操作this.scroll.refresh()但是没有效果 因为DOM没有更新还是需要nexttick 异步更新DOM
+    events: { // 子----父 因为选择的都是基础类型改变不了父级的组件
+      'ratingtype.select'(type) { // TYPE 里面的T是小写 与$emit里面的评写一样
+        this.selectType = type; // 把子组件的type赋值给父组件selectType
+         // 选择筛选后窗口的高度会更改 需要进行下一步的操作this.scroll.refresh()但是没有效果 因为DOM没有更新还是需要nexttick 异步更新DOM
         this.$nextTick(() => {
           this.scroll.refresh();
         });
@@ -114,17 +151,17 @@
           this.scroll.refresh();
         });
       }
-    },    
+    }, 
     components: {
       Cartcontrol,
       Split,
       Ratingselect
-    },
+    }
   };
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-
+  @import "../../common/stylus/mixin";
 
   .detail
     position: fixed//屏幕定位
@@ -146,17 +183,40 @@
         height: 40px
         line-height: 40px
         .foodheader-left
-          margin-left: 15px
+          margin-left: 5px
         .foodheader-right
           margin-right: 25px
           .icons
             margin-right: 8px
-      .image-wrapper
-        border-radius: 10px
-        img
+        .shareBox
           width: 100%
           height: 100%
-          transform: scale(2)
+          position: fixed
+          bottom: 0px
+          left: 0px
+          background: #fff
+          font-size: 12px
+          color: #000
+          //z-index: 200
+          display: flex
+          .top
+            height: 20px
+            border-bottom: 1px solid (rgba(7, 17, 27, 0.1))
+          .text
+            text-aglin: center
+          .box-content
+            margin: 20px 20px 5px 20px
+            .box
+              flex: 1
+              //.icons
+                
+              //.text
+      .image-wrapper
+        border-radius: 10px
+        .img
+          width: 100%
+          height: 100%
+          transform: scale(0.99)
           border-radius: 10px
           border-shadow: -2px 0 3px -1px rgb(7, 17, 27)
           border-shadow: 0 -2px 3px -1px rgb(7, 17, 27)
@@ -205,18 +265,18 @@
           border-radius: 12px
           color: #fff
           background: rgb(0, 160, 220)
-        .info
-          padding-top: 12px
-          .title
-            margin-bottom: 15px
-            margin-top: 15px
-            line-height: 14px
-            font-size: 16px
-            font-weight: 700
-            color: rgb(7, 17, 27)
-          .text
-            font-size: 12px
-            color: rgb(147, 153, 159)
-            line-height: 12px
+      .info
+        padding-top: 12px
+        .title
+          margin-bottom: 15px
+          margin-top: 15px
+          line-height: 14px
+          font-size: 16px
+          font-weight: 700
+          color: rgb(7, 17, 27)
+        .text
+          font-size: 12px
+          color: rgb(147, 153, 159)
+          line-height: 12px
 
 </style>

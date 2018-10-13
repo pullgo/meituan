@@ -1,5 +1,5 @@
 const state = {
 	good: {}
-}
+};
 
-export default state
+export default state;

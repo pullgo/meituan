@@ -6,19 +6,15 @@
 
 <script type="text/ecmascript-6">
 /* eslint-disable no-new */
-
-
   export default {
     props:
-      ["title"],
-    data() {
+      ['title'],
+    data () {
       return {
-      }
+      };
     }
-  }
-
+  };
 </script>
-
 <style scoped lang="stylus" rel="stylesheet/stylus">
   @import "../../common/stylus/mixin"
   .classify

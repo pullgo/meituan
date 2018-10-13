@@ -126,15 +126,13 @@
 
 <script type="text/ecmascript-6">
   
-  import Slider from 'base/Slider/slider'
-  import Scroll from 'base/Scroll/scroll'
-  import axios from 'axios'
-  import Swich from 'components/Swich/Swich'
-  import Goods from 'components/Goods/goods'
-  import Massage from 'components/Massage/massage'
-  import Shopcart from 'components/Shopcart/shopcart'
-
-
+  import Slider from 'base/Slider/slider';
+  import Scroll from 'base/Scroll/scroll';
+  import axios from 'axios';
+  import Swich from 'components/Swich/Swich';
+  import Goods from 'components/Goods/goods';
+  import Massage from 'components/Massage/massage';
+  import Shopcart from 'components/Shopcart/shopcart';
   export default {
     props: {
       slider: {
@@ -146,46 +144,46 @@
         recommends: [],
         isFixed:'isFixed',
         noFixed:'noFixed',
-        fixedSearch: false,
-      }
+        fixedSearch: false
+      };
     },
-    //购物车有商品的时候
+     // 购物车有商品的时候
     computd: {
-      //totalCount() {
-        //let count = 0; 
-      //}
+      totalCount() {
+      let count = 0; 
+      }
     },
     created() {
       axios.get('../data.json').then((res) => {
-        this.recommends = res.data.slider
-        //this.messages = res.data.messages
-        //console.log(this.messages)
-      })
+        this.recommends = res.data.slider;
+        // this.messages = res.data.messages
+        // console.log(this.messages)
+      });
     },
     mounted() {
-      window.addEventListener('scroll', this.handleScroll)//添加滚动监听事件
+      window.addEventListener('scroll', this.handleScroll); // 添加滚动监听事件
     },
     methods: {
-      //滑动搜索框特效
+       // 滑动搜索框特效
       handleScroll () {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop || 
         document.body.scrollTop;
         if (scrollTop > 0) {
           this.fixedSearch = true;
-          this.$refs.headAddress.style="display:none";
+          this.$refs.headAddress.style = "display:none";
           //this.$refs.head.style.tranform = `translate3d(0,40px,0)`
-        } else{
+        } else {
           this.fixedSearch = false;
-          this.$refs.headAddress.style="display:block";
+          this.$refs.headAddress.style = "display:block";
         }
-          return ''        
-        //console.log(offsetTop)
+          return '';        
+         // console.log(offsetTop)
       },
       touthes(event) {
-        this.$emit('touchStart','touchMove','touchEnd', event)      
+        this.$emit('touchStart','touchMove','touchEnd', event);     
       },
     },
-    destroyed () {//销毁
+    destroyed () { // 销毁
       window.removeEventListener('scroll', this.handleScroll);
     },
     components: {
@@ -195,7 +193,7 @@
       Goods,
       Massage
       //Shopcart
-    },
+    }
   };
 </script>
 

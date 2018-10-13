@@ -1,9 +1,9 @@
 <template>
   <div class="ratingselect">
     <div class="rating-type border-1px">
-      <span @click="select(2, event)" class="block positive" :class="{'active':selectType===2">{{desc.all}}<span class="count ">{{ratings.length}}</span></span>
-      <span  @click="select(0, event)" class="block positive" :class="{'active':selectType===0">{{desc.positive}}<span class="count">{{positives.length}}</span></span>
-      <span  @click="select(1, event)" class="block negetive" :class="{'active':selectType===1">{{desc.negetive}}<span class="count">{{negetive.length}}</span></span>
+      <span @click="select(2, event)" class="block positive" :class="{'active':selectType===2}">{{desc.all}}<span class="count ">{{ratings.length}}</span></span>
+      <span  @click="select(0, event)" class="block positive" :class="{'active':selectType===0}">{{desc.positive}}<span class="count">{{positives.length}}</span></span>
+      <span  @click="select(1, event)" class="block negetive" :class="{'active':selectType===1}">{{desc.negetive}}<span class="count">{{negetive.length}}</span></span>
     </div>
     <div class="switch" :class="{'on':onlyContent}" @click="toggleContent">
       <span></span>
@@ -14,9 +14,9 @@
 
 <script type="text/ecmascript-6">
 
-  const POSITIVE = 0;//正
-  const NEGATIVE = 1;//负
-  const ALL = 0;//全部评价
+  const POSITIVE = 0;// 正
+  const NEGATIVE = 1;// 负
+  const ALL = 0;// 全部评价
   export default {
     props:{
       ratings: {
@@ -25,15 +25,15 @@
           return [];
         }
       },
-      /*selectType: {//选择类型
+      selectType: {// 选择类型
         type: Number,
-        default: ALL//默认显示所有的
-      },*/
-      onlyContent: {//读内容或者不读内容 是布尔值
+        default: ALL// 默认显示所有的
+      },
+      onlyContent: {// 读内容或者不读内容 是布尔值
         type: Boolean,
         default: false
       },
-      desc: {//描述
+      desc: {// 描述
         type: Object,
         default() {
           return {
@@ -42,24 +42,24 @@
             negetive: '不满意',
           }
         }
-      },
+      }
     },
     methods: {
       select(type, event) {
-        if(!event._constructed) {
+        if (!event._constructed) {
           return;
         }
         this.selectType = type;
-        //点击更改按钮后告知父级 值告诉父的变化 父就可以监听组件
+        // 点击更改按钮后告知父级 值告诉父的变化 父就可以监听组件
         this.$emit('ratingtype.select', type);
       },
       toggleContent(event) {
-        if(!event._constructed) {
+        if (!event._constructed) {
           return;
         }
         this.onlyContent = !this.onlyContent;
-        //告诉content.toggle把onlyContent传出去
-        this.#emit('content.toggle', this.onlyContent);
+        // 告诉content.toggle把onlyContent传出去
+        this.$emit('content.toggle', this.onlyContent);
       }
     },
     computed: {
@@ -69,11 +69,11 @@
         });
       },
       negetive() {
-        return this.ratings.filter((rating) =>{
+        return this.ratings.filter((rating) => {
           return rating.rateType === NEGATIVE;
         });
-      },
-    },    
+      }
+    }   
   };
 </script>
 

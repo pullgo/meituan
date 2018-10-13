@@ -50,10 +50,10 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import axios from 'axios'
-  import star from 'components/star/star'
-  import loading from 'base/loading/loading'
-  import Scroll from 'base/Scroll/scroll'
+  import axios from 'axios';
+  import star from 'base/star/star';
+  import loading from 'base/loading/loading';
+  import Scroll from 'base/Scroll/scroll';
   
   export default {
     props: {
@@ -64,18 +64,16 @@
   	data() {
   		return {
   			items: [],
-  		}
+  		};
   	},
   	created() {
   		axios.get('../data.json').then((res) => {
-        this.goods = res.data.goods
-        this.seller = res.data.seller
-        this.items = res.data.poilist
-        //console.log(this.items)
+        this.goods = res.data.goods;
+        this.seller = res.data.seller;
+        this.items = res.data.poilist;
+        // console.log(this.items)
   		})
 	  },
-      computed: {
-      },
     components: {
       star,
       loading,

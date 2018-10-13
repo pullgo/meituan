@@ -22,21 +22,21 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import axios from 'axios'
+  import axios from 'axios';
 
   export default {
     data() {
       return {
         massages: []
-      }
+      };
     },
     created() {
       axios.get('../data.json').then((res) => {
-        this.massages = res.data.massages
-        //console.log(this.massages)
-      })
-    },
-  }
+        this.massages = res.data.massages;
+        // console.log(this.massages);
+      });
+    }
+  };
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
