@@ -52,7 +52,7 @@
               >
     </Shopcart>
     <!--点击跳转到每个商品详情页面-->          
-    <Detail :food="selectedFood" ref="food"></Detail>
+    <Detail :food="selectedFood" v-show="selectedFood" ref="food"></Detail>
   </div>
 </template>
 <script type="text/ecmascript-6">
@@ -77,10 +77,11 @@
         seller: [],
         ListHeight: [], // 总区间的高度
         scrollY: 0, // 跟踪变量需要跟踪就放在data里面
-        selectedFood: {} // data观测的数据不能与methods里面的方法重名 会给this访问到 要不然会覆盖
+        selectedFood: {}
+        /* data观测的数据不能与methods里面的方法重名 会给this访问到 要不然会覆盖 */
   		};
   	},
-  	created() {
+    created() {
       this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
       axios.get('../data.json').then((res) => {
         this.goods = res.data.goods;
@@ -88,23 +89,23 @@
         // console.log(typeof(this.seller))
         // 计算产生滚动
         this.$nextTick(() => {
-        // 渲染后才可以使用 这个是一个接口改变了DOM
-        // 但是数据没有更新需要使用$nextTick才可以计算高度得到滚动效果
+          // 渲染后才可以使用 这个是一个接口改变了DOM
+          /* 但是数据没有更新需要使用$nextTick才可以计算高度得到滚动效果 */
           this._initScroll(); // 调用
           // 左右联动
           this._calculateHeight(); // 计算高度相应位置高亮
         });
       });
-	  },
+    },
     // 计算左侧索引
     computed: {
       currentIndex() { // 计算左侧索引
         for (let i = 0; i < this.ListHeight.length; i++) {
           let height1 = this.ListHeight[i]; // 当前索引值的高度高点
           let height2 = this.ListHeight[i + 1]; // 下一个索引值的高度 低点
-          // 是>= 默认第一个是高亮向下的闭区间>=一开始就是o否则不会跟着滚动
+          /* 是>= 默认第一个是高亮向下的闭区间>=一开始就是o否则不会跟着滚动 */
           if (!height2 || (this.scrollY >= height1 && this.scrollY < height2)) {
-            /* this._followScroll(i); */
+            this._followScroll(i);
             return i; // 最后一个或者当前区间则返回索引
           }
         }
@@ -113,16 +114,17 @@
       // cartconcontrol修改的是food.count属性
       // 而food是父组件传入的对象而增加了count属性会影响到父组件
       // 计算属性观测的是goods变化拿到所有被选择过的foods购物车数据改变
-      selectFoods() { 
+      selectFoods() {
         let foods = [];
         this.goods.forEach((good) => { // 首先遍历goods 拿到good
           good.foods.forEach((food) => { // 遍历foods 拿到food
-            if (food.count) { // 判断food.count是否大于0 如果大于0 表示被选择过
+            if (food.count) {
+            // 判断food.count是否大于0 如果大于0 表示被选择过
               foods.push(food); // 把food push进去
             }
           });
         });
-        // console.log(food) //无数据
+        // console.log(goods) // 无数据
         return foods; // 返回foods给selectFoods 在传给购物车组件
       }
     },
@@ -135,26 +137,26 @@
       },
       _initScroll() {
         this.menuScroll = new BScroll(this.$refs.menuWrapper, {
-          click: true, 
-          // 这样才可以点击BScroll实现原理是监听star与end阻止了默认事件
-          // 但是派发了2次点击事件 成PC端点击2次需要传$event         
+          click: true
+          /* 这样才可以点击BScroll实现原理是监听star与end阻止了默认事件 */
+          // 但是派发了2次点击事件 成PC端点击2次需要传$event
         });
         this.foodsScroll = new BScroll(this.$refs.foodsWrapper, {
           click: true,
           probeType: 3
-          // 为1时非实时派发滚动事件为2时屏幕滑动为3的时候
-          // 不仅在屏幕滑动的过程中而且在momentum滚动动画实时派发 
-          // 是foodsScroll面设置的否则滚动时左边无高亮效果       
+          /* 为1时非实时派发滚动事件为2时屏幕滑动为3的时候
+          不仅在屏幕滑动的过程中而且在momentum滚动动画实时派发
+          是foodsScroll面设置的否则滚动时左边无高亮效果 */
         });
         // 监听滚动位置scroll方法滚动的时候把实时位置暴露出来
         this.foodsScroll.on('scroll', (pos) => {
           if (pos.y <= 0) {
             this.scrollY = Math.abs(Math.round(pos.y));
-            // Math.round转化为整数 Math.abs绝对值可能是负值转为正值  
+            /* Math.round转化为整数 Math.abs绝对值可能是负值转为正值 */
           }
         });
       },
-      // 传入event为解决区分是不是本身事件而在dom中传入的event的时候在pc端出现2次点击事件
+      /* 传入event为解决区分是不是本身事件而在dom中传入的event的时候在pc端出现2次点击事件 */
       selectMenu(index, event) {
         if (!event._constructed) {
           return;
@@ -162,7 +164,7 @@
         // console.log(index);
         let foodsList = this.$refs.foodsWrapper;
         let el = foodsList[index];
-        console.log(this.foodsList[index]);
+        // console.log(this.foodsList[index]);
         this.foodsScroll.scrollToElement(el, 300);
       },
       // 点击跳转到每个商品详情页面
@@ -172,8 +174,8 @@
         }
           this.selectedFood = food;
           // 调用子组件detail.vue的show方法跳转到每个商品详情页面
+          // console.log(this.selectedFood);
           this.$refs.food.show();
-          // console.log(this.food)
       },
       _calculateHeight() {
         let foodList = this.$refs.foodsWrapper.getElementsByClassName('food-list-hook');
@@ -182,7 +184,7 @@
         for (let i = 0; i < foodList.length; i++) {
           let item = foodList[i]; // 每一个的高度
           height += item.clientHeight;
-          // clientHeight接口 对区间的统计可理解为内部可视区高度,样式的height+上下padding
+          /* clientHeight接口 对区间的统计可理解为内部可视区高度,样式的height+上下padding */
           this.ListHeight.push(height);
         }
       },

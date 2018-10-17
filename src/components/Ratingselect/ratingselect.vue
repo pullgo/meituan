@@ -11,14 +11,12 @@
     </div>
   </div>
 </template>
-
 <script type="text/ecmascript-6">
-
   const POSITIVE = 0;// 正
   const NEGATIVE = 1;// 负
   const ALL = 0;// 全部评价
   export default {
-    props:{
+    props: {
       ratings: {
         type: Array,
         default() {
@@ -39,8 +37,8 @@
           return {
             all: '全部',
             positive: '满意',
-            negetive: '不满意',
-          }
+            negetive: '不满意'
+          };
         }
       }
     },
@@ -73,7 +71,7 @@
           return rating.rateType === NEGATIVE;
         });
       }
-    }   
+    }
   };
 </script>
 
@@ -82,9 +80,10 @@
 
   .ratingselect
     .rating-type
-      padding: 18px 0
-      margin: 0 18px//padding的话下划线会满
-      border-1px(rgba(7, 17, 27, 0.1))
+      padding: 10px 0
+      margin: 0 0px//padding的话下划线会满
+      //border-1px(rgba(7, 17, 27, 0.1))
+      //border: 1px solid #ffc95d
       font-size: 0
       .block
         display: inline-block//有间隙 父级加font size
@@ -100,15 +99,17 @@
           font-size: 8px
           margin-left: 2px
         &.positive
-          background: rgb(0, 160, 220, 0.2)
+          background: #fff
           &.active
-            background: rgb(0, 160, 220)
+            background: #ffc95d
+            color: #383838
         &.negative
           background: rgba(77, 85, 93, 0.2)
           &.active
-            background: rgb(77, 85, 93)
+            background: #ffc95d
+            color: #383838
     .switch
-      padding: 12px 18px
+      //padding: 12px 18px
       line-height: 24px
       border-bottom: rgba(7, 17, 27, 0.1)
       color: rgb(147, 153, 159)

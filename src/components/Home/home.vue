@@ -142,15 +142,15 @@
     data() {
       return {
         recommends: [],
-        isFixed:'isFixed',
-        noFixed:'noFixed',
+        isFixed: 'isFixed',
+        noFixed: 'noFixed',
         fixedSearch: false
       };
     },
      // 购物车有商品的时候
     computd: {
       totalCount() {
-      let count = 0; 
+      let count = 0;
       }
     },
     created() {
@@ -161,27 +161,28 @@
       });
     },
     mounted() {
-      window.addEventListener('scroll', this.handleScroll); // 添加滚动监听事件
+      window.addEventListener('scroll', this.handleScroll);
+       // 添加滚动监听事件
     },
     methods: {
        // 滑动搜索框特效
       handleScroll () {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop || 
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop ||
         document.body.scrollTop;
         if (scrollTop > 0) {
           this.fixedSearch = true;
-          this.$refs.headAddress.style = "display:none";
-          //this.$refs.head.style.tranform = `translate3d(0,40px,0)`
+          this.$refs.headAddress.style = 'display:none';
+          // this.$refs.head.style.tranform = `translate3d(0,40px,0)`
         } else {
           this.fixedSearch = false;
-          this.$refs.headAddress.style = "display:block";
+          this.$refs.headAddress.style = 'display:block';
         }
-          return '';        
+          return '';
          // console.log(offsetTop)
       },
       touthes(event) {
-        this.$emit('touchStart','touchMove','touchEnd', event);     
-      },
+        this.$emit('touchStart', 'touchMove', 'touchEnd', event);
+      }
     },
     destroyed () { // 销毁
       window.removeEventListener('scroll', this.handleScroll);
@@ -192,7 +193,6 @@
       Swich,
       Goods,
       Massage
-      //Shopcart
     }
   };
 </script>
@@ -200,8 +200,8 @@
 <style scoped lang="stylus" rel="stylesheet/stylus">
 //@import "../../common/stylus/mixin"
 .home
-  position: relative
-  height: 100%
+  // position: relative
+  // height: 100%
   //overflow-y: auto
   background: #fff
   .head

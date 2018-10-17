@@ -5,7 +5,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import BScroll from 'better-scroll'; 
+  import BScroll from 'better-scroll';
   export default {
     props: {
       probeType: { // 什么情况下都可以监听到
@@ -60,13 +60,13 @@
         if (this.pullup) {
           this.scroll.on('scrollEnd', () => {
             if (this.scroll.y <= (this.scroll.maxScrollY + 50)) {
-              this.$emit('scrollToEnd')
+              this.$emit('scrollToEnd');
             }
           });
         }
         if (this.beforeScroll) {
           this.scroll.on('beforeScrollStart', () => {
-            this.$emit('beforeScroll')
+            this.$emit('beforeScroll');
           });
         }
       },

@@ -1,59 +1,43 @@
-﻿<template><!--点击跳到单个商品页面 v-show="showFlag-->
+﻿<template><!--点击跳到单个商品页面-->
   <transition class="move" ref="food">
     <div class="detail" v-show="showFlag">
       <div class="detail-content">
         <div class="icon-wrapper">
           <div class="fl foodheader-left">
-            <span class="iconfont return icon-xiala"></span>
+            <span class="iconfont return icon-xiala" @click="closeDetail"></span>
           </div>
-          <div class="fr foodheader-right" @click="showList">
+          <div class="fr foodheader-right">
             <span class="iconfont icons icon-xiaoxi"></span>
-            <span class="iconfont icons icon-fenxiang" ></span>
-            <span class="iconfont icons icon-gengduo"></span>
-          </div>
-          <!--点击分享弹出的对话框-->
-          <div class="shareBox" v-show="listShow">
-            <div class="top"></div>
-            <span class="text">商家配送范围有限，建议分享给您附近的朋友</span>
-            <div class="box-content">
-              <div class="box">
-                <span class="iconfont icons"></span>
-                <span class="text">微信朋友圈</span>
-              </div>
-              <div class="box">
-                <span class="iconfont icons"></span>
-                <span class="text">微信好友</span>
-              </div>
-              <div class="box">
-                <span class="iconfont icons"></span>
-                <span class="text">QQ好友</span>
-              </div>
-            </div>
-            <span class="cancal">取消</span>
+            <span class="iconfont icons icon-fenxiang"@click="showList"></span>
+            <span class="iconfont icons icon-gengduo" @click="showBox"></span>
           </div>
           <!--点击更多弹出的对话框-->
-          <div class="moreBox">
-            <div class="icons">
-              <i class="iconfont icon-gouwuchekong"></i>
-              <i class="iconfont icon-xiaoxi"></i>
-            </div>
-            <div class="text">
+          <div class="moreBox" v-show="boxShow" @click="hideBox">
+            <div class="box">
+              <i class="iconfont icons icon-gouwuchekong"></i>
               <span>我的购物车</span>
+            </div>
+            <div class="box">
+              <i class="iconfont icons icon-xiaoxi"></i>
               <span>消息中心</span>
+            </div>
+            <div class="box">
+              <i class="iconfont icons icon-xiaoxi"></i>
+              <span>联系商家</span>
             </div>
           </div>
         </div>
         <div class="image-wrapper">
-          <img class="img" :src="goods[0].foods[0].image"/>
+          <img class="img" :src="food.image"/>
         </div>
         <div class="content">
-          <h1 class="title">{{goods[0].foods[0].name}}</h1>
+          <h1 class="title">{{food.name}}</h1>
           <div class="detail-text">
-            <span class="sell-count">月售{{goods[0].foods[0].sellCount}}</span>
-            <span class="rating">好评度{{goods[0].foods[0].rating}}%</span>
+            <span class="sell-count">月售{{food.sellCount}}</span>
+            <span class="rating">好评度{{food.rating}}%</span>
           </div>
           <div class="price">
-            <span class="now">￥{{goods[0].foods[0].price}}</span><span v-show="goods[0].foods[0].oldPrice" class="old">￥{{goods[0].foods[0].oldPrice}}</span>
+            <span class="now">￥{{food.price}}</span><span v-show="food.oldPrice" class="old">￥{{food.oldPrice}}</span>
           </div>
           <Split></Split>
           <div class="cartcontrol-wrapper">
@@ -63,13 +47,37 @@
         </div>
         <div class="info">
           <h1 class="title">商品描述</h1>
-          <div class="text" v-show="goods[0].foods[0].info">{{goods[0].foods[0].info}}</div>
+          <div class="text" v-show="food.info">{{food.info}}</div>
         </div>
         <div class="ratings">
           <h1 class="title">外卖评价</h1>
           <Ratingselect :select-type="selectType" :only-content="onlyContent"></Ratingselect>
         </div>
       </div>
+      <!--点击分享弹出的对话框-->
+      <div class="shareBox" v-show="listShow" ref="shareBox">
+        <h1 class="top-title">商家配送范围有限，建议分享给您附近的朋友</h1>
+        <div class="box-content border-1px">
+          <ul>
+            <li class="box">
+              <span class="iconfont icons icon-pengyouquan"></span>
+              <span class="text">微信朋友圈</span>
+            </li>
+            <li class="box">
+              <span class="iconfont icons icon-weixin"></span>
+              <span class="text">微信好友</span>
+            </li>
+            <li class="box">
+              <span class="iconfont icons icon-QQ"></span>
+              <span class="text">QQ好友</span>
+            </li>
+          </ul>
+        </div>
+        <div class="cancal">取消</div>
+      </div>
+      <transition name="fade">
+        <div class="list-mask" v-show="listShow" @click="hideList"></div>
+      </transition>
     </div>
   </transition>
 </template>
@@ -81,6 +89,7 @@
   import Ratingselect from 'components/Ratingselect/ratingselect';
   import Split from 'base/Split/split';
   import Cartcontrol from 'base/Cartcontrol/cartcontrol';
+
   const ALL = 2;
   export default {
     propos: {
@@ -92,21 +101,24 @@
       return {
         goods: '',
         foods: '',
+        food: {},
         showFlag: false, // 观测
         selectType: ALL, // 子传父
         onlyContent: true, // 子传父
+        listShow: false,
+        boxShow: false,
         desc: {
           all: '全部',
           positive: '推荐',
           negative: '吐槽'
         }
       };
-      listShow: false
     },
     created() {
       axios.get('../data.json').then((res) => {
         this.goods = res.data.goods;
-         // console.log(this.food)
+        this.foods = res.data.foods;
+        // console.log(this.foods);
       });
     },
     watch: {
@@ -122,7 +134,7 @@
         this.showFlag = true; // 父调子
         this.selectType = ALL;
         this.onlyContent = true;
-        this.$nextTick(() => {
+        /* this.$nextTick(() => {
           if (!this.scroll) {
             this.scroll = new BScroll(this.$refs.food, {
               click: true
@@ -130,17 +142,33 @@
           } else {
             this.scroll.refresh();
           }
-          // console.log(this.scroll)
-        });
+          // console.log(this.scroll);
+        }); */
       },
-      showList(listShow) {
+      showList() {
         this.listShow = true;
+        this.$refs.shareBox.style = 'z-index:35';
+      },
+      hideList() {
+        this.listShow = false;
+      },
+      showBox() {
+        this.boxShow = true;
+      },
+      hideBox() {
+        this.boxShow = false;
+      },
+      closeDetail() {
+        this.showFlag = false;
       }
     },
-    events: { // 子----父 因为选择的都是基础类型改变不了父级的组件
-      'ratingtype.select'(type) { // TYPE 里面的T是小写 与$emit里面的评写一样
-        this.selectType = type; // 把子组件的type赋值给父组件selectType
-         // 选择筛选后窗口的高度会更改 需要进行下一步的操作this.scroll.refresh()但是没有效果 因为DOM没有更新还是需要nexttick 异步更新DOM
+    // 子----父 因为选择的都是基础类型改变不了父级的组件
+    events: {
+    // TYPE里面的T是小写与$emit里面的评写一样
+      'ratingtype.select'(type) {
+        // 把子组件的type赋值给父组件selectType
+        this.selectType = type;
+        // 选择筛选后窗口的高度会更改 需要进行下一步的操作this.scroll.refresh()但是没有效果 因为DOM没有更新还是需要nexttick 异步更新DOM
         this.$nextTick(() => {
           this.scroll.refresh();
         });
@@ -151,7 +179,7 @@
           this.scroll.refresh();
         });
       }
-    }, 
+    },
     components: {
       Cartcontrol,
       Split,
@@ -168,8 +196,9 @@
     left: 0
     top: 0
     bottom: 48px
-    z-index: 30
+    z-index: 32
     width: 100%
+    height: 100%
     background: #fff
     &.move-transtion//最终状态
       transition: all 0.2s linear//晃动为线性移动
@@ -187,30 +216,17 @@
         .foodheader-right
           margin-right: 25px
           .icons
-            margin-right: 8px
-        .shareBox
-          width: 100%
-          height: 100%
-          position: fixed
-          bottom: 0px
-          left: 0px
+            margin-right: 8px         
+        .moreBox
+          position: absolute
+          top: 51px
+          right: 12px
+          padding: 0px 10px 10px 10px
+          z-index: 200
           background: #fff
           font-size: 12px
-          color: #000
-          //z-index: 200
-          display: flex
-          .top
-            height: 20px
-            border-bottom: 1px solid (rgba(7, 17, 27, 0.1))
-          .text
-            text-aglin: center
-          .box-content
-            margin: 20px 20px 5px 20px
-            .box
-              flex: 1
-              //.icons
-                
-              //.text
+          .icons
+            margin-right: 5px
       .image-wrapper
         border-radius: 10px
         .img
@@ -227,8 +243,9 @@
         .title
           margin-bottom: 15px
           margin-top: 15px
+          margin-right: 100px
           line-height: 14px
-          font-size: 24px
+          font-size: 22px
           font-weight: 700
           color: rgb(7, 17, 27)
         .sell-count, .rating
@@ -251,7 +268,7 @@
         .cartcontrol-wrapper
           position: absolute
           right: 12px
-          bottom: 12px
+          bottom: 9px
         .buy
           position: absolute
           right: 18px
@@ -264,12 +281,13 @@
           font-size: 10px
           border-radius: 12px
           color: #fff
-          background: rgb(0, 160, 220)
+          background: #ffc95d
       .info
         padding-top: 12px
         .title
           margin-bottom: 15px
           margin-top: 15px
+          margin-right: 100px
           line-height: 14px
           font-size: 16px
           font-weight: 700
@@ -278,5 +296,70 @@
           font-size: 12px
           color: rgb(147, 153, 159)
           line-height: 12px
-
+      .ratings
+        padding: 0
+        margin: 0
+      .title
+        margin-bottom: 15px
+        margin-top: 15px
+        margin-right: 100px
+        line-height: 14px
+        font-size: 14px
+        font-weight: 700
+        color: #292d31
+    .shareBox
+      width: 100%
+      // height: 150px
+      position: fixed
+      bottom: 0px
+      left: 0px
+      background: #fff
+      font-size: 12px
+      color: #000
+      .top-title
+        font-size: 15px
+        text-align: center
+        margin-top: 10px
+      .box-content
+        padding: 10px 10px 12px 31px
+        border-bottom: 1px solid (rgba(7, 17, 27, 0.1))
+        .box
+          display: inline-block
+          flex: 1
+          margin-right: 55px
+          flex-direction: column
+          align-items: center
+          .icons
+            display: flex
+            flex-direction: column
+            align-items: center
+            font-size: 50px
+            margin-top: 16px
+            color: #ffc95d
+          .text
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin-top: 10px
+            line-height: 20px
+      .cancal
+        font-size: 16px;
+        text-align: center
+        height: 40px
+        line-height: 40px
+    .list-mask
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 40
+      backdrop-filter: blur(10px)
+      opacity: 1
+      background: rgba(7, 17, 27, 0.6)
+      &.fade-enter-active, &.fade-leave-active
+        transition: all 0.5s
+      &.fade-enter, &.fade-leave-active
+        opacity: 0
+        background: rgba(7, 17, 27, 0)
 </style>

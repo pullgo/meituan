@@ -21,29 +21,28 @@
 		},
 		computed: {
 			starType() {
-				return 'star-' + this.size; 
-				// 拼接一个class比如star-48/35/24
+				return 'star-' + this.size; // 拼接一个class 比如star-48/35/24
 			},
-			itemClasses() {
-				let result = [];
-				// 4.3->4向下取0.5倍数的值
-				let score = Math.floor(this.score * 2) / 2;
-				// 判断是否有小数 不为0则是有小数的
-				let hasDecimal = score % 1 !== 0;
-				// 整数 全心
-				let integer = Math.floor(score);
-				for (let i = 0; i < integer; i++) {
-					result.push(CLS_ON);
+		itemClasses() {
+			let result = [];
+			// 4.3->4向下取0.5倍数的值
+			let score = Math.floor(this.score * 2) / 2;
+			// 判断是否有小数 不为0则是有小数的
+			let hasDecimal = score % 1 !== 0;
+			// 整数 全心
+			let integer = Math.floor(score);
+			for (let i = 0; i < integer; i++) {
+				result.push(CLS_ON);
 				}
-				if (hasDecimal)	{
-					result.push(CLS_HALF);
+			if (hasDecimal)	{
+				result.push(CLS_HALF);
 				}
-				while (result.length < LENGTH) {
-					result.push(CLS_OFF);
+			while (result.length < LENGTH) {
+				result.push(CLS_OFF);
 				}
-	 		       return result;
-			}		
-		}	
+				return result;
+			}
+		}
 	};
 </script>
 

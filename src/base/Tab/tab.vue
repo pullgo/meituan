@@ -2,19 +2,19 @@
   <div class="tab border-1px">
     <router-link to="/home">
       <i class="iconfont icon-shouye i"></i>
-      <span>首页</span>
+      <span class="text">首页</span>
     </router-link>
     <router-link to="/fastbuy">
       <i class="iconfont icon-shangjia i"></i>
-      <span>闪购</span>
+      <span class="text">闪购</span>
     </router-link>
     <router-link to="/order">
       <i class="iconfont icon-dingdan i"></i>
-      <span>订单</span>
+      <span class="text">订单</span>
     </router-link>
     <router-link to="/me">
       <i class="iconfont icon-wode i"></i>
-      <span>我的</span>
+      <span class="text">我的</span>
     </router-link>
   </div> 
 </template>
@@ -45,6 +45,8 @@
       &.active
         color: #ffc847
     .i
-      font-size: 20px
+      font-size: 18px
       margin-top: 4px
+    .text
+      font-size: 15px
 </style>

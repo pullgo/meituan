@@ -25,6 +25,7 @@ module.exports = {
     'space-before-function-paren': 0,
     'semi': ['error', 'always'],
     'indent': 0,
-    'no-unused-vars': 0
+    'no-unused-vars': 0,
+    'no-tabs': 'off'
   }
 }

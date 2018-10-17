@@ -31,7 +31,7 @@
                       <li class="support-supp" v-for="supp
              in item.discounts2[0]">
                         <span class="iconfont icon-store icon"></span>
-                        <span class="text border-1px">{{item.discounts2[0].info}}</span>
+                        <!--<span class="text border-1px">{{item.discounts2[0].info}}</span>--> 
                       </li>
                     </ul>
                   </div>
@@ -63,17 +63,17 @@
     },
   	data() {
   		return {
-  			items: [],
+        items: []
   		};
   	},
-  	created() {
-  		axios.get('../data.json').then((res) => {
+    created() {
+      axios.get('../data.json').then((res) => {
         this.goods = res.data.goods;
         this.seller = res.data.seller;
         this.items = res.data.poilist;
         // console.log(this.items)
-  		})
-	  },
+      });
+    },
     components: {
       star,
       loading,

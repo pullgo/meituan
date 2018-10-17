@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="shopcart">
+  <div class="shopcart" ref="shopcart">
     <div class="shopcart-wrapper" @click="toggleList">
       <div class="wrapper-left">
         <div class="icon-wrapper" :class="{'highlight':totalCount>0}">
@@ -264,7 +264,7 @@
     left: 0px
     width: 100%
     height: 58px
-    z-index: 156
+    z-index: 33
     .shopcart-wrapper
       background: #404040
       display: flex
@@ -284,7 +284,7 @@
           border-radius: 50%
           border-sizing: border-box
           &.highlight
-            background: rgb(0, 160, 220)
+            background: #ffc95d
           .logo
             width: 100%
             height: 100%
@@ -295,7 +295,7 @@
             .icon-gouwuchekong
               font-size: 28px
               &.highlight
-                color: #fff
+                color: #383838
           .num
             position: absolute
             top: 0
@@ -354,8 +354,8 @@
             background: #404040
             color: #9c9c9c
           &.enough
-            background: #00a0dc
-            color: #fff
+            background: #ffc95d
+            color: #383838
     .ball-container
       .ball
         position: fixed//相对于视口动画

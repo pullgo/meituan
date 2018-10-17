@@ -318,3 +318,4 @@ Summary of project questions 项目问题点总结：
 
 	《具体事例看home.vue 购物车事件 参考链接；https://blog.csdn.net/m_uncle/article/details/78129222》
 
+持续更新中.............

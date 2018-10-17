@@ -19,29 +19,29 @@ export default new VueRouter({
 
 	routes: [
 		{
-			path:'/home',
+			path: '/home',
 			component: Home,
 			children: [
 				{
-					path:'massage',
+					path: 'massage',
 					component: Massage
 				},
 				{
-					path:'food',
+					path: 'food',
 					component: Food,
 					// redirect: '/menu',
 					children: [
 						{
 						path: '/home/food/Menu',
-						component: Menu,												
+						component: Menu
 						},
 						{
 						path: '/home/food/seller',
-						component: Seller						
+						component: Seller
 						},
 						{
 						path: '/home/food/ratings',
-						component: Ratings							
+						component: Ratings
 						}
 					]
 				},
@@ -52,19 +52,19 @@ export default new VueRouter({
 			]
 		},
 		{
-			path:'/fastbuy',
+			path: '/fastbuy',
 			component: FastBuy
 		},
 		{
-			path:'/order',
+			path: '/order',
 			component: Order
 		},
 		{
-			path:'/me', 
+			path: '/me',
 			component: Me,
 			children: [
 				{
-					path:'mmassage',
+					path: 'mmassage',
 					component: MMassage
 				},
 				{
@@ -74,16 +74,8 @@ export default new VueRouter({
 			]
 		},
 		{ // 404路由 访问不存在 直接跳转
-			path:'*',
+			path: '*',
 			redirect: '/home'
 		}
 	]
 });
-
-
-
-
-
-
-
-

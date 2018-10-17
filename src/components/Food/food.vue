@@ -81,7 +81,6 @@
         box-sizing: border-box
         font-size: 10px
         border-radius: 12px
-        color: #fff
-        background: rgb(0, 160, 220)
-
-</style> 
+        color: #383838
+        background: #ffc95d
+</style>

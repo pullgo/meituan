@@ -14,7 +14,7 @@ export default {
     iconType() {
       return 'icon-' + this.size;
     }
-  },
+  }
 };
 </script>
 

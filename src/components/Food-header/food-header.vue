@@ -84,12 +84,9 @@
     <router-view></router-view>    
   </div>
 </template>
-
-<script type="text/ecmascript-6">
-
+<script type='text/ecmascript-6'>
   import axios from 'axios';
   import Icon from 'base/Icon/icon';
-
   export default {
     data() {
       return {
@@ -100,14 +97,14 @@
     created() {
       axios.get('../data.json').then((res) => {
         this.seller = res.data.seller;
-      }),
+      });
       this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
     },
     methods: {
-      toggleList(listShow) {
+      toggleList() {
         this.listShow = true;
       },
-      hideList(listShow){
+      hideList() {
         this.listShow = false;
       }
     },
@@ -138,7 +135,7 @@
       font-size: 0
       //height: 80px
       margin-top: 20px
-      background: rgba(255, 255, 255, 0.9)
+      //background: #f3f5f7
       border-radius: 8px
       transform: scale(0.98)
       .avatar
@@ -193,7 +190,7 @@
           padding-bottom: 30px
           margin-top: 15px
           height: 100%
-          background: rgba(255, 255, 255, 0.9)
+          background: #f3f5f7
           .icon-wrapper
             //position: relative
             margin-bottom: 30px

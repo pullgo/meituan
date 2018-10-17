@@ -152,9 +152,9 @@
 <style scoped lang="stylus" rel="stylesheet/stylus">
 @import "../../common/stylus/mixin"
 .me
-  position: relative
-  width: 100%
-  height: 100%
+  //position: relative
+  //width: 100%
+  //height: 100%
   border-bottom: 10px solid #ededed
   font-size: 14px
   color: #383838

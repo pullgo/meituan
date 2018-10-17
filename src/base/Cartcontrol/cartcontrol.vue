@@ -5,22 +5,20 @@
     <transition class="move">
      <div class="cart-decrease" v-show="food.count>0" @click.stop.prevent="decreaseCart">
         <!--滚动层-->
-        <span class="inner iconfont icon-wuuiconsuoxiao"></span>
+        <span class="inner iconfont icon-53"></span>
       </div>
     </transition>
     <!--数字-->
     <div class="cart-count" v-show="food.count>0">{{food.count}}</div>
     <!--加-->
-    <div class="cart-add iconfont icon-jia" @click.stop.prevent="addCart"></div>
+    <div class="cart-add iconfont icon-jia1" @click.stop.prevent="addCart"></div>
   </div>
 </template>
 <script type="text/ecmascript-6">
   import Vue from 'vue';
   export default {
-    props: {
-      food: { // 父辈传入food
-        type: Object
-      }
+    props: { // 父辈传入food
+      food: {}
     },
     watch: {
       food: {
@@ -71,7 +69,7 @@
       display: inline-block
       padding: 6px//扩大点击区域
       font-size: 24px
-      color: rgb(0, 160, 260)
+      color: #999999
       transform: translate3d(0, 0, 0)//3D可以开起硬件加速 更加流畅
       .inner
         display: inline-block//否则动画做不起来 否则没有宽高 高度为0
@@ -102,6 +100,6 @@
       padding: 6px
       line-height: 30px
       font-size: 24px
-      color: rgb(0, 160, 220)
+      color: #ffc95d
 
 </style>
