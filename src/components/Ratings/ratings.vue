@@ -93,7 +93,7 @@
   @import "../../common/stylus/mixin"
   .ratings
     position: absolute
-    top: 190px
+    top: 220px
     left: 0px
     width: 100%
     height: 100%

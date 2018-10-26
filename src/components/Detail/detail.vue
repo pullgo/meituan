@@ -8,8 +8,8 @@
           </div>
           <div class="fr foodheader-right">
             <span class="iconfont icons icon-xiaoxi"></span>
-            <span class="iconfont icons icon-fenxiang"@click="showList"></span>
-            <span class="iconfont icons icon-gengduo" @click="showBox"></span>
+            <span class="iconfont icons icon-fenxiang" @click="showList"></span>
+            <span class="iconfont icons icon-gengduo"  @click="showBox"></span>
           </div>
           <!--点击更多弹出的对话框-->
           <div class="moreBox" v-show="boxShow" @click="hideBox">

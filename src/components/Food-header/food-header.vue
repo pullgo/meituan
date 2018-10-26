@@ -77,11 +77,7 @@
         <div class="activityBg"></div>
       </div>      
     </div>
-    <!--模糊的背景层-->
-    <div class="background">
-      <img :src="seller.avatar" class="img">
-    </div>
-    <router-view></router-view>    
+      <router-view></router-view>
   </div>
 </template>
 <script type='text/ecmascript-6'>
@@ -118,7 +114,7 @@
   .FoodHeader
     width: 100%
     height: 130px
-    margin-bottom: 20px
+    //margin-bottom: 20px
     //margin-left: 15px
     .IconBox
       width: 100%
@@ -133,11 +129,12 @@
     .content-wrapper
       positive: relative
       font-size: 0
-      //height: 80px
-      margin-top: 20px
+      height: 90px
+      margin-top: 35px
       //background: #f3f5f7
       border-radius: 8px
       transform: scale(0.98)
+      box-shadow: 1px 1px 0.1px 0.5px #6d6b6b
       .avatar
         position: absolute
         right: 20px
@@ -236,19 +233,8 @@
           top: 0
           left: 0
           width: 100%
-          height: 160px
+          height: 131px
           background: rgba(255, 255, 255, 0.9)
           z-index: -2          
-    .background
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 160px
-      z-index: -1
-      filter: blur(10px)
-      .img
-        width: 100%
-        height: 100%
 
 </style> 

@@ -4,7 +4,7 @@
       <scroll ref="scroll" class="goods-content" :data="poilist">
         <div>
           <ul>
-            <router-link  :to="{path:'/home/food'}">
+            <router-link  :to="{path:'/home/menu'}">
               <li v-for="item in items" class="item">
                 <div class="icon">
                     <img v-lazy="item.pic_url" height="100" width="114">

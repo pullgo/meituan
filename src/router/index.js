@@ -11,6 +11,7 @@ import Food from 'components/Food/food';
 import Menu from 'components/Menu/menu';
 import Seller from 'components/Seller/seller';
 import Ratings from 'components/Ratings/ratings';
+// import Detail from 'components/Detail/detail';
 
 Vue.use(VueRouter);
 
@@ -34,6 +35,12 @@ export default new VueRouter({
 						{
 						path: '/home/food/Menu',
 						component: Menu
+						/* children: [
+							{
+								path: '/home/food/menu/Detail',
+								component: Detail
+							}
+						] */
 						},
 						{
 						path: '/home/food/seller',
@@ -72,10 +79,10 @@ export default new VueRouter({
 					component: Setting
 				}
 			]
-		},
-		{ // 404路由 访问不存在 直接跳转
-			path: '*',
-			redirect: '/home'
 		}
+		/* {  404路由 访问不存在 直接跳转
+			// path: '*',
+			// redirect: '/home'
+		} */
 	]
 });
