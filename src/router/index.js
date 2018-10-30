@@ -7,7 +7,7 @@ import Me from 'components/Me/me';
 import Massage from 'components/Massage/massage';
 import MMassage from 'components/MMassage/mmassage';
 import Setting from 'components/Setting/setting';
-import Food from 'components/Food/food';
+// import Food from 'components/Food/food';
 import Menu from 'components/Menu/menu';
 import Seller from 'components/Seller/seller';
 import Ratings from 'components/Ratings/ratings';
@@ -28,33 +28,17 @@ export default new VueRouter({
 					component: Massage
 				},
 				{
-					path: 'food',
-					component: Food,
-					// redirect: '/menu',
-					children: [
-						{
-						path: '/home/food/Menu',
-						component: Menu
-						/* children: [
-							{
-								path: '/home/food/menu/Detail',
-								component: Detail
-							}
-						] */
-						},
-						{
-						path: '/home/food/seller',
-						component: Seller
-						},
-						{
-						path: '/home/food/ratings',
-						component: Ratings
-						}
-					]
+					path: '/home/Menu',
+					component: Menu
+
 				},
 				{
-					path: ':id', // 传入不同的id 渲染不同物品
-					component: Food
+					path: '/home/seller',
+					component: Seller
+				},
+				{
+					path: '/home/ratings',
+					component: Ratings
 				}
 			]
 		},

@@ -3,7 +3,7 @@
     <FoodHeader></FoodHeader>    
     <div class="ttab">
       <span class="ttab-item">
-        <router-link to="/home/food/menu">点菜</router-link>
+        <router-link to="/home/food/Menu">点菜</router-link>
       </span>
       <span class="ttab-item">
          <router-link to="/home/food/ratings">评价</router-link>

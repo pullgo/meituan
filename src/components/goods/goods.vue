@@ -1,6 +1,6 @@
 <template>
   <div class="goods">
-  	<div class="foods-wrapper">
+  	<div class="goods-wrapper">
       <scroll ref="scroll" class="goods-content" :data="poilist">
         <div>
           <ul>
@@ -26,7 +26,7 @@
                     <span class="charging">{{item.min_price_tip}}</span>∣
                     <span class="average">{{item.average_price_tip}}</span>
                   </div>
-                  <div class="foods-type">
+                  <div class="goods-type">
                     <ul v-if="item.discounts2" class="supports">
                       <li class="support-supp" v-for="supp
              in item.discounts2[0]">
@@ -83,7 +83,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  .foods-wrapper	
+  .goods-wrapper	
    	margin: 10px
     background: #fff
     .item
@@ -139,7 +139,7 @@
             .money
               padding-right: 10px
               margin-left: 6px
-        .foods-type
+        .goods-type
           height: 20px
           display: inline-block
           .text

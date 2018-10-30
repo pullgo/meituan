@@ -1,34 +1,36 @@
 <template>
   <div class="seller" ref="seller">
-  <div class="seller-wrapper">
-    <div class="address-wrapper">
-      <div class="address-left">
-        <i class="iconfont icon-ziyuan"></i>
-        <span class="text">广州市增城区沙浦大道31号嘉业购物广场1楼</span>
-      </div>
-      <div class="address-right">
-        <i class="iconfont icon-kefuzhongxin"></i>
-      </div>
-    </div>
-    <!--商家实景-->
-    <Scroll ref="scroll">
-      <div>
-        <div class="pic-wrapper" ref="picWrapper">
-          <ul class="pic-list" ref="picList">
-            <li class="pic-item" v-for="pic in seller.pics">
-              <img :src="pic" width="120" height="90">
-            </li>
-          </ul>        
+    <FoodHeader></FoodHeader>    
+    <div class="seller-wrapper">
+      <div class="address-wrapper">
+        <div class="address-left">
+          <i class="iconfont icon-ziyuan"></i>
+          <span class="text">广州市增城区沙浦大道31号嘉业购物广场1楼</span>
+        </div>
+        <div class="address-right">
+          <i class="iconfont icon-kefuzhongxin"></i>
         </div>
       </div>
-    </Scroll>
-    <!--档案-->
-    <div class="archives-box"></div>
-  </div>
+      <!--商家实景-->
+      <Scroll ref="scroll">
+        <div>
+          <div class="pic-wrapper" ref="picWrapper">
+            <ul class="pic-list" ref="picList">
+              <li class="pic-item" v-for="pic in seller.pics">
+                <img :src="pic" width="120" height="90">
+              </li>
+            </ul>        
+          </div>
+        </div>
+      </Scroll>
+      <!--档案-->
+      <div class="archives-box"></div>
+    </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+  import FoodHeader from 'components/food-header/food-header';
   import axios from 'axios';
   import Scroll from 'base/Scroll/scroll';
   import BScroll from 'better-scroll';
@@ -76,6 +78,7 @@
       }
     },
     components: {
+      FoodHeader,
       Scroll
     }
   };
@@ -86,11 +89,15 @@
   .seller
     width: 100%
     height: 100%
+    position: fixed
+    top: 0
+    left: 0
     background: #fff
+    z-index: 110    
     color: #8b8b8b
-    position: absolute
-    top: 220px
     .seller-wrapper
+      position: absolute
+      top: 220px    
       padding: 10px 0
       .address-wrapper
         display: flex

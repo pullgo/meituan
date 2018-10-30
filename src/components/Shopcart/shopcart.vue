@@ -428,7 +428,7 @@
     left: 0
     width: 100%
     height: 100%
-    z-index: 40
+    z-index: -2
     backdrop-filter: blur(10px)
     opacity: 1
     background: rgba(7, 17, 27, 0.6)

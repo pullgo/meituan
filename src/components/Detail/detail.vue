@@ -4,7 +4,9 @@
       <div class="detail-content">
         <div class="icon-wrapper">
           <div class="fl foodheader-left">
-            <span class="iconfont return icon-xiala" @click="closeDetail"></span>
+            <router-link :to="{path:'/home/Menu'}">
+              <span class="iconfont return icon-xiala"  @click="closeDetail"></span>            
+            </router-link>
           </div>
           <div class="fr foodheader-right">
             <span class="iconfont icons icon-xiaoxi"></span>
@@ -273,7 +275,7 @@
           position: absolute
           right: 18px
           bottom: 18px
-          z-index: 10
+          // z-index: 10
           height: 24px
           line-height: 24px
           padding: 0 12px
@@ -311,7 +313,7 @@
       width: 100%
       // height: 150px
       position: fixed
-      bottom: 0px
+      bottom: 20px
       left: 0px
       background: #fff
       font-size: 12px
@@ -353,7 +355,7 @@
       left: 0
       width: 100%
       height: 100%
-      z-index: 40
+      z-index: 0
       backdrop-filter: blur(10px)
       opacity: 1
       background: rgba(7, 17, 27, 0.6)

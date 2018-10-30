@@ -113,11 +113,12 @@
         <i class="iconfont icon-shaixuan i" width="15" height="15"></i>
       </div>
     </div>
-    <goods></goods>
+    <div class="goods-box">
+      <goods></goods>
+    </div>
     <!--商家end--> 
     <!--购物车start
-    <shopcart ref="shopcart" @touch="touthes"
-    ></shopcart>-->
+    <shopcart ref="shopcart"></shopcart>-->
     <!--购物车end-->
     <!--店铺页面start-->
     <!--店铺页面start-->
@@ -172,17 +173,16 @@
         if (scrollTop > 0) {
           this.fixedSearch = true;
           this.$refs.headAddress.style = 'display:none';
-          // this.$refs.head.style.tranform = `translate3d(0,40px,0)`
         } else {
           this.fixedSearch = false;
           this.$refs.headAddress.style = 'display:block';
         }
           return '';
          // console.log(offsetTop)
-      },
-      touthes(event) {
-        this.$emit('touchStart', 'touchMove', 'touchEnd', event);
       }
+      /* touthes(event) {
+        this.$emit('touchStart', 'touchMove', 'touchEnd', event);
+      } */
     },
     destroyed () { // 销毁
       window.removeEventListener('scroll', this.handleScroll);
@@ -200,10 +200,12 @@
 <style scoped lang="stylus" rel="stylesheet/stylus">
 //@import "../../common/stylus/mixin"
 .home
-  // position: relative
-  // height: 100%
-  //overflow-y: auto
+  position: relative
+  top: 0px
+  left: 0px
+  min-height: 667px
   background: #fff
+  //overflow: hidden
   .head
     width: 100%
     height: 80px
@@ -239,7 +241,7 @@
         background: #e1e1e1     
     .noFixed
       position: relative
-      text-aglin: center
+      text-align: center
       .input
         width: 88%
         height: 30px
@@ -438,6 +440,8 @@
       height: 20px
       line-height: 20px
   //打开massgae消息页面的动画 因为是属于路由里面的动画 应该在router-view外一层做 否则无效果
+  .goods-box
+    position: absulote
   .hide-enter-active, .hide-leave-active 
     transition: opacity .5s
   .hide-enter, .hide-leave-active
