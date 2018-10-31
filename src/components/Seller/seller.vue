@@ -2,7 +2,7 @@
   <div class="seller" ref="seller">
     <FoodHeader></FoodHeader>    
     <div class="seller-wrapper">
-      <div class="address-wrapper">
+      <div class="address-wrapper border-1px">
         <div class="address-left">
           <i class="iconfont icon-ziyuan"></i>
           <span class="text">广州市增城区沙浦大道31号嘉业购物广场1楼</span>
@@ -24,7 +24,14 @@
         </div>
       </Scroll>
       <!--档案-->
-      <div class="archives-box"></div>
+      <div class="archives-box">
+        <ul>
+          <li v-for="item in items " class=" item border-1px">
+            <i class="iconfont icon">{{item.icon}}</i>
+            <p class="text">{{item.text}}</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -40,7 +47,33 @@
     },
     data() {
       return {
-        seller: []
+        seller: [],
+        items: [
+          {
+            icon: '',
+            text: '查看食品安全档案'
+          },
+          {
+            icon: '',
+            text: '配送服务：由美团提供配送服务'
+          },
+          {
+            icon: '',
+            text: '配送时间：11:20-23:20'
+          },
+          {
+            icon: '',
+            text: '本店搬迁至李复广场停车场里面'
+          },
+          {
+            icon: '',
+            text: '商家服务 到店自取'
+          },
+          {
+            icon: '',
+            text: '新用户立减16元，首次使用美团支付最高减3元'
+          }
+        ]
       };
     },
     created() {
@@ -94,7 +127,7 @@
     left: 0
     background: #fff
     z-index: 110    
-    color: #8b8b8b
+    // color: #8b8b8b
     .seller-wrapper
       position: absolute
       top: 220px    
@@ -132,4 +165,16 @@
             height: 90px
             &:last-child
               margin: 0
+      .archives-box
+        padding: 2px
+        .item
+          height: 20px
+          border-bottom: 1px solid rgba(7, 17, 27, 0.1)
+          .icon
+            font-size: 14px
+            color: #7d7d7d
+          .text
+            font-size: 14px
+            color: #7d7d7d
+
 </style> 
