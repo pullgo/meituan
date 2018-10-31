@@ -19,7 +19,7 @@
       </div>
       <!--购物车小球飞的效果-->
       <div class="ball-container">
-        <div v-for="ball in balls">
+        <div v-for="ball in balls" :value="ball.code" :key="ball.code">
           <transition name="drop"  @before-enter="beforeDrop" @enter="dropping" @after-enter="afterDrop">
             <div class="ball" v-show="ball.show">
               <div class="inner inner-hook"></div>
@@ -36,7 +36,7 @@
           </div>
           <div class="list-content" ref="listContent">
             <ul>
-              <li class="food" v-for="food in selectFoods">
+              <li class="food" v-for="food in selectFoods" :value="food.code" :key="food.code">
                 <span class="name">{{food.name}}</span>
                 <div class="price">
                   <span>￥{{food.price*food.count}}</span>

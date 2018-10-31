@@ -318,4 +318,14 @@ Summary of project questions 项目问题点总结：
 
 	《具体事例看home.vue 购物车事件 参考链接；https://blog.csdn.net/m_uncle/article/details/78129222》
 
+	13.一直以来我的手机页面在预览的时候一直无法滑动
+	
+	CSS DOM 各个定位等都一一排查过了  都没有找到原因 终于在一次网上查询如法滑动的原因 无意中看到scroll.js有默认阻止滑动事件 赶紧回头看了一下 想不到真的z在reset.css里面有一句：
+	 
+	touch-action：none 顿时恍然大悟  
+
+	赶紧一搜touch-action：none为何物  表示不进行任何touch相关默认行为，例如，你想用手指滚动网页就不行，双击放大缩小页面也不可以，所有这些行为要自定义
+	https://www.zhangxinxu.com/wordpress/2018/07/chrome-safari-touchmove-preventdefault-treated-as-passive/?from=groupmessage
+
+
 持续更新中.............

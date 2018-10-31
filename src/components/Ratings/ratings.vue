@@ -32,7 +32,7 @@
         <div>
           <div class="ratings-wrapper">
             <ul>
-              <li v-for="rating in ratings" class="item border-1px">
+              <li v-for="rating in ratings" :value="rating.code" :key="rating.code" class="item border-1px" v-show="ratings">
                 <div class="avatar">
                   <img class="img" width="28" height="28" :src="rating.avatar">
                 </div>
@@ -45,7 +45,7 @@
                   <p class="text">{{rating.text}}</p>
                   <div class="recommend">
                     <span class="icon-thumb_up"></span>
-                    <span class="item" v-for="item in rating.recommend">{{item}}</span>
+                    <span class="item" v-for="item in rating.recommend" :value="item.code" :key="item.code" >{{item}}</span>
                   </div>
                   <div class="time"></div>
                 </div>
@@ -99,7 +99,7 @@
   .ratings
     width: 100%
     height: 100%
-    position: fixed
+    position: absolute
     top: 0
     left: 0
     background: #fff

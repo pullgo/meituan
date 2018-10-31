@@ -1,11 +1,12 @@
 <template>
-  <div class="shopcart-icon" ref="shopcart-icon"
-    @touchstart.prevent='touchStart'
+<!--    @touchstart.prevent='touchStart'
     @touchmove.prevent='touchMove'
     @touchsend.prevent='touchEnd'
+-->
+  <div class="shopcart-icon" ref="shopcart-icon"
   >
     <div class="ShopCartIcon-wrapper" ref="remove">
-      <div ref="ShopCartIcon-content" class="ShopCartIcon-content"">   
+      <div ref="ShopCartIcon-content" class="ShopCartIcon-content">   
         <span class="iconfont icon-gouwucheman"></span>
         <!--购物车选择多少个 v-show="totalCount>0"{{totalCount}}-->
         <div class="num"></div>
@@ -41,7 +42,7 @@
                 </div>
                 <div class="other-price">
                   <span>包装费 待</span>
-                  <!--{{deliveryPrice}}--> 
+                  {{deliveryPrice}}--> 
                   <!--<span class="desc">另需配送费￥元</span>
                 </div>
                 <div class="ZPrice-wrapper">

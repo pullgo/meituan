@@ -23,7 +23,7 @@
       <div>
         <div v-if="recommends.length" class="slider-wrapper">
           <slider>
-            <div v-for="item in recommends">
+            <div v-for="item in recommends" :value="item.recCode" :key="item.recCode">
               <a :href="item.linkUrl">
                 <img :src="item.picUrl"/>
               </a>
@@ -200,12 +200,13 @@
 <style scoped lang="stylus" rel="stylesheet/stylus">
 //@import "../../common/stylus/mixin"
 .home
-  position: relative
-  top: 0px
-  left: 0px
-  min-height: 667px
+  height: 100%
+  width: 100%
   background: #fff
-  //overflow: hidden
+  position: relative
+  // top: 0px
+  // left: 0px
+  // overflow: hidden
   .head
     width: 100%
     height: 80px
