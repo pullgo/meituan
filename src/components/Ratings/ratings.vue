@@ -32,7 +32,7 @@
         <div>
           <div class="ratings-wrapper">
             <ul>
-              <li v-for="rating in ratings" :value="rating.code" :key="rating.code" class="item border-1px" v-show="ratings">
+              <li v-for="rating in ratings" :value="rating.code" :key="rating.code" class="item border-1px">
                 <div class="avatar">
                   <img class="img" width="28" height="28" :src="rating.avatar">
                 </div>

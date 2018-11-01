@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from 'components/Home/home';
-import FastBuy from 'components/FastBuy/fastbuy';
+import FindList from 'components/FindList/findList';
 import Order from 'components/Order/order';
 import Me from 'components/Me/me';
 import Massage from 'components/Massage/massage';
@@ -24,7 +24,7 @@ export default new VueRouter({
 			component: Home,
 			children: [
 				{
-					path: 'massage',
+					path: '/home/massage',
 					component: Massage
 				},
 				{
@@ -43,8 +43,8 @@ export default new VueRouter({
 			]
 		},
 		{
-			path: '/fastbuy',
-			component: FastBuy
+			path: '/findList',
+			component: FindList
 		},
 		{
 			path: '/order',

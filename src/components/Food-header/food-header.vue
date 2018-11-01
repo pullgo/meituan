@@ -82,7 +82,7 @@
     </div>
 
     <div class="ttab">
-      <span class="ttab-item">
+      <span class="ttab-item active">
         <router-link to="/home/Menu">点菜</router-link>
       </span>
       <span class="ttab-item">
@@ -148,6 +148,7 @@
         width: 100%
         height: 40px
         line-height: 40px
+        font-size: 20px
         .foodheader-left
           margin-left: 15px
         .foodheader-right
@@ -285,6 +286,7 @@
           color: rgb(77, 85, 93)
           &.active
             border-bottom: 4px solid #ffc95d
+            color: #000
       .text
         position: absolute
         right: 38px

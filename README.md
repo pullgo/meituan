@@ -187,9 +187,9 @@ Summary of project questions 项目问题点总结：
 	 	}
 	 }
 
-	4.[Vue warn]: Error in render: "TypeError: Cannot read property 'foods' of undefined"
+	4.<emitted value instead of instance of error> error compiling template:>
 
-	found in....
+	DOM中少了一个>
 
 
  四.知识点的总结

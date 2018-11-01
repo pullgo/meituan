@@ -50,27 +50,27 @@
         seller: [],
         items: [
           {
-            icon: '',
+            icon: '\ue607',
             text: '查看食品安全档案'
           },
           {
-            icon: '',
+            icon: '\ue653',
             text: '配送服务：由美团提供配送服务'
           },
           {
-            icon: '',
+            icon: '\ue630',
             text: '配送时间：11:20-23:20'
           },
           {
-            icon: '',
+            icon: '\ue605',
             text: '本店搬迁至李复广场停车场里面'
           },
           {
-            icon: '',
+            icon: '\ue8c0',
             text: '商家服务 到店自取'
           },
           {
-            icon: '',
+            icon: '\ue6af',
             text: '新用户立减16元，首次使用美团支付最高减3元'
           }
         ]
@@ -168,13 +168,20 @@
       .archives-box
         padding: 2px
         .item
-          height: 20px
+          width: 100%
+          height: 40px
+          margin-left: 15px
+          line-height: 40px
+          display: -webkit-inline-box
           border-bottom: 1px solid rgba(7, 17, 27, 0.1)
+          &.nth-last-child
+            border: none
           .icon
-            font-size: 14px
+            font-size: 20px
             color: #7d7d7d
+            margin-right: 10px
           .text
             font-size: 14px
-            color: #7d7d7d
+            color: #000
 
 </style> 

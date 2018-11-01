@@ -1,13 +1,15 @@
 <template>
-  <div class="order">
-    <div v-for="item in orderData">
-      <order-item :data="item"></order-item>
+  <div class="FindList">
+    <div class="findList-wrapper" v-for="item in findList">
+      <FindItem :data="item"></FindItem>
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-  import OrderItem from 'base/order-item/order-item';
+  import FindItem from 'base/find-item/find-item';
+  import axios from 'axios';
+  
   export default {
     data() {
       return {
@@ -16,11 +18,14 @@
     },
     created() {
       axios.get('../data.json').then((res) => {
-        this.orderData = res.data.poilist;
+        this.findList = res.data.findList;
+        // console.log(this.findList);
       });
     },
+    // methods: {
+    // },
     components: {
-      OrderItem
+      FindItem
     }
   };
 </script>

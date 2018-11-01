@@ -4,9 +4,9 @@
       <i class="iconfont icon-shouye i"></i>
       <span class="text">首页</span>
     </router-link>
-    <router-link to="/fastbuy">
+    <router-link to="/findList">
       <i class="iconfont icon-shangjia i"></i>
-      <span class="text">闪购</span>
+      <span class="text">发现</span>
     </router-link>
     <router-link to="/order">
       <i class="iconfont icon-dingdan i"></i>

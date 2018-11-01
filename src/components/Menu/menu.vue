@@ -1,6 +1,6 @@
 <template>
   <div class="menu">
-    <FoodHeader></FoodHeader>    
+    <FoodHeader></FoodHeader> 
     <div class="menu-content">
       <!--左边-->
       <div class="menu-wrapper" ref="menuWrapper">
@@ -47,7 +47,6 @@
         </div>
       </scroll>
     </div>
-
     <!--selectFoods传入购物车组件 实现联动 -->     
     <Shopcart :select-foods="selectFoods"
               :delivery-price="seller.deliveryPrice"
