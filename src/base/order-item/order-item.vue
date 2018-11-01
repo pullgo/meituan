@@ -2,17 +2,18 @@
   <div class="OrderItem">
     <div class="top">
       <img v-lazy="data.pic_url">
-      <div class="name">{{data.name}}</div>
-      <div class="status">订单已完成</div>
+      <div class="info-box border-1px">
+        <div class="name">{{data.name}}</div>
+        <div class="status">订单已完成</div>
+      </div>
     </div>
-
-    <div class="mid">
+    <div class="describe-wrapper">
       <div class="food">香辣爆炒牛肚煲仔饭<span>x1</span></div>
       <div class="cost">总计1个菜，实付<span>￥12.00</span></div>
     </div>
-
-    <div class="bottom">
+    <div class="business">
       <div class="again border-1px">再来一单</div>
+      <div class="again border-1px">相似商家</div>
     </div>
   </div>
 </template>
@@ -36,12 +37,13 @@ export default {
   display: flex
   flex-direction: column
   width: 100%
-  height: 180px
+  height: 200px
   padding: 15px 5px
   color: #333
-  background-color: #fff
+  background: #fff
   box-sizing: border-box
   margin-bottom: 10px
+  border-bottom: 10px solid #ededed;
   .top
     flex: 1
     padding: 0 15px
@@ -55,17 +57,20 @@ export default {
       margin-top: 5px
       margin-right: 10px
       border-radius: 50%
-    .name
-      position: relative
-      float: left
-      max-width: 50%
-      color: #333
-      font-size: 16px
-      font-weight: bold
-    .status
-      float: right
-      color: #999
-  .mid
+    .info-box
+      border-bottom: 1px solid (rgba(7, 17, 27, 0.1))
+      height: 60px
+      margin-left: 50px
+      .name
+        float: left
+        color: #333
+        font-size: 16px
+        font-weight: bold
+      .status
+        float: right
+        margin-right: 10px
+        font-size: 15px
+  .describe-wrapper
     flex: 2
     margin-left: 62px
     margin-right: 15px
@@ -76,6 +81,7 @@ export default {
     .food
       line-height: 25px
       font-size: 12px
+      margin-top: 10px
       span
         font-size: 14px
         color: #151515
@@ -87,7 +93,7 @@ export default {
       span
         font-size: 14px
         color: #151515
-  .bottom 
+  .business 
     flex: 1
     padding: 0 15px
     font-size: 14px
@@ -98,9 +104,9 @@ export default {
       width: 76px
       height: 24px
       line-height: 24px
-      border: 1px solid #ccc
+      border: 1px solid (rgba(7, 17, 27, 0.1))
       text-align: center
       font-size: 14px
       border-radius: 2px
-      margin: 9px 0
+      margin: 9px 0px 9px 5px
 </style> 

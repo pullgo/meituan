@@ -254,6 +254,8 @@
         left: 15px
         width: 15px
         height: 15px
+        margin-left: 5px
+        line-height: 15px
   .FavorableZone
     width: 100% 
     padding-top: 10px
