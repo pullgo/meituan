@@ -12,7 +12,7 @@
           <router-link to="/order/all">全部订单</router-link>
         </span>
         <span class="ttab-item">
-          <router-link to="/order/NRatings">待评价</router-link>
+          <router-link to="/order/toBeEvaluated">待评价</router-link>
         </span>
         <span class="ttab-item">
           <router-link to="/order/refund">退款</router-link>
@@ -56,17 +56,15 @@
     width: 100%
     height: 100%
     .fixedBox
-      // width: 375px
       position: fixed
       top: 0px
       left: 0px
+      width: 100%
       padding-top: 10px
       background: #ffc847
       color: #383838
       z-index: 10
       border-bottom: 10px solid #ededed
-      @media only screen and (max-width: 375px)
-        width: 390px
       .title-left
         width: 100%
         height: 30px
@@ -90,7 +88,6 @@
         line-height: 40px
         border-1px(rgba(7, 17, 27, 0.1))
         margin-left: 20px
-        padding-top: 20px
         .ttab-item
           flex: 1
           text-align: center
@@ -116,6 +113,6 @@
           border: 1px solid #ffc95d    
     .item-wrapper
       position: absolute
-      top: 100px
+      top: 120px
       left: 0px
 </style> 

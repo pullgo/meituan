@@ -7,11 +7,11 @@ import Me from 'components/Me/me';
 import Massage from 'components/Massage/massage';
 import MMassage from 'components/MMassage/mmassage';
 import Setting from 'components/Setting/setting';
-// import Food from 'components/Food/food';
 import Menu from 'components/Menu/menu';
 import Seller from 'components/Seller/seller';
 import Ratings from 'components/Ratings/ratings';
-// import Detail from 'components/Detail/detail';
+import ToBeEvaluated from 'components/ToBeEvaluated/toBeEvaluated';
+import Refund from 'components/Refund/refund';
 
 Vue.use(VueRouter);
 
@@ -28,7 +28,7 @@ export default new VueRouter({
 					component: Massage
 				},
 				{
-					path: '/home/Menu',
+					path: '/home/menu',
 					component: Menu
 
 				},
@@ -48,7 +48,22 @@ export default new VueRouter({
 		},
 		{
 			path: '/order',
-			component: Order
+			component: Order,
+			children: [
+				{
+					path: '/order/all',
+					component: All
+				},
+
+				{
+					path: '/order/toBeEvaluated',
+					component: ToBeEvaluated
+				},
+				{
+					path: '/order/refund',
+					component: Refund
+				}
+			]
 		},
 		{
 			path: '/me',
