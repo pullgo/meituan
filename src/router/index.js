@@ -51,11 +51,6 @@ export default new VueRouter({
 			component: Order,
 			children: [
 				{
-					path: '/order/all',
-					component: All
-				},
-
-				{
 					path: '/order/toBeEvaluated',
 					component: ToBeEvaluated
 				},

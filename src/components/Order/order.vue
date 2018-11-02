@@ -9,7 +9,7 @@
       </div>
       <div class="ttab">
         <span class="ttab-item active">
-          <router-link to="/order/all">全部订单</router-link>
+          <router-link to="/order">全部订单</router-link>
         </span>
         <span class="ttab-item">
           <router-link to="/order/toBeEvaluated">待评价</router-link>

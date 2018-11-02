@@ -1,5 +1,7 @@
 <template>
-  <div class="toBeEvaluated">22</div>
+  <div class="toBeEvaluated">
+    <img src="../../common/image/pingjia.png" width="150px" height="150px"/>
+  </div>
 </template>
 <script type="text/ecmascript-6">
   export default {

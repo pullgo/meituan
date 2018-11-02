@@ -1,5 +1,7 @@
 <template>
-  <div class="Refund">333</div>
+  <div class="Refund">
+    <img :src="tuik.png"/>
+  </div>
 </template>
 <script type="text/ecmascript-6">
   export default {
