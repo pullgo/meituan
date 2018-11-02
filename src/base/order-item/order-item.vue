@@ -3,13 +3,19 @@
     <div class="top">
       <img v-lazy="data.pic_url">
       <div class="info-box border-1px">
-        <div class="name">{{data.name}}</div>
-        <div class="status">订单已完成</div>
+        <span class="name">{{data.name}}</span>
+        <span class="status">订单已完成</span>
       </div>
     </div>
     <div class="describe-wrapper">
-      <div class="food">香辣爆炒牛肚煲仔饭<span>x1</span></div>
-      <div class="cost">总计1个菜，实付<span>￥12.00</span></div>
+      <div class="food">
+        <span class="text">香辣爆炒牛肚煲仔饭</span>
+        <span class="num">x1</span>
+      </div>
+      <div class="cost">
+        <span class="text">总计1个菜，实付</span>
+        <span class="text">￥12.00</span>
+      </div>
     </div>
     <div class="business">
       <div class="again border-1px">再来一单</div>
@@ -35,15 +41,14 @@ export default {
 @import "../../common/stylus/mixin"
 .OrderItem 
   display: flex
-  flex-direction: column
   width: 100%
-  height: 200px
+  height: 210px
+  flex-direction: column
   padding: 15px 5px
-  color: #333
-  background: #fff
-  box-sizing: border-box
-  margin-bottom: 10px
   border-bottom: 10px solid #ededed;
+  box-sizing: border-box
+  color: #333
+  background: #f9f9f39
   .top
     flex: 1
     padding: 0 15px
@@ -62,11 +67,17 @@ export default {
       height: 60px
       margin-left: 50px
       .name
+        display: inline-block
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        width: 160px
+        height: 50px
         float: left
         color: #333
         font-size: 16px
         font-weight: bold
-      .status
+     .status
         float: right
         margin-right: 10px
         font-size: 15px
@@ -79,18 +90,23 @@ export default {
     font-size: 14px
     color: #666
     .food
+      width: 288px
       line-height: 25px
       font-size: 12px
       margin-top: 10px
-      span
+      @media only screen and (max-width: 288px)
+        width: 320px
+      .text
         font-size: 14px
         color: #151515
-        float: right
+        padding-right: 140px
+      .num
+        margin-right: 15px
     .cost
-      float: right
       font-size: 12px
       line-height: 25px
-      span
+      float: right
+      .text
         font-size: 14px
         color: #151515
   .business 

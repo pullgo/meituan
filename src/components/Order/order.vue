@@ -1,8 +1,10 @@
 <template>
   <div class="order">
     <div class="fixedBox">
-      <div class="title-box">
+      <div class="title-left">
         <span class="title">订单</span>
+      </div>
+      <div class="title-right">
         <span class="iconfont icon-search icon"></span>
       </div>
       <div class="ttab">
@@ -21,8 +23,10 @@
       </keep-alive>
     </div>
     <!--订单列表-->
-    <div v-for="item in orderData" :value="item.code" :key="item.code" class="item">
-      <order-item :data="item"></order-item>
+    <div class="item-wrapper">
+      <div v-for="item in orderData" :value="item.code" :key="item.code" class="item">
+        <order-item :data="item"></order-item>
+      </div>
     </div>
   </div>
 </template>
@@ -52,25 +56,33 @@
     width: 100%
     height: 100%
     .fixedBox
-      width: 100%
+      // width: 375px
       position: fixed
       top: 0px
       left: 0px
       padding-top: 10px
-      background: #f3f3f373
-      .title-box
+      background: #ffc847
+      color: #383838
+      z-index: 10
+      border-bottom: 10px solid #ededed
+      @media only screen and (max-width: 375px)
+        width: 390px
+      .title-left
         width: 100%
         height: 30px
-        text-align: center
-        line-height: 30px
+        display: inline
+        // text-align: center
+        // line-height: 30px
         .title
           color: #000
           font-size: 20px
-          margin-left: 15px
+          margin-left: 30px
+      .title-right
+        float: right
         .icon
-          float: right
           font-size: 24px
-          margin-right: 15px
+          margin-right: 30px
+          color: #000
       .ttab
         width: 100%
         height: 40px
@@ -79,7 +91,6 @@
         border-1px(rgba(7, 17, 27, 0.1))
         margin-left: 20px
         padding-top: 20px
-        padding-left: 10px
         .ttab-item
           flex: 1
           text-align: center
@@ -103,4 +114,8 @@
           border-radius: 12px
           color: #ffc95d
           border: 1px solid #ffc95d    
+    .item-wrapper
+      position: absolute
+      top: 100px
+      left: 0px
 </style> 
