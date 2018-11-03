@@ -74,7 +74,7 @@
         .title
           color: #000
           font-size: 20px
-          margin-left: 30px
+          margin-left: 10rem
       .title-right
         float: right
         .icon
@@ -94,9 +94,8 @@
           & > a
             display: block
             font-size: 16px
-            color: rgb(77, 85, 93)
+            color: #7c7f82
             &.active
-              border-bottom: 4px solid #ffc95d
               color: #000
         .text
           position: absolute
@@ -113,6 +112,6 @@
           border: 1px solid #ffc95d    
     .item-wrapper
       position: absolute
-      top: 120px
+      top: 84px
       left: 0px
 </style> 

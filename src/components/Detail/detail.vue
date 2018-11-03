@@ -4,9 +4,7 @@
       <div class="detail-content">
         <div class="icon-wrapper">
           <div class="fl foodheader-left">
-            <router-link :to="{path:'/home/Menu'}">
-              <span class="iconfont return icon-xiala"  @click="closeDetail"></span>            
-            </router-link>
+            <span class="iconfont return icon-xiala" @click="closeDetail"></span>            
           </div>
           <div class="fr foodheader-right">
             <span class="iconfont icons icon-xiaoxi"></span>
@@ -28,18 +26,25 @@
               <span>联系商家</span>
             </div>
           </div>
+          <!--点击消息弹出的对话框-->
+          <div class="dialogueBox">
+            <div class="box-wrapper">
+              
+            </div>
+          </div>
         </div>
+        <!--中心内容-->
         <div class="image-wrapper">
-          <img class="img" :src="food.image"/>
+          <img class="img" :src="goods[0].foods[0].image"/>
         </div>
         <div class="content">
-          <h1 class="title">{{food.name}}</h1>
+          <h1 class="title">{{goods[0].foods[0].name}}</h1>
           <div class="detail-text">
-            <span class="sell-count">月售{{food.sellCount}}</span>
-            <span class="rating">好评度{{food.rating}}%</span>
+            <span class="sell-count"  v-show="goods[0].foods[0].sellCount">月售{{goods[0].foods[0].sellCount}}</span>
+            <span class="rating" v-show="goods[0].foods[0].rating" >好评度{{goods[0].foods[0].rating}}%</span>
           </div>
           <div class="price">
-            <span class="now">￥{{food.price}}</span><span v-show="food.oldPrice" class="old">￥{{food.oldPrice}}</span>
+            <span class="now">￥{{goods[0].foods[0].price}}</span><span v-show="goods[0].foods[0].oldPrice" class="old">￥{{goods[0].foods[0].oldPrice}}</span>
           </div>
           <Split></Split>
           <div class="cartcontrol-wrapper">
@@ -49,7 +54,7 @@
         </div>
         <div class="info">
           <h1 class="title">商品描述</h1>
-          <div class="text" v-show="food.info">{{food.info}}</div>
+          <div class="text" v-show="goods[0].foods[0].info">{{goods[0].foods[0].info}}</div>
         </div>
         <div class="ratings">
           <h1 class="title">外卖评价</h1>
@@ -58,7 +63,7 @@
       </div>
       <!--点击分享弹出的对话框-->
       <div class="shareBox" v-show="listShow" ref="shareBox">
-        <h1 class="top-title">商家配送范围有限，建议分享给您附近的朋友</h1>
+        <h1 class="top-title border-1px">商家配送范围有限，建议分享给您附近的朋友</h1>
         <div class="box-content border-1px">
           <ul>
             <li class="box">
@@ -194,6 +199,7 @@
   @import "../../common/stylus/mixin";
 
   .detail
+    touch-action: none
     position: fixed//屏幕定位
     left: 0
     top: 0
@@ -297,7 +303,7 @@
         .text
           font-size: 12px
           color: rgb(147, 153, 159)
-          line-height: 12px
+          line-height: 14px
       .ratings
         padding: 0
         margin: 0
@@ -322,8 +328,10 @@
         font-size: 15px
         text-align: center
         margin-top: 10px
+        padding-bottom: 10px
+        border-bottom: 1px solid (rgba(7, 17, 27, 0.1))
       .box-content
-        padding: 10px 10px 12px 31px
+        padding: 10px 10px 20px 31px
         border-bottom: 1px solid (rgba(7, 17, 27, 0.1))
         .box
           display: inline-block
