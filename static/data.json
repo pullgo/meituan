@@ -1,0 +1,3278 @@
+{
+  "slider": [
+    {
+      "linkUrl":"http://waimai.meituan.com/",
+      "picUrl": "//p0.meituan.net/codeman/a97baf515235f4c5a2b1323a741e577185048.jpg"
+    },
+    {
+      "linkUrl":"http://waimai.meituan.com/",
+      "picUrl": "//p1.meituan.net/codeman/826a5ed09dab49af658c34624d75491861404.jpg"
+    },
+    {
+      "linkUrl":"http://waimai.meituan.com/",
+      "picUrl": "//p0.meituan.net/codeman/368e0a984b54325d42b7811c3665ad93157188.jpg"
+    },
+    {
+      "linkUrl":"http://waimai.meituan.com/",
+      "picUrl": "//p0.meituan.net/codeman/a97baf515235f4c5a2b1323a741e577185048.jpg"
+    },
+    {
+      "linkUrl":"http://waimai.meituan.com/",
+      "picUrl": "//p1.meituan.net/codeman/826a5ed09dab49af658c34624d75491861404.jpg"
+    },
+    {
+      "linkUrl":"http://waimai.meituan.com/",
+      "picUrl": "//p0.meituan.net/codeman/368e0a984b54325d42b7811c3665ad93157188.jpg"
+    }
+  ],
+  "classifications": [
+    {
+      "icon":"/static/image/icon3.jpg",
+      "title":"美食"
+    },
+    {
+      "icon":"/static/image/icon5.jpg",
+      "title":"美团超市"
+    },
+    {
+      "icon":"/static/image/icon15.jpg",
+      "title":"生鲜果蔬"
+    },
+    {
+      "icon":"/static/image/icon14.jpg",
+      "title":"跑腿代购"
+    },
+    {
+      "icon":"/static/image/icon21.jpg",
+      "title":"下午茶"
+    },
+    {
+      "icon":"/static/image/icon6.jpg",
+      "title":"汉堡披萨"
+    },
+    {
+      "icon":"/static/image/icon17.jpg",
+      "title":"品牌特惠"
+    },
+    {
+      "icon":"/static/image/icon20.jpg",
+      "title":"小吃馆"
+    },
+    {
+      "icon":"/static/image/icon18.jpg",
+      "title":"送药上门"
+    },
+    {
+      "icon":"/static/image/icon4.jpg",
+      "title":"能量西餐"
+    },
+    {
+      "icon":"/static/image/icon8.jpg",
+      "title":"暖胃粉面"
+    },
+    {
+      "icon":"/static/image/icon3.jpg",
+      "title":"炸鸡零食"
+    },
+    {
+      "icon":"/static/image/icon10.jpg",
+      "title":"鲜花蛋糕"
+    },
+    {
+      "icon":"/static/image/icon9.jpg",
+      "title":"到店自取"
+    },
+    {
+      "icon":"/static/image/icon12.jpg",
+      "title":"快餐简餐"
+    },
+    {
+      "icon":"/static/image/icon11.jpg",
+      "title":"安心购"
+    },
+    {
+      "icon":"/static/image/icon16.jpg",
+      "title":"免配送费"
+    },
+    {
+      "icon":"/static/image/icon5.jpg",
+      "title":"新商家"
+    },
+    {
+      "icon":"/static/image/icon2.jpg",
+      "title":"煲仔饭"
+    },
+    {
+      "icon":"/static/image/icon7.jpg",
+      "title":"全部分类"
+    }
+  ],
+  "massages": [
+    {
+    "image":"/static/image/商家代金券.jpg",
+    "title":"商家代金券"     
+    },
+    {
+    "image":"/static/image/好友互动消息.jpg",
+    "title":"好友互动消息"     
+    },
+    {
+    "image":"/static/image/客服消息.jpg",
+    "title":"客服消息"     
+    },
+    {
+    "image":"/static/image/售后通知.jpg",
+    "title":"售后通知"     
+    },
+    {
+    "image":"/static/image/系统通知.jpg",
+    "title":"系统通知"     
+    }
+  ],
+  "findList": [
+        {
+            "title": "太子妃吹出好莱坞效果！明星扎堆的影视城",
+            "desc": "最近好看的剧太多了，《琅琊榜》《芈月传》《太子妃升职记》最是受人追捧，前俩者正剧布景恢宏，后者鼓风机吹出新境界，愣是让个穷酸剧组坐上新神剧宝座，殊不知，这几部都是在一个地方拍摄哒！想撞星追星，不去这些地方你就白瞎了，明星扎堆的节奏啊！盘点东方好莱坞几大影视城，你都去过吗？",
+            "img": "https://p1.meituan.net/gpa/c5f5a4ea35d8a6ab77815efb94fc0722100193.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 121017,
+            "url": "https://m.dianping.com/toplist/detail?listId=2912469&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "真正的黑暗料理！大学食堂里有奇葩菜",
+            "desc": "有一种人才，叫做食堂大厨，有一种传说中的菜系，叫做高校食堂菜。这些菜式搭配奇葩、颜色奇葩、味道更奇葩，主要烹饪方法有瞎特么炒、 乱特么炖，今天，小编特此盘点，这些年，大学食堂的奇葩菜。",
+            "img": "https://p0.meituan.net/fifa/19f09afbef6c4a1d56f20727e18a178693641.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 410633,
+            "url": "https://m.dianping.com/toplist/detail?listId=2884414&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "我们都是甜品控，少女心爆棚的夏日甜品",
+            "desc": "每款甜品，都承载着一个甜蜜的梦：好吃到没朋友的草莓拿破仑；忍不住都想去偷吃的浓厚乳酪；全手工打造的小清新蛋糕......每种甜品都有属于自己主打而独特的味道，让人念想不已。小编收集了夏天里少女心满满的甜品店，如果你还没有去过，依然敢自称嗷嗷待撩的少女吗？",
+            "img": "https://p1.meituan.net/gpa/3a32ae7db4cb5ae69f7920011f12eed657811.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 52675,
+            "url": "https://m.dianping.com/toplist/detail?listId=2938777&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "温州资深吃货私藏的夜宵圣地",
+            "desc": "天气越来越暖了，而温州的夜生活也开始啦，看个电影啊，听个演唱会啊，刷个KTV啊，又或者悲剧的加个班，一不小心就到了11、12点，甚至凌晨！肚子已经饿的咕咕叫，拿什么拯救你，我的胃？当然是——夜！宵！一起躁起来！",
+            "img": "https://p0.meituan.net/fifa/d642338502278442bc205f6fb6fa539647288.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 8348,
+            "url": "https://m.dianping.com/toplist/detail?listId=2945420&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "春风十里不如睡你，让人一见倾心的浪漫酒店",
+            "desc": "在这个明媚的春天里，我们怀着美好的心愿准备要深情地走遍世界，看最美的风景，结识更多有趣的人，品尝到传说中的美食，努力做一个有故事的人。出门在外，最重要就是安全和舒适了，小编心血推荐这些中国top榜单上令人一见倾心的浪漫酒店。不管你在哪个城市，总会有一家在你附近，选个周末带着你最爱的人一起睡睡吧，或者在长假期一家人去最理想的那家，体验一番也是特别的安逸。",
+            "img": "https://p1.meituan.net/gpa/8dc9abb60543fa9a6bac29399a5024c5223540.png%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 10253,
+            "url": "https://m.dianping.com/toplist/detail?listId=2941727&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "从街头吃到街尾，让你欲罢不能的人气美食街",
+            "desc": "对于吃货来说，出去旅游的意义除了欣赏风景以外，品尝当地美食也是必不可少的一个环节。而最地道最能代表一个地方风味的美食往往不存在于高大上的餐厅里，而是遍布于各大美食街的推车上。小编现在就来为大家细数让人流口水的国内著名的美食街",
+            "img": "https://p1.meituan.net/gpa/b300b67b69b5d37e36e7527f10e12275218086.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 16938,
+            "url": "https://m.dianping.com/toplist/detail?listId=2938578&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "鲜的眉毛都掉下来的美味",
+            "desc": "春回大地，也带来了专属于这个季节的独特美味！田间的野菜、河海的时鲜，无一不是散发着诱人香气的经典食材，快来看看这一道道“鲜得眉毛掉下来”的美味！",
+            "img": "https://p0.meituan.net/gpa/20aa13237803d52c0b3c03c4dcbafc9c678679.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 23114,
+            "url": "https://m.dianping.com/toplist/detail?listId=2939453&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "吃韩剧美食，看仲基欧巴实力撩妹",
+            "desc": "韩国料理思密达！最近太阳的后裔火遍天，看剧中仲基偶吧和乔妹吃韩国料理，有没有流口水呢？韩国料理时尚又健康，很受女性朋友的欢迎，韩国烤肉、韩国拌饭、韩国泡菜每一样都是人间美味……魔都这些不能错过的韩国料理，你最爱哪家？",
+            "img": "https://p1.meituan.net/gpa/991e8afb0ca21aeb4c03b096e3f0b56b274029.png%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 42453,
+            "url": "https://m.dianping.com/toplist/detail?listId=2937035&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "又要去日本看樱花?!这里的樱花一样美醉人心",
+            "desc": "每年3月至5月，各地樱花竞相开放。最受旅游者瞩目的是日本樱花季。其实，你也许不知道，即使不用走出国门，也可以欣赏到各式各样的落英缤纷。现在正是纯洁浪漫的樱花开的热烈的时候，趁着春日的阳光，小编带你去寻找国内最适合赏樱花的地方吧！",
+            "img": "https://p0.meituan.net/gpa/c883ce764dd846cdbed9658ef73cf4c2206667.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 7901,
+            "url": "https://m.dianping.com/toplist/detail?listId=2923304&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "学仲基欧巴实力撩妹，带她去这些约会绝美地",
+            "desc": "最近，一只行走的撩妹Boy不停地出现在小编的胖友圈，搞得人人血脉喷张，舔屏根本停不下来！小编挣扎着清醒过来，告诉大家，这部剧除了撩人的剧情，男女主角超高颜值，取景地也是超大手笔！希腊的沉船湾美如画，但离我们的距离实在太遥远了，小编特意为各位男性朋友搜集了中国约会绝美地，每一个都是实力撩妹地，剩下的怎么俘获女神芳心就看你们了！",
+            "img": "https://p1.meituan.net/fifa/d9380c04b1381dda988244428de5b733172012.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 26682,
+            "url": "https://m.dianping.com/toplist/detail?listId=2926557&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "OMG，这些餐厅居然性冷淡？！",
+            "desc": "美食圈刮起性冷淡风，又被称之为禁欲系风。其实，性冷淡风在时尚圈流行已久，大抵是说一些产品追求极简主义，黑白灰以及原木等自然色为主，不会出现任何扎眼和哗众取宠的设计，强调朴素不奢华。近来，这股风潮从时尚圈蔓延到餐饮界,这种低饱和度的视觉风格，更刺激挑拨着大家的食欲！小编特意为大家搜罗了全国这些极简“性冷淡”觅食地，教你如何在这些“性冷淡”餐厅吃到高潮！",
+            "img": "https://p1.meituan.net/fifa/b94e5ca4b2df6048b4e342874f30a046303783.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 145463,
+            "url": "https://m.dianping.com/toplist/detail?listId=2920231&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "每逢佳节胖十斤？！",
+            "desc": "小长假终于结束啦，都说每逢佳节胖三斤，这个春节你胖了吗？从超市出来的时候，保安把小编拦下，问小编肚子上塞了什么鼓鼓的！那是小编的肉，自己长得肉啊！说多了都是泪！小编决定从今天开始排油解毒！听说，吃这些馆子能瘦哦~快去试试看！",
+            "img": "https://p1.meituan.net/gpa/fc6dc19dc6419101ca118cc67cd65ed3208086.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 271738,
+            "url": "https://m.dianping.com/toplist/detail?listId=2920654&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "SM风强势来袭！来一发抖S美食吧！",
+            "desc": "有这么一些美食，他们靠创意的造型和诱人的口味吸引了大批食客，“抖M”的钢管鸡，“抖S”的血袋...虽然名字听起来有点“恐怖”，但依旧阻挡不了吃货对美食的热情。小编为重口吃货们准备了这份全国SM美食花名册，各位吃货爷们想要哪道销魂菜伺候就请往下看吧～",
+            "img": "https://p1.meituan.net/gpa/98e6942d7b7bf19719a7b1ed553872bc274741.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 158213,
+            "url": "https://m.dianping.com/toplist/detail?listId=2920798&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "动物主题餐厅大搜罗！萌翻你的童心",
+            "desc": "这两周都被动物城一只狐狸和一只兔子刷屏了，顺带连一只连笑都像慢动作回放的树濑也火了。很多姑娘嚷嚷着要嫁给这只撩妹技能满分的狐狸？好吧，我承认狐狸的男友力max！二次元的萌物比宋仲基欧巴还要难嫁，倒不如在看完电影继续来这些餐厅和这些可爱的动物一起玩耍吧！",
+            "img": "https://p1.meituan.net/fifa/94f7286fc8e73123f994af94272ff3e698161.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 135710,
+            "url": "https://m.dianping.com/toplist/detail?listId=2926449&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "万万没想到！反差很大的奇葩美食",
+            "desc": "#浅色#大天朝的美食确实是博大精深，什么都能做成吃食，今天小编要介绍的反差很大的奇葩美食，有些做法很有创意，有些食材吓人，有些外貌和口味完全南辕北辙，简直让人惊呼：万万没想到啊！",
+            "img": "https://p0.meituan.net/fifa/b032cd831a767d6624c14379d34ea1f743838.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 53147,
+            "url": "https://m.dianping.com/toplist/detail?listId=2886404&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "全国必吃的100道招牌菜",
+            "desc": "国庆送大礼！给你的家乡菜，点个赞，即可参与活动，小编将从所有参与点赞的会员中，抽出最幸运的3名，发放100元面值的星巴克礼品卡各一张！活动时间：即日-2015年10月8日24点，奖品发放日期：活动结束后3个工作日内与获奖者联系。还不赶紧行动！此活动仅限大众点评APP内参与！",
+            "img": "https://p0.meituan.net/gpa/e6150b242057b72ebf29e9213ad7845c81912.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 311253,
+            "url": "https://m.dianping.com/toplist/detail?listId=1571422&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "吃货有童心！玩转各地稀奇古怪的主题餐厅",
+            "desc": "好吃的餐馆很多，聪明人就想着把好玩、特别、美味集合于一身做一个有噱头的餐馆，于是各地稀奇古怪的主题餐厅出现的，影视、怀旧、武侠、童话、动漫各种好玩的场景、摆设第一眼就让人印象深刻。",
+            "img": "https://p1.meituan.net/gpa/42ce6aad56cf0a70dcc9228a55326cbb93930.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 510691,
+            "url": "https://m.dianping.com/toplist/detail?listId=1595572&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "情话boy黄歇 请芈月吃遍浪漫小食",
+            "desc": "#浅色#芈月跟黄歇青梅竹马，是从楚王宫里偷糕饼相识的。站在吃货的角度，留心小芈月的吃食未免觉得穿帮，战国那会儿哪儿有绿豆糕、桂花糕这些点心，窝窝头才更合乎国情吧！小编为你开扒一下楚（湖北湖南）、秦（陕西）、义渠（甘肃内蒙）等列国属地后来流传起来的小吃，带上你的情话boy去吃遍浪漫小食。",
+            "img": "https://p0.meituan.net/gpa/58fb5505cf2fd1d28c99f7593b6c4f1749235.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 376073,
+            "url": "https://m.dianping.com/toplist/detail?listId=2909035&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "我跟圣诞有个约会！浪漫圣诞大餐吃起来",
+            "desc": "叮叮当，叮叮当，铃儿响叮当，驯鹿已启程。圣诞老人和礼物在路上，今年的圣诞大餐你已经想好去哪里吃了吗？最最贴心的小编来啦，为你精挑细选各地人气餐厅，让你享用到完美的圣诞大餐。",
+            "img": "https://p0.meituan.net/gpa/7061c63ce43d55fedd2d7ce8bfd625f829503.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 10497,
+            "url": "https://m.dianping.com/toplist/detail?listId=2909326&t=1&source=2&utm_source=tpl_detail"
+        },
+        {
+            "title": "大片外景地 因为影视节目而爆火的地方",
+            "desc": "有更多地方因为成为大片外景地或是人气节目拍摄地而解开了神秘面纱，名声大噪，这就来看看因为影视节目而火的地方。",
+            "img": "https://p0.meituan.net/gpa/18bea0db8fd4e713f42f19f187adf41f256777.jpg%40720w_348h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20",
+            "bizType": 1,
+            "view": 15058,
+            "url": "https://m.dianping.com/toplist/detail?listId=1602337&t=1&source=2&utm_source=tpl_detail"
+        }
+    ],    
+  "seller": {
+    "name": "粥品香坊（回龙观）",
+    "description": "蜂鸟专送",
+    "deliveryTime": 38,
+    "score": 4.9,
+    "serviceScore": 4.8,
+    "foodScore": 5,
+    "rankRate": 69.2,
+    "minPrice": 15,
+    "deliveryPrice": 5,
+    "ratingCount": 24,
+    "sellCount": 90,
+    "bulletin": "电话预约，请至少提前4小时致电商家预约，自提配送皆可；详情咨询商家，团购用户不可同时享受商家其他优惠，提供免费WiFi",
+    "supports": [
+      {
+        "type": 0,
+        "description": "在线支付满28减5"
+      },
+      {
+        "type": 1,
+        "description": "VC无限橙果汁全场8折"
+      },
+      {
+        "type": 2,
+        "description": "单人精彩套餐"
+      },
+      {
+        "type": 3,
+        "description": "该商家支持发票,请下单写好发票抬头"
+      },
+      {
+        "type": 4,
+        "description": "已加入“外卖保”计划,食品安全保障"
+      }
+    ],
+    "avatar": "http://p0.meituan.net/deal/fbaa2a1ae837841cd87b66a511b69142120317.jpg@428w_320h_1e_1c",
+    "pics": [
+      "http://fuss10.elemecdn.com/8/71/c5cf5715740998d5040dda6e66abfjpeg.jpeg?imageView2/1/w/180/h/180",
+      "http://fuss10.elemecdn.com/b/6c/75bd250e5ba69868f3b1178afbda3jpeg.jpeg?imageView2/1/w/180/h/180",
+      "http://fuss10.elemecdn.com/f/96/3d608c5811bc2d902fc9ab9a5baa7jpeg.jpeg?imageView2/1/w/180/h/180",
+      "http://fuss10.elemecdn.com/6/ad/779f8620ff49f701cd4c58f6448b6jpeg.jpeg?imageView2/1/w/180/h/180"
+    ],
+    "infos": [
+      "该商家支持发票,请下单写好发票抬头",
+      "品类:其他菜系,包子粥店",
+      "北京市昌平区回龙观西大街龙观置业大厦底商B座102单元1340",
+      "营业时间:10:00-20:30"
+    ]
+  },
+  "goods": [
+    {
+      "name": "热销榜",
+      "type": -1,
+      "foods": [
+        {
+          "name": "皮蛋瘦肉粥",
+          "price": 10,
+          "oldPrice": "",
+          "description": "咸粥",
+          "classifications": "粥类",
+          "sellCount": 229,
+          "rating": 100,
+          "charging": 24,
+          "distribution": 3,
+          "score": 5,
+          "average":15,
+          "info": "一碗皮蛋瘦肉粥，总是我到粥店时的不二之选。香浓软滑，饱腹暖心，皮蛋的Q弹与瘦肉的滑嫩伴着粥香溢于满口，让人喝这样的一碗粥也觉得心满意足",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "很喜欢的粥",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/c/cd/c12745ed8a5171e13b427dbc39401jpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/c/cd/c12745ed8a5171e13b427dbc39401jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "扁豆焖面",
+          "price": 14,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 188,
+          "score": 3.5,
+          "charging": 22,
+          "classifications": "精品小炒",
+          "distribution": 4,
+          "average":126,
+          "rating": 96,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "info": "",
+          "icon": "http://fuss10.elemecdn.com/c/6b/29e3d29b0db63d36f7c500bca31d8jpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/c/6b/29e3d29b0db63d36f7c500bca31d8jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "葱花饼",
+          "price": 10,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 124,
+          "rating": 85,
+          "charging": 22,
+          "score": 4.5,
+          "distribution": 4,
+          "average":126,
+          "classifications": "陕西特产",
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "没啥味道",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 1,
+              "text": "很一般啊",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/f/28/a51e7b18751bcdf871648a23fd3b4jpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/f/28/a51e7b18751bcdf871648a23fd3b4jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "牛肉馅饼",
+          "price": 14,
+          "oldPrice": "",
+          "description": "",
+          "charging": 14,
+          "distribution": 6,
+          "score": 3.4,
+          "average":55,
+          "classifications": "陕西特产",
+          "sellCount": 114,
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "难吃不推荐",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/d/b9/bcab0e8ad97758e65ae5a62b2664ejpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/d/b9/bcab0e8ad97758e65ae5a62b2664ejpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "招牌猪肉白菜锅贴/10个",
+          "price": 17,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 101,
+          "rating": 78,
+          "score": 4.1,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "招牌特产",
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "不脆,不好吃",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/7/72/9a580c1462ca1e4d3c07e112bc035jpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/7/72/9a580c1462ca1e4d3c07e112bc035jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "南瓜粥",
+          "price": 9,
+          "oldPrice": "",
+          "description": "甜粥",
+          "charging": 14,
+          "distribution": 6,
+          "classifications": "甜粥",
+          "average":55,
+          "sellCount": 91,
+          "rating": 100,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "红豆薏米美肤粥",
+          "price": 12,
+          "oldPrice": "",
+          "description": "甜粥",
+          "charging": 14,
+          "distribution": 6,
+          "classifications": "甜粥",
+          "average":55,
+          "sellCount": 86,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/d/22/260bd78ee6ac6051136c5447fe307jpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/d/22/260bd78ee6ac6051136c5447fe307jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "八宝酱菜",
+          "price": 4,
+          "oldPrice": "",
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "配菜系列",
+          "description": "",
+          "sellCount": 84,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "红枣山药糙米粥",
+          "price": 10,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 81,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "粥类",
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "糊塌子",
+          "price": 10,
+          "oldPrice": "",
+          "description": "",
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "特产",
+          "sellCount": 80,
+          "rating": 93,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/0/05/097a2a59fd2a2292d08067e16380cjpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/0/05/097a2a59fd2a2292d08067e16380cjpeg.jpeg?imageView2/1/w/750/h/750"
+        }
+      ]
+    },
+    {
+      "name": "单人精彩套餐",
+      "type": 2,
+      "foods": [
+        {
+          "name": "红枣山药粥套餐",
+          "price": 29,
+          "oldPrice": 36,
+          "description": "红枣山药糙米粥,素材包,爽口莴笋丝,四川泡菜或八宝酱菜,配菜可备注",
+          "sellCount": 17,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "米粥",
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/6/72/cb844f0bb60c502c6d5c05e0bddf5jpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/6/72/cb844f0bb60c502c6d5c05e0bddf5jpeg.jpeg?imageView2/1/w/750/h/750"
+        }
+      ]
+    },
+    {
+      "name": "冰爽饮品限时特惠",
+      "type": 1,
+      "foods": [
+        {
+          "name": "VC无限橙果汁",
+          "price": 8,
+          "oldPrice": 10,
+          "description": "",
+          "sellCount": 15,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "特产",
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "还可以",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/e/c6/f348e811772016ae24e968238bcbfjpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/e/c6/f348e811772016ae24e968238bcbfjpeg.jpeg?imageView2/1/w/750/h/750"
+        }
+      ]
+    },
+    {
+      "name": "精选热菜",
+      "type": -1,
+      "foods": [
+        {
+          "name": "娃娃菜炖豆腐",
+          "price": 17,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 43,
+          "rating": 92,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "特产",
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "菜量还可以,味道还可以",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/d/2d/b1eb45b305635d9dd04ddf157165fjpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/d/2d/b1eb45b305635d9dd04ddf157165fjpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "手撕包菜",
+          "price": 16,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 29,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "特产",
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/9/c6/f3bc84468820121112e79583c24efjpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/9/c6/f3bc84468820121112e79583c24efjpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "香酥黄金鱼/3条",
+          "price": 11,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 15,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "特产",
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/4/e7/8277a6a2ea0a2e97710290499fc41jpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/4/e7/8277a6a2ea0a2e97710290499fc41jpeg.jpeg?imageView2/1/w/750/h/750"
+        }
+      ]
+    },
+    {
+      "name": "爽口凉菜",
+      "type": -1,
+      "foods": [
+        {
+          "name": "八宝酱菜",
+          "price": 4,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 84,
+          "rating": 100,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "特产",
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "拍黄瓜",
+          "price": 9,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 28,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "特产",
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/6/54/f654985b4e185f06eb07f8fa2b2e8jpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/6/54/f654985b4e185f06eb07f8fa2b2e8jpeg.jpeg?imageView2/1/w/750/h/750"
+        }
+      ]
+    },
+    {
+      "name": "精选套餐",
+      "type": -1,
+      "foods": [
+        {
+          "name": "红豆薏米粥套餐",
+          "price": 37,
+          "oldPrice": "",
+          "description": "红豆薏米粥,三鲜干蒸烧卖,拍黄瓜",
+          "sellCount": 3,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "特产",
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/f/49/27f26ed00c025b2200a9ccbb7e67ejpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/f/49/27f26ed00c025b2200a9ccbb7e67ejpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "皮蛋瘦肉粥套餐",
+          "price": 31,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 12,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "特产",
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/8/96/f444a8087f0e940ef264617f9d98ajpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/8/96/f444a8087f0e940ef264617f9d98ajpeg.jpeg?imageView2/1/w/750/h/750"
+        }
+      ]
+    },
+    {
+      "name": "果拼果汁",
+      "type": -1,
+      "foods": [
+        {
+          "name": "蜜瓜圣女萝莉杯",
+          "price": 6,
+          "oldPrice": "",
+          "description": "",
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "特产",
+          "sellCount": 1,
+          "rating": "",
+          "info": "",
+          "ratings": [],
+          "icon": "http://fuss10.elemecdn.com/b/5f/b3b04c259d5ec9fa52e1856ee50dajpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/b/5f/b3b04c259d5ec9fa52e1856ee50dajpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "加多宝",
+          "price": 6,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 7,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "特产",
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/b/9f/5e6c99c593cf65229225c5661bcdejpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/b/9f/5e6c99c593cf65229225c5661bcdejpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "VC无限橙果汁",
+          "price": 8,
+          "oldPrice": 10,
+          "description": "",
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "特产",
+          "sellCount": 15,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "还可以",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/e/c6/f348e811772016ae24e968238bcbfjpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/e/c6/f348e811772016ae24e968238bcbfjpeg.jpeg?imageView2/1/w/750/h/750"
+        }
+      ]
+    },
+    {
+      "name": "小吃主食",
+      "type": -1,
+      "foods": [
+        {
+          "name": "扁豆焖面",
+          "price": 14,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 188,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "特产",
+          "rating": 96,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/c/6b/29e3d29b0db63d36f7c500bca31d8jpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/c/6b/29e3d29b0db63d36f7c500bca31d8jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "葱花饼",
+          "price": 10,
+          "oldPrice": "",
+          "description": "",
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "特产",
+          "sellCount": 124,
+          "rating": 85,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "没啥味道",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 1,
+              "text": "很一般啊",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/f/28/a51e7b18751bcdf871648a23fd3b4jpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/f/28/a51e7b18751bcdf871648a23fd3b4jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "牛肉馅饼",
+          "price": 14,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 114,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "特产",
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "难吃不推荐",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/d/b9/bcab0e8ad97758e65ae5a62b2664ejpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/d/b9/bcab0e8ad97758e65ae5a62b2664ejpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "招牌猪肉白菜锅贴/10个",
+          "price": 17,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 101,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "特产",
+          "rating": 78,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "不脆,不好吃",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/7/72/9a580c1462ca1e4d3c07e112bc035jpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/7/72/9a580c1462ca1e4d3c07e112bc035jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "糊塌子",
+          "price": 10,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 80,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "特产",
+          "rating": 93,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/0/05/097a2a59fd2a2292d08067e16380cjpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/0/05/097a2a59fd2a2292d08067e16380cjpeg.jpeg?imageView2/1/w/750/h/750"
+        }
+      ]
+    },
+    {
+      "name": "特色粥品",
+      "type": -1,
+      "foods": [
+        {
+          "name": "皮蛋瘦肉粥",
+          "price": 10,
+          "oldPrice": "",
+          "description": "咸粥",
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "粥类",
+          "sellCount": 229,
+          "rating": 100,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "很喜欢的粥",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/c/cd/c12745ed8a5171e13b427dbc39401jpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/c/cd/c12745ed8a5171e13b427dbc39401jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "南瓜粥",
+          "price": 9,
+          "oldPrice": "",
+          "description": "甜粥",
+          "sellCount": 91,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "粥类",
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/8/a6/453f65f16b1391942af11511b7a90jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "红豆薏米美肤粥",
+          "price": 12,
+          "oldPrice": "",
+          "description": "甜粥",
+          "sellCount": 86,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "粥类",
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/d/22/260bd78ee6ac6051136c5447fe307jpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/d/22/260bd78ee6ac6051136c5447fe307jpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "红枣山药糙米粥",
+          "price": 10,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 81,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "粥类",
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/9/b5/469d8854f9a3a03797933fd01398bjpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "鲜蔬菌菇粥",
+          "price": 11,
+          "oldPrice": "",
+          "description": "咸粥",
+          "sellCount": 56,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "粥类",
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": ""
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/e/a3/5317c68dd618929b6ac05804e429ajpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/e/a3/5317c68dd618929b6ac05804e429ajpeg.jpeg?imageView2/1/w/750/h/750"
+        },
+        {
+          "name": "田园蔬菜粥",
+          "price": 10,
+          "charging": 14,
+          "distribution": 6,
+          "average":55,
+          "classifications": "粥类",
+          "oldPrice": "",
+          "description": "咸粥",
+          "sellCount": 33,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png"
+            }
+          ],
+          "icon": "http://fuss10.elemecdn.com/a/94/7371083792c19df00e546b29e344cjpeg.jpeg?imageView2/1/w/114/h/114",
+          "image": "http://fuss10.elemecdn.com/a/94/7371083792c19df00e546b29e344cjpeg.jpeg?imageView2/1/w/750/h/750"
+        }
+      ]
+    }
+  ],
+  "ratings": [
+    {
+      "username": "3******c",
+      "rateTime": 1469281964000,
+      "deliveryTime": 30,
+      "score": 5,
+      "rateType": 0,
+      "text": "不错,粥很好喝,我经常吃这一家,非常赞,以后也会常来吃,强烈推荐.",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": [
+        "南瓜粥",
+        "皮蛋瘦肉粥",
+        "扁豆焖面",
+        "娃娃菜炖豆腐",
+        "牛肉馅饼"
+      ]
+    },
+    {
+      "username": "2******3",
+      "rateTime": 1469271264000,
+      "deliveryTime": "",
+      "score": 4,
+      "rateType": 0,
+      "deliveryTime": "",
+      "text": "服务态度不错",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": [
+        "扁豆焖面"
+      ]
+    },
+    {
+      "username": "3******b",
+      "rateTime": 1469261964000,
+      "score": 3,
+      "rateType": 1,
+      "text": "",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "1******c",
+      "rateTime": 1469261864000,
+      "deliveryTime": 20,
+      "score": 5,
+      "rateType": 0,
+      "text": "良心店铺",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "2******d",
+      "rateTime": 1469251264000,
+      "deliveryTime": 10,
+      "score": 4,
+      "rateType": 0,
+      "text": "",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "9******0",
+      "rateTime": 1469241964000,
+      "deliveryTime": 70,
+      "score": 1,
+      "rateType": 1,
+      "text": "送货速度蜗牛一样",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "d******c",
+      "rateTime": 1469231964000,
+      "deliveryTime": 30,
+      "score": 5,
+      "rateType": 0,
+      "text": "很喜欢的粥店",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "2******3",
+      "rateTime": 1469221264000,
+      "deliveryTime": "",
+      "score": 4,
+      "rateType": 0,
+      "text": "量给的还可以",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "3******8",
+      "rateTime": 1469211964000,
+      "deliveryTime": "",
+      "score": 3,
+      "rateType": 1,
+      "text": "",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "a******a",
+      "rateTime": 1469201964000,
+      "deliveryTime": "",
+      "score": 4,
+      "rateType": 0,
+      "text": "孩子喜欢吃这家",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": [
+        "南瓜粥"
+      ]
+    },
+    {
+      "username": "3******3",
+      "rateTime": 1469191264000,
+      "deliveryTime": "",
+      "score": 4,
+      "rateType": 0,
+      "text": "粥挺好吃的",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "t******b",
+      "rateTime": 1469181964000,
+      "deliveryTime": "",
+      "score": 3,
+      "rateType": 1,
+      "text": "",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "f******c",
+      "rateTime": 1469171964000,
+      "deliveryTime": 15,
+      "score": 5,
+      "rateType": 0,
+      "text": "送货速度很快",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "k******3",
+      "rateTime": 1469161264000,
+      "deliveryTime": "",
+      "score": 4,
+      "rateType": 0,
+      "text": "",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "u******b",
+      "rateTime": 1469151964000,
+      "deliveryTime": "",
+      "score": 4,
+      "rateType": 0,
+      "text": "下雨天给快递小哥点个赞",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "s******c",
+      "rateTime": 1469141964000,
+      "deliveryTime": "",
+      "score": 4,
+      "rateType": 0,
+      "text": "好",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "z******3",
+      "rateTime": 1469131264000,
+      "deliveryTime": "",
+      "score": 5,
+      "rateType": 0,
+      "text": "吃了还想再吃",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "n******b",
+      "rateTime": 1469121964000,
+      "deliveryTime": "",
+      "score": 3,
+      "rateType": 1,
+      "text": "发票开的不对",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "m******c",
+      "rateTime": 1469111964000,
+      "deliveryTime": 30,
+      "score": 5,
+      "rateType": 0,
+      "text": "好吃",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "l******3",
+      "rateTime": 1469101264000,
+      "deliveryTime": 40,
+      "score": 5,
+      "rateType": 0,
+      "text": "还不错吧",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "3******o",
+      "rateTime": 1469091964000,
+      "deliveryTime": "",
+      "score": 2,
+      "rateType": 1,
+      "text": "",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "3******p",
+      "rateTime": 1469081964000,
+      "deliveryTime": "",
+      "score": 4,
+      "rateType": 0,
+      "text": "很喜欢的粥",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "o******k",
+      "rateTime": 1469071264000,
+      "deliveryTime": "",
+      "score": 5,
+      "rateType": 0,
+      "text": "",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "k******b",
+      "rateTime": 1469061964000,
+      "deliveryTime": "",
+      "score": 4,
+      "rateType": 0,
+      "text": "",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    }
+  ],
+  "poilist": [
+      {
+          "id": 405484553859425,
+          "mt_poi_id": 157861559,
+          "name": "饭戒（楚河汉街店）",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 0,
+          "mt_delivery_time": "35分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p0.meituan.net/xianfu/2920fc37b810c63d12b1f6eb678e199015072.jpg",
+          "pic_url_square": "",
+          "avg_delivery_time": 35,
+          "shipping_fee": 2.5,
+          "shipping_fee_discount": 0,
+          "min_price": 15,
+          "new_promotion": 0,
+          "discounts2": [],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 7722,
+          "wm_poi_score": 4.6,
+          "shipping_time_x": "[[\"10:00-20:00\"],[\"10:00-20:00\"],[\"10:00-20:00\"],[\"10:00-20:00\"],[\"10:00-20:00\"],[\"10:00-20:00\"],[\"10:00-20:00\"]]",
+          "pre_book": 1,
+          "brand_type": 28902,
+          "sales": 7722,
+          "priority": 0,
+          "wm_poi_opening_days": 109,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30558379,
+          "longitude": 114335958,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "2.0km",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/424019d742dbb6b0193ce7ac54a843201104.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥2.5",
+          "min_price_tip": "起送 ¥15",
+          "average_price_tip": "人均 ¥17",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": "首单减16"
+          },
+          "support_pay": 2,
+          "invoice_support": 1,
+          "invoice_min_price": 0,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "405484553859425"
+      },
+      {
+          "id": 541768161101968,
+          "mt_poi_id": 161814550,
+          "name": "台资味（武汉中南店）",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "49分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p1.meituan.net/xianfu/0567a050846552c293191f36434fa415240132.jpg",
+          "pic_url_square": "",
+          "avg_delivery_time": 49,
+          "shipping_fee": 4,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 1,
+          "discounts2": [
+              {
+                  "id": 103,
+                  "type": 24,
+                  "info": "可领1~20元代金券",
+                  "icon_url": "http://p0.meituan.net/xianfu/c2c0f31d0ebf0f60af115d058169c492992.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 2,
+                  "sequence": 6
+              },
+              {
+                  "id": 100,
+                  "type": 20,
+                  "info": "实际支付30元返4元商家代金券",
+                  "icon_url": "http://p0.meituan.net/xianfu/652eea4034250563fe11b02e3219ba8d981.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 2,
+                  "sequence": 7
+              },
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团专送提供高品质送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 91,
+          "wm_poi_score": 4.7,
+          "shipping_time_x": "[[\"10:00-21:15\"],[\"10:00-21:15\"],[\"10:00-21:15\"],[\"10:00-21:15\"],[\"10:00-21:15\"],[\"10:00-21:15\"],[\"10:00-21:15\"]]",
+          "pre_book": 1,
+          "brand_type": 12207,
+          "sales": 91,
+          "priority": 0,
+          "wm_poi_opening_days": 10,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30539616,
+          "longitude": 114330458,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "1.9km",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/1d8aa7f1ef0946e602d4ef5317388d831457.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥4",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": "25减4"
+          },
+          "support_pay": 2,
+          "invoice_support": 0,
+          "invoice_min_price": 0,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "541768161101968"
+      },
+      {
+          "id": 442489992073349,
+          "mt_poi_id": 64670751,
+          "name": "九毛九山西手工面(凯德1818店)",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "51分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p0.meituan.net/xianfu/e4437a3c18e48106b88a19ccb544cc1f35460.jpg",
+          "pic_url_square": "",
+          "avg_delivery_time": 51,
+          "shipping_fee": 5,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 0,
+          "discounts2": [
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团专送提供高品质送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 883,
+          "wm_poi_score": 4.7,
+          "shipping_time_x": "[[\"11:00-21:00\"],[\"11:00-21:00\"],[\"11:00-21:00\"],[\"11:00-21:00\"],[\"11:00-21:00\"],[\"11:00-21:00\"],[\"11:00-21:00\"]]",
+          "pre_book": 0,
+          "brand_type": 9389,
+          "sales": 883,
+          "priority": 0,
+          "wm_poi_opening_days": 418,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30552962,
+          "longitude": 114340172,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "1.0km",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/424019d742dbb6b0193ce7ac54a843201104.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥5",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "人均 ¥31",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": "50减8"
+          },
+          "support_pay": 2,
+          "invoice_support": 1,
+          "invoice_min_price": 0,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "442489992073349"
+      },
+      {
+          "id": 321608137508023,
+          "mt_poi_id": 65450980,
+          "name": "南京大牌档（武汉凯德1818店）",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "50分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p1.meituan.net/xianfu/d3a267d8418c66850c3a7b8358aa8c408360.jpeg",
+          "pic_url_square": "",
+          "avg_delivery_time": 50,
+          "shipping_fee": 5,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 0,
+          "discounts2": [
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团专送提供高品质送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 3683,
+          "wm_poi_score": 4.7,
+          "shipping_time_x": "[[\"10:30-14:00\",\"16:30-21:20\"],[\"10:30-14:00\",\"16:30-21:20\"],[\"10:30-14:00\",\"16:30-21:20\"],[\"10:30-14:00\",\"16:30-21:20\"],[\"10:30-14:00\",\"16:30-21:20\"],[\"10:30-14:00\",\"16:30-21:20\"],[\"10:30-14:00\",\"16:30-21:20\"]]",
+          "pre_book": 1,
+          "brand_type": 9161,
+          "sales": 3683,
+          "priority": 0,
+          "wm_poi_opening_days": 315,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30552962,
+          "longitude": 114340172,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "1.0km",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/424019d742dbb6b0193ce7ac54a843201104.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥5",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "人均 ¥21",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": ""
+          },
+          "support_pay": 2,
+          "invoice_support": 1,
+          "invoice_min_price": 30,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "321608137508023"
+      },
+      {
+          "id": 560489923595841,
+          "mt_poi_id": 1895138,
+          "name": "翠华餐厅(汉街店)",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "48分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p1.meituan.net/xianfu/e5ab74eff5bb2393510805675a12a70410240.jpg",
+          "pic_url_square": "",
+          "avg_delivery_time": 48,
+          "shipping_fee": 5,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 0,
+          "discounts2": [
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团专送提供高品质送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 963,
+          "wm_poi_score": 4.9,
+          "shipping_time_x": "[[\"10:00-21:00\"],[\"10:00-21:00\"],[\"10:00-21:00\"],[\"10:00-21:00\"],[\"10:00-21:00\"],[\"10:00-21:00\"],[\"10:00-21:00\"]]",
+          "pre_book": 0,
+          "brand_type": 401,
+          "sales": 963,
+          "priority": 0,
+          "wm_poi_opening_days": 476,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30555617,
+          "longitude": 114343521,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "1.4km",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/424019d742dbb6b0193ce7ac54a843201104.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥5",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "人均 ¥48",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": ""
+          },
+          "support_pay": 2,
+          "invoice_support": 1,
+          "invoice_min_price": 20,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "560489923595841"
+      },
+      {
+          "id": 493862095883583,
+          "mt_poi_id": 51287075,
+          "name": "如意馄饨（中南旗舰店）",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "44分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p0.meituan.net/xianfu/829ddf0c82683c1311c29444646818be46396.jpg",
+          "pic_url_square": "",
+          "avg_delivery_time": 44,
+          "shipping_fee": 4,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 0,
+          "discounts2": [
+              {
+                  "id": 103,
+                  "type": 24,
+                  "info": "可领2元代金券",
+                  "icon_url": "http://p0.meituan.net/xianfu/c2c0f31d0ebf0f60af115d058169c492992.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 2,
+                  "sequence": 6
+              },
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团专送提供高品质送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 3879,
+          "wm_poi_score": 4.6,
+          "shipping_time_x": "[[\"07:30-22:30\"],[\"07:30-22:30\"],[\"07:30-22:30\"],[\"07:30-22:30\"],[\"07:30-22:30\"],[\"07:30-22:30\"],[\"07:30-22:30\"]]",
+          "pre_book": 1,
+          "brand_type": 30813,
+          "sales": 3879,
+          "priority": 0,
+          "wm_poi_opening_days": 790,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30537847,
+          "longitude": 114331836,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "1.9km",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/424019d742dbb6b0193ce7ac54a843201104.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥4",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "人均 ¥22",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": ""
+          },
+          "support_pay": 2,
+          "invoice_support": 1,
+          "invoice_min_price": 20,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "493862095883583"
+      },
+      {
+          "id": 336447249519818,
+          "mt_poi_id": 111205869,
+          "name": "西贝莜面村（武汉中南路店）",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "52分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p0.meituan.net/xianfu/855b75c4bfca1c51a5c1e65061a865499740.jpeg",
+          "pic_url_square": "",
+          "avg_delivery_time": 52,
+          "shipping_fee": 5,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 0,
+          "discounts2": [
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团专送提供高品质送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 1629,
+          "wm_poi_score": 4.7,
+          "shipping_time_x": "[[\"11:00-14:00\",\"17:00-21:00\"],[\"11:00-14:00\",\"17:00-21:00\"],[\"11:00-14:00\",\"17:00-21:00\"],[\"11:00-14:00\",\"17:00-21:00\"],[\"11:00-14:00\",\"17:00-21:00\"],[\"11:00-14:00\",\"17:00-21:00\"],[\"11:00-14:00\",\"17:00-21:00\"]]",
+          "pre_book": 1,
+          "brand_type": 291,
+          "sales": 1629,
+          "priority": 0,
+          "wm_poi_opening_days": 186,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30537710,
+          "longitude": 114333644,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "1.8km",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/424019d742dbb6b0193ce7ac54a843201104.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥5",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "人均 ¥30",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": ""
+          },
+          "support_pay": 2,
+          "invoice_support": 1,
+          "invoice_min_price": 30,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "336447249519818"
+      },
+      {
+          "id": 543954299476015,
+          "mt_poi_id": 161873944,
+          "name": "港式烧腊饭（大食代店）",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "36分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p0.meituan.net/xianfu/2c0074ccf930c98d98aea0c00a108a25238266.jpg",
+          "pic_url_square": "",
+          "avg_delivery_time": 36,
+          "shipping_fee": 4,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 1,
+          "discounts2": [
+              {
+                  "id": 100,
+                  "type": 20,
+                  "info": "实际支付35元返3元商家代金券",
+                  "icon_url": "http://p0.meituan.net/xianfu/652eea4034250563fe11b02e3219ba8d981.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 2,
+                  "sequence": 7
+              },
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团专送提供高品质送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 15,
+          "wm_poi_score": 5,
+          "shipping_time_x": "[[\"09:45-20:05\"],[\"09:45-20:05\"],[\"09:45-20:05\"],[\"09:45-20:05\"],[\"09:45-20:05\"],[\"09:45-20:05\"],[\"09:45-20:05\"]]",
+          "pre_book": 1,
+          "brand_type": 0,
+          "sales": 15,
+          "priority": 0,
+          "wm_poi_opening_days": 5,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30551430,
+          "longitude": 114339520,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "830m",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/1d8aa7f1ef0946e602d4ef5317388d831457.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥4",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": ""
+          },
+          "support_pay": 2,
+          "invoice_support": 0,
+          "invoice_min_price": 0,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "543954299476015"
+      },
+      {
+          "id": 345720083960693,
+          "mt_poi_id": 93467737,
+          "name": "香他她煲仔饭（凯德1818店）",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "45分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p1.meituan.net/xianfu/dd0924646979b32c80153b2dc51367de29373.jpg",
+          "pic_url_square": "",
+          "avg_delivery_time": 45,
+          "shipping_fee": 4,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 0,
+          "discounts2": [
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团专送提供高品质送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 3041,
+          "wm_poi_score": 4.6,
+          "shipping_time_x": "[[\"10:00-20:50\"],[\"10:00-20:50\"],[\"10:00-20:50\"],[\"10:00-20:50\"],[\"10:00-20:50\"],[\"10:00-20:50\"],[\"10:00-20:50\"]]",
+          "pre_book": 1,
+          "brand_type": 28266,
+          "sales": 3041,
+          "priority": 0,
+          "wm_poi_opening_days": 455,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30553760,
+          "longitude": 114339975,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "1.2km",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/424019d742dbb6b0193ce7ac54a843201104.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥4",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "人均 ¥21",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": ""
+          },
+          "support_pay": 2,
+          "invoice_support": 0,
+          "invoice_min_price": 0,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "345720083960693"
+      },
+      {
+          "id": 431945847404026,
+          "mt_poi_id": 51167098,
+          "name": "眉州东坡酒楼(凯德1818店)",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "56分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p0.meituan.net/xianfu/3e3a9dc92701d915cf52d3bfdc5f71ac10338.jpg",
+          "pic_url_square": "",
+          "avg_delivery_time": 56,
+          "shipping_fee": 5,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 0,
+          "discounts2": [
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团专送提供高品质送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 2419,
+          "wm_poi_score": 4.7,
+          "shipping_time_x": "[[\"10:00-14:30\",\"17:00-21:30\"],[\"10:00-14:30\",\"17:00-21:30\"],[\"10:00-14:30\",\"17:00-21:30\"],[\"10:00-14:30\",\"17:00-21:30\"],[\"10:00-14:30\",\"17:00-21:30\"],[\"10:00-14:30\",\"17:00-21:30\"],[\"10:00-14:30\",\"17:00-21:30\"]]",
+          "pre_book": 1,
+          "brand_type": 375,
+          "sales": 2419,
+          "priority": 0,
+          "wm_poi_opening_days": 557,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30553598,
+          "longitude": 114340313,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "1.1km",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/424019d742dbb6b0193ce7ac54a843201104.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥5",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "人均 ¥34",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": ""
+          },
+          "support_pay": 2,
+          "invoice_support": 1,
+          "invoice_min_price": 1,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "431945847404026"
+      },
+      {
+          "id": 285208289713871,
+          "mt_poi_id": 741739,
+          "name": "周黑鸭（中南一店）",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "42分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p1.meituan.net/xianfu/2b83f8f7fd3b98b3c2de1448fa02a73925372.jpeg",
+          "pic_url_square": "",
+          "avg_delivery_time": 42,
+          "shipping_fee": 5,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 0,
+          "discounts2": [
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团专送提供高品质送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 922,
+          "wm_poi_score": 4.8,
+          "shipping_time_x": "[[\"08:30-21:00\"],[\"08:30-21:00\"],[\"08:30-21:00\"],[\"08:30-21:00\"],[\"08:30-21:00\"],[\"08:30-21:00\"],[\"08:30-21:00\"]]",
+          "pre_book": 0,
+          "brand_type": 10361,
+          "sales": 922,
+          "priority": 0,
+          "wm_poi_opening_days": 299,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30535746,
+          "longitude": 114332329,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "2.1km",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/424019d742dbb6b0193ce7ac54a843201104.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥5",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "人均 ¥47",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": ""
+          },
+          "support_pay": 2,
+          "invoice_support": 0,
+          "invoice_min_price": 0,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "285208289713871"
+      },
+      {
+          "id": 289571976505983,
+          "mt_poi_id": 161997243,
+          "name": "乡里大厨（洪山广场店）",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 0,
+          "mt_delivery_time": "60分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p0.meituan.net/xianfu/585ffc4baccc05da80d15daa0f2503e9225280.jpg",
+          "pic_url_square": "",
+          "avg_delivery_time": 60,
+          "shipping_fee": 2.5,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 1,
+          "discounts2": [],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 0,
+          "wm_poi_score": 0,
+          "shipping_time_x": "[[\"10:00-23:00\"],[\"10:00-23:00\"],[\"10:00-23:00\"],[\"10:00-23:00\"],[\"10:00-23:00\"],[\"10:00-23:00\"],[\"10:00-23:00\"]]",
+          "pre_book": 1,
+          "brand_type": 0,
+          "sales": 0,
+          "priority": 0,
+          "wm_poi_opening_days": 1,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30548360,
+          "longitude": 114337915,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "604m",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/1d8aa7f1ef0946e602d4ef5317388d831457.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥2.5",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": ""
+          },
+          "support_pay": 2,
+          "invoice_support": 0,
+          "invoice_min_price": 0,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "289571976505983"
+      },
+      {
+          "id": 397117957597453,
+          "mt_poi_id": 152306738,
+          "name": "五芳斋回味餐厅（武汉中南一路店）",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "49分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p0.meituan.net/xianfu/5a0b0c14a48ec4a97a12fd39b716a03022260.jpg",
+          "pic_url_square": "",
+          "avg_delivery_time": 49,
+          "shipping_fee": 4,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 0,
+          "discounts2": [
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 1280,
+          "wm_poi_score": 4.7,
+          "shipping_time_x": "[[\"07:00-20:00\"],[\"07:00-20:00\"],[\"07:00-20:00\"],[\"07:00-20:00\"],[\"07:00-20:00\"],[\"07:00-20:00\"],[\"07:00-20:00\"]]",
+          "pre_book": 0,
+          "brand_type": 11252,
+          "sales": 1280,
+          "priority": 0,
+          "wm_poi_opening_days": 214,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30535125,
+          "longitude": 114332192,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "2.2km",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/424019d742dbb6b0193ce7ac54a843201104.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥4",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "人均 ¥19",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": ""
+          },
+          "support_pay": 2,
+          "invoice_support": 1,
+          "invoice_min_price": 100,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "397117957597453"
+      },
+      {
+          "id": 532117369638030,
+          "mt_poi_id": 156867611,
+          "name": "大米先生（洪山广场店）",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "35分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p1.meituan.net/xianfu/56aa10e5f869fce1222699d06f5a75dc11576.jpg",
+          "pic_url_square": "",
+          "avg_delivery_time": 35,
+          "shipping_fee": 4,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 0,
+          "discounts2": [
+              {
+                  "id": 103,
+                  "type": 24,
+                  "info": "可领3元代金券",
+                  "icon_url": "http://p0.meituan.net/xianfu/c2c0f31d0ebf0f60af115d058169c492992.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 2,
+                  "sequence": 6
+              },
+              {
+                  "id": 100,
+                  "type": 20,
+                  "info": "实际支付30元返3元商家代金券",
+                  "icon_url": "http://p0.meituan.net/xianfu/652eea4034250563fe11b02e3219ba8d981.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 2,
+                  "sequence": 7
+              },
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团专送提供高品质送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 892,
+          "wm_poi_score": 4.4,
+          "shipping_time_x": "[[\"10:00-19:40\"],[\"10:00-19:40\"],[\"10:00-19:40\"],[\"10:00-19:40\"],[\"10:00-19:40\"],[\"10:00-19:40\"],[\"10:00-19:40\"]]",
+          "pre_book": 1,
+          "brand_type": 100003951,
+          "sales": 892,
+          "priority": 0,
+          "wm_poi_opening_days": 130,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30548099,
+          "longitude": 114337714,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "610m",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/424019d742dbb6b0193ce7ac54a843201104.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥4",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "人均 ¥18",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": ""
+          },
+          "support_pay": 2,
+          "invoice_support": 1,
+          "invoice_min_price": 0,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "532117369638030"
+      },
+      {
+          "id": 426675922494174,
+          "mt_poi_id": 95127393,
+          "name": "虾与稻(汉街店)",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "43分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p1.meituan.net/xianfu/70eccc5bef60f1136072f30971b56977115823.png",
+          "pic_url_square": "",
+          "avg_delivery_time": 43,
+          "shipping_fee": 3,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 0,
+          "discounts2": [
+              {
+                  "id": 100,
+                  "type": 20,
+                  "info": "实际支付1元返3元商家代金券",
+                  "icon_url": "http://p0.meituan.net/xianfu/652eea4034250563fe11b02e3219ba8d981.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 2,
+                  "sequence": 7
+              },
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团专送提供高品质送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 1932,
+          "wm_poi_score": 4.8,
+          "shipping_time_x": "[[\"10:15-19:50\"],[\"10:15-19:50\"],[\"10:15-19:50\"],[\"10:15-19:50\"],[\"10:15-19:50\"],[\"10:15-19:50\"],[\"10:15-19:50\"]]",
+          "pre_book": 1,
+          "brand_type": 100007254,
+          "sales": 1932,
+          "priority": 0,
+          "wm_poi_opening_days": 128,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30552637,
+          "longitude": 114339157,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "1.0km",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/424019d742dbb6b0193ce7ac54a843201104.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥3",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "人均 ¥22",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": ""
+          },
+          "support_pay": 2,
+          "invoice_support": 0,
+          "invoice_min_price": 0,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "426675922494174"
+      },
+      {
+          "id": 531851081655567,
+          "mt_poi_id": 159430117,
+          "name": "红状元粥店（汉街店）",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "41分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p0.meituan.net/xianfu/028e6a3610902ac14f755ec86c15bfb0331645.jpg",
+          "pic_url_square": "",
+          "avg_delivery_time": 41,
+          "shipping_fee": 3,
+          "shipping_fee_discount": 0,
+          "min_price": 15,
+          "new_promotion": 0,
+          "discounts2": [
+              {
+                  "id": 103,
+                  "type": 24,
+                  "info": "本店新用户可领2元代金券",
+                  "icon_url": "http://p0.meituan.net/xianfu/c2c0f31d0ebf0f60af115d058169c492992.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 2,
+                  "sequence": 6
+              },
+              {
+                  "id": 100,
+                  "type": 20,
+                  "info": "实际支付40元返2元商家代金券",
+                  "icon_url": "http://p0.meituan.net/xianfu/652eea4034250563fe11b02e3219ba8d981.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 2,
+                  "sequence": 7
+              },
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团专送提供高品质送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 5148,
+          "wm_poi_score": 4.7,
+          "shipping_time_x": "[[\"07:50-14:00\",\"15:50-20:30\"],[\"07:50-14:00\",\"15:50-20:30\"],[\"07:50-14:00\",\"15:50-20:30\"],[\"07:50-14:00\",\"15:50-20:30\"],[\"07:50-14:00\",\"15:50-20:30\"],[\"07:50-14:00\",\"15:50-20:30\"],[\"07:50-14:00\",\"15:50-20:30\"]]",
+          "pre_book": 1,
+          "brand_type": 33665,
+          "sales": 5148,
+          "priority": 0,
+          "wm_poi_opening_days": 81,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30559039,
+          "longitude": 114344126,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "2.0km",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/424019d742dbb6b0193ce7ac54a843201104.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥3",
+          "min_price_tip": "起送 ¥15",
+          "average_price_tip": "人均 ¥17",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": ""
+          },
+          "support_pay": 2,
+          "invoice_support": 0,
+          "invoice_min_price": 0,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "531851081655567"
+      },
+      {
+          "id": 353979306032071,
+          "mt_poi_id": 94166862,
+          "name": "如意馄饨(东湖国际店)",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "41分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p0.meituan.net/xianfu/829ddf0c82683c1311c29444646818be46396.jpg",
+          "pic_url_square": "",
+          "avg_delivery_time": 41,
+          "shipping_fee": 4,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 0,
+          "discounts2": [
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团专送提供高品质送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 1435,
+          "wm_poi_score": 4.7,
+          "shipping_time_x": "[[\"07:45-20:30\"],[\"07:45-20:30\"],[\"07:45-20:30\"],[\"07:45-20:30\"],[\"07:45-20:30\"],[\"07:45-20:30\"],[\"07:45-20:30\"]]",
+          "pre_book": 1,
+          "brand_type": 30813,
+          "sales": 1435,
+          "priority": 0,
+          "wm_poi_opening_days": 574,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30560277,
+          "longitude": 114350764,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "2.5km",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/424019d742dbb6b0193ce7ac54a843201104.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥4",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "人均 ¥17",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": ""
+          },
+          "support_pay": 2,
+          "invoice_support": 0,
+          "invoice_min_price": 0,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "353979306032071"
+      },
+      {
+          "id": 496258687683370,
+          "mt_poi_id": 154034134,
+          "name": "悦享食遇（汉街店）",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "40分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p1.meituan.net/xianfu/26cb4e468717c46960c88180734c98e3248413.jpg",
+          "pic_url_square": "",
+          "avg_delivery_time": 40,
+          "shipping_fee": 3,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 0,
+          "discounts2": [
+              {
+                  "id": 100,
+                  "type": 20,
+                  "info": "实际支付20元返3元商家代金券",
+                  "icon_url": "http://p0.meituan.net/xianfu/652eea4034250563fe11b02e3219ba8d981.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 2,
+                  "sequence": 7
+              },
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团专送提供高品质送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 1521,
+          "wm_poi_score": 4.7,
+          "shipping_time_x": "[[\"10:10-20:30\"],[\"10:10-20:30\"],[\"10:10-20:30\"],[\"10:10-20:30\"],[\"10:10-20:30\"],[\"10:10-20:30\"],[\"10:10-20:30\"]]",
+          "pre_book": 1,
+          "brand_type": 0,
+          "sales": 1521,
+          "priority": 0,
+          "wm_poi_opening_days": 185,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30555073,
+          "longitude": 114347339,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "1.5km",
+          "poi_type_icon": "",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥3",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "人均 ¥13",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": ""
+          },
+          "support_pay": 2,
+          "invoice_support": 1,
+          "invoice_min_price": 88,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "496258687683370"
+      },
+      {
+          "id": 359605713225950,
+          "mt_poi_id": 1141097,
+          "name": "秀玉红茶坊(汉街店)",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "54分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p1.meituan.net/xianfu/1ad5a776ee0955ac81ce27659226329723824.jpg",
+          "pic_url_square": "",
+          "avg_delivery_time": 54,
+          "shipping_fee": 5,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 0,
+          "discounts2": [
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团专送提供高品质送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 2251,
+          "wm_poi_score": 4.6,
+          "shipping_time_x": "[[\"10:30-21:00\"],[\"10:30-21:00\"],[\"10:30-21:00\"],[\"10:30-21:00\"],[\"10:30-21:00\"],[\"10:30-21:00\"],[\"10:30-21:00\"]]",
+          "pre_book": 1,
+          "brand_type": 1479,
+          "sales": 2251,
+          "priority": 0,
+          "wm_poi_opening_days": 671,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30555198,
+          "longitude": 114343971,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "1.4km",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/424019d742dbb6b0193ce7ac54a843201104.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥5",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "人均 ¥31",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": ""
+          },
+          "support_pay": 2,
+          "invoice_support": 0,
+          "invoice_min_price": 0,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "359605713225950"
+      },
+      {
+          "id": 539921325180733,
+          "mt_poi_id": 160268074,
+          "name": "优粮生活（汉街店）",
+          "support_coupon": 0,
+          "is_favorite": 0,
+          "sort_reason_type": 0,
+          "sort_reason_tag": "",
+          "delivery_type": 1,
+          "mt_delivery_time": "39分钟",
+          "status": 1,
+          "origin_status": 1,
+          "status_desc": "",
+          "pic_url": "http://p0.meituan.net/xianfu/1c58e3b4d704cc944603dca3aa68ec3a20751.jpg",
+          "pic_url_square": "",
+          "avg_delivery_time": 39,
+          "shipping_fee": 5,
+          "shipping_fee_discount": 0,
+          "min_price": 20,
+          "new_promotion": 0,
+          "discounts2": [
+              {
+                  "id": 103,
+                  "type": 24,
+                  "info": "可领1~10元代金券",
+                  "icon_url": "http://p0.meituan.net/xianfu/c2c0f31d0ebf0f60af115d058169c492992.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 2,
+                  "sequence": 6
+              },
+              {
+                  "id": 100,
+                  "type": 20,
+                  "info": "实际支付30元返2元商家代金券",
+                  "icon_url": "http://p0.meituan.net/xianfu/652eea4034250563fe11b02e3219ba8d981.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 2,
+                  "sequence": 7
+              },
+              {
+                  "id": -3,
+                  "type": 99,
+                  "info": "由美团专送提供高品质送餐服务",
+                  "icon_url": "http://p0.meituan.net/xianfu/51639e2e7a51c71d967acc44a060e3092048.png",
+                  "use_icon_from_server": 1,
+                  "display_code": 1,
+                  "sequence": 49
+              }
+          ],
+          "shipping_time_info": {
+              "in_shipping_time": 1,
+              "beg_shipping_time": "",
+              "status_content": "",
+              "desc_content": "",
+              "reservation_status": 0
+          },
+          "month_sale_num": 748,
+          "wm_poi_score": 4.6,
+          "shipping_time_x": "[[\"09:00-20:00\"],[\"09:00-20:00\"],[\"09:00-20:00\"],[\"09:00-20:00\"],[\"09:00-20:00\"],[\"09:00-20:00\"],[\"09:00-20:00\"]]",
+          "pre_book": 0,
+          "brand_type": 436,
+          "sales": 748,
+          "priority": 0,
+          "wm_poi_opening_days": 39,
+          "buz_type": 0,
+          "across_book_offset_days": 0,
+          "across_book_max_days": 0,
+          "latitude": 30555246,
+          "longitude": 114347326,
+          "primitiveDistance": 1.7976931348623157e+308,
+          "distance": "1.5km",
+          "poi_type_icon": "http://p0.meituan.net/xianfu/424019d742dbb6b0193ce7ac54a843201104.png",
+          "ad_attr": "",
+          "shipping_fee_tip": "配送 ¥5",
+          "min_price_tip": "起送 ¥20",
+          "average_price_tip": "人均 ¥18",
+          "recommend_info": {
+              "icon": "",
+              "recommend_reason": ""
+          },
+          "support_pay": 2,
+          "invoice_support": 0,
+          "invoice_min_price": 0,
+          "charge_info": "",
+          "ad_type": 0,
+          "wm_poi_view_id": "539921325180733"
+      }
+  ]
+}
