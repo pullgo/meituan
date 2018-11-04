@@ -1,7 +1,7 @@
 <template>
   <div class="Refund">
     <img class="img" src="../../common/image/orderBg.png" width="150px" height="150px"/>
-    <span class="text">没有待评价的订单</span>
+    <span class="text">没有退款的订单</span>
   </div>
 </template>
 <script type="text/ecmascript-6">
@@ -11,7 +11,7 @@
 <style lang="stylus" rel="stylesheet/stylus">
 .Refund
 	position: absolute
-	top: 84px
+	top: 94px
 	left:0px
 	width: 100%
 	height: 660px

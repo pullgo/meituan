@@ -64,7 +64,7 @@
     <!--我的资产部分-->
     <div class="asset">
       <div class="classify border-1px">
-        <p class="title">我的资产</p>
+        <span class="title">我的资产</span>
       </div>
       <div class="icon-wrapper1">
         <ul>
@@ -89,7 +89,9 @@
       </div>    
     <!--我的服务部分-->
     <div class="serve">
-      <classify title="我的服务"></classify>
+      <div class="classify border-1px">
+        <span class="title">我的服务</span>
+      </div>
       <div class="icon-wrapper2">
         <ul>
           <li class="iconList2">
@@ -105,7 +107,9 @@
     </div>
     <!--更多推荐部分-->
     <div class="recommend">
-      <classify title="更多推荐"></classify>
+      <div class="classify border-1px">
+        <span  class="title">更多推荐</span>
+      </div>
       <div class="icon-wrapper3">
         <ul>
           <li class="iconList3">
@@ -135,7 +139,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import Classify from 'base/Classify/classify';
+  // import Classify from 'base/Classify/classify';
   import Scroll from 'base/Scroll/scroll';
 
   export default {
@@ -144,7 +148,7 @@
       };
     },
     components: {
-      Classify
+      // Classify
     }
   };
 </script>
@@ -283,6 +287,14 @@
   .serve
     height: 100%
     width: 100%
+    .classify
+      height: 40px
+      border-1px(rgba(7, 17, 27, 0.1))
+      .title
+        margin-left: 20px
+        color: #383838
+        font-size: 16px
+        line-height: 40px
     .icon-wrapper2
       line-height: 20px
       border-bottom: 10px solid #ededed
@@ -308,6 +320,14 @@
   .recommend
     height: 100%
     width: 100%
+    .classify
+      height: 40px
+      border-1px(rgba(7, 17, 27, 0.1))
+      .title
+        margin-left: 20px
+        color: #383838
+        font-size: 16px
+        line-height: 40px
     .icon-wrapper3
       line-height: 20px
       border-bottom: 10px solid #ededed

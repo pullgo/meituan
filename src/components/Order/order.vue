@@ -8,7 +8,7 @@
         <span class="iconfont icon-search icon"></span>
       </div>
       <div class="ttab">
-        <span class="ttab-item active">
+        <span class="ttab-item">
           <router-link to="/order">全部订单</router-link>
         </span>
         <span class="ttab-item">
@@ -60,11 +60,11 @@
       top: 0px
       left: 0px
       width: 100%
-      padding-top: 10px
-      background: #ffc847
+      padding-top: 15px
+      background: #fbfbfb
       color: #383838
       z-index: 10
-      border-bottom: 10px solid #ededed
+      // border-bottom: 10px solid #ededed
       .title-left
         width: 100%
         height: 30px
@@ -86,17 +86,23 @@
         height: 40px
         display: flex
         line-height: 40px
-        border-1px(rgba(7, 17, 27, 0.1))
+        // border-1px(rgba(7, 17, 27, 0.1))
         margin-left: 20px
+        margin-top: 15px
         .ttab-item
-          flex: 1
+          // flex: 1
+          display: inline-block;
+          width: 75px
+          height: 40px
           text-align: center
+          margin-right: 3rem
           & > a
             display: block
             font-size: 16px
             color: #7c7f82
             &.active
               color: #000
+              border-bottom: 3px solid #ffc847
         .text
           position: absolute
           right: 38px

@@ -1,10 +1,11 @@
-﻿<template><!--点击跳到单个商品页面-->
+﻿<template><!--点击跳到单个商品页面" 一加上goods[0].foods[0]就报错 foods undfeind 不加就没有数据-->
   <transition class="move" ref="food">
     <div class="detail" v-show="showFlag">
       <div class="detail-content">
         <div class="icon-wrapper">
           <div class="fl foodheader-left">
-            <span class="iconfont return icon-xiala" @click="closeDetail"></span>            
+            <router-link :to="{path:'/home/menu'}">
+            <span class="iconfont return icon-xiala" @click="closeDetail"></span></router-link>            
           </div>
           <div class="fr foodheader-right">
             <span class="iconfont icons icon-xiaoxi"></span>
@@ -38,13 +39,13 @@
           <img class="img" :src="goods[0].foods[0].image"/>
         </div>
         <div class="content">
-          <h1 class="title">{{goods[0].foods[0].name}}</h1>
+          <h1 class="title">{{food.name}}</h1>
           <div class="detail-text">
-            <span class="sell-count"  v-show="goods[0].foods[0].sellCount">月售{{goods[0].foods[0].sellCount}}</span>
-            <span class="rating" v-show="goods[0].foods[0].rating" >好评度{{goods[0].foods[0].rating}}%</span>
+            <span class="sell-count"  v-show="food.sellCount">月售{{food.sellCount}}</span>
+            <span class="rating" v-show="food.rating" >好评度{{food.rating}}%</span>
           </div>
           <div class="price">
-            <span class="now">￥{{goods[0].foods[0].price}}</span><span v-show="goods[0].foods[0].oldPrice" class="old">￥{{goods[0].foods[0].oldPrice}}</span>
+            <span class="now">￥{{food.price}}</span><span v-show="food.oldPrice" class="old">￥{{food.oldPrice}}</span>
           </div>
           <Split></Split>
           <div class="cartcontrol-wrapper">
@@ -54,7 +55,7 @@
         </div>
         <div class="info">
           <h1 class="title">商品描述</h1>
-          <div class="text" v-show="goods[0].foods[0].info">{{goods[0].foods[0].info}}</div>
+          <div class="text" v-show="food.info">{{food.info}}</div>
         </div>
         <div class="ratings">
           <h1 class="title">外卖评价</h1>
@@ -85,6 +86,7 @@
       <transition name="fade">
         <div class="list-mask" v-show="listShow" @click="hideList"></div>
       </transition>
+      <router-view></router-view>
     </div>
   </transition>
 </template>
@@ -199,7 +201,7 @@
   @import "../../common/stylus/mixin";
 
   .detail
-    touch-action: none
+    // touch-action: none
     position: fixed//屏幕定位
     left: 0
     top: 0

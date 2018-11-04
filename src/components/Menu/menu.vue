@@ -60,7 +60,6 @@
 </template>
 <script type="text/ecmascript-6">
   import FoodHeader from 'components/food-header/food-header';
-
   import axios from 'axios';
   import loading from 'base/loading/loading';
   import Scroll from 'base/Scroll/scroll';
@@ -117,9 +116,9 @@
         }
         return 0; // 否则返回0
       },
-      // cartconcontrol修改的是food.count属性
-      // 而food是父组件传入的对象而增加了count属性会影响到父组件
-      // 计算属性观测的是goods变化拿到所有被选择过的foods购物车数据改变
+      /* cartconcontrol修改的是food.count属性
+      而food是父组件传入的对象而增加了count属性会影响到父组件
+      计算属性观测的是goods变化拿到所有被选择过的foods购物车数据改变 */
       selectFoods() {
         let foods = [];
         this.goods.forEach((good) => { // 首先遍历goods 拿到good
@@ -144,8 +143,8 @@
       _initScroll() {
         this.menuScroll = new BScroll(this.$refs.menuWrapper, {
           click: true
-          /* 这样才可以点击BScroll实现原理是监听star与end阻止了默认事件 */
-          // 但是派发了2次点击事件 成PC端点击2次需要传$event
+          /* 这样才可以点击BScroll实现原理是监听star与end阻止了默认事件
+          但是派发了2次点击事件 成PC端点击2次需要传$event */
         });
         this.foodsScroll = new BScroll(this.$refs.foodsWrapper, {
           click: true,
@@ -158,7 +157,7 @@
         this.foodsScroll.on('scroll', (pos) => {
           if (pos.y <= 0) {
             this.scrollY = Math.abs(Math.round(pos.y));
-            /* Math.round转化为整数 Math.abs绝对值可能是负值转为正值 */
+            // Math.round转化为整数 Math.abs绝对值可能是负值转为正值
           }
         });
       },
