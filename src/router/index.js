@@ -8,7 +8,7 @@ import Massage from 'components/Massage/massage';
 import MMassage from 'components/MMassage/mmassage';
 import Setting from 'components/Setting/setting';
 import Menu from 'components/Menu/menu';
-import detail from 'components/detail/detail';
+// import Food from 'components/food/food';
 import Seller from 'components/Seller/seller';
 import Ratings from 'components/Ratings/ratings';
 import ToBeEvaluated from 'components/ToBeEvaluated/toBeEvaluated';
@@ -30,13 +30,13 @@ export default new VueRouter({
 				},
 				{
 					path: '/home/menu',
-					component: Menu,
-					children: [
+					component: Menu
+					/* children: [
 						{
-							path: '/home/menu/detail',
-							component: detail
+							path: '/home/menu/food',
+							component: Food
 						}
-					]
+					] */
 
 				},
 				{

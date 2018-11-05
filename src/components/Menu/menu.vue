@@ -55,7 +55,7 @@
               >
     </Shopcart>
     <!--点击跳转到每个商品详情页面-->          
-    <Detail :food="selectedFood" v-show="selectedFood" ref="food"></Detail>
+    <Food :food="selectedFood" v-show="selectedFood" ref="food"></Food>
   </div>
 </template>
 <script type="text/ecmascript-6">
@@ -67,7 +67,7 @@
   import BScroll from 'better-scroll';
   import Shopcart from 'components/Shopcart/shopcart';
   import Cartcontrol from 'base/Cartcontrol/cartcontrol';
-  import Detail from 'components/detail/detail';
+  import Food from 'components/food/food';
 
   export default {
     props: {
@@ -177,10 +177,11 @@
         if (!event._constructed) {
           return;
         }
-          this.selectedFood = food;
-          // 调用子组件detail.vue的show方法跳转到每个商品详情页面
-          // console.log(this.selectedFood);
-          this.$refs.food.show();
+        // console.log(food); //有数据
+        this.selectedFood = food;
+        // 调用子组件detail.vue的show方法跳转到每个商品详情页面
+        // console.log(this.selectedFood);//有数据
+        this.$refs.food.show();
       },
       _calculateHeight() {
         let foodList = this.$refs.foodsWrapper.getElementsByClassName('food-list-hook');
@@ -206,7 +207,7 @@
       Icon,
       Shopcart,
       Cartcontrol,
-      Detail
+      Food
     },
     // carcontrol传过来的事件 父组件接收子组件事件
     events: {

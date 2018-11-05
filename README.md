@@ -191,6 +191,17 @@ Summary of project questions 项目问题点总结：
 
 	DOM中少了一个>
 
+	5. The data property "food" is already declared as a prop. Use prop default value instead.  found in...
+
+	翻译过来就是：
+
+	数据属性“orderId”已经声明为一个PROP。使用PROP默认值代替。
+
+	大致思路就是：访问data 和methods中的数据之外，还访问了props组件传递过来的值，如果发现data数据字段中的key值已经被定义，那么props传的参数再有这个重名的key值就会报这个错误。
+
+	props的优先级 > data中的优先级 > menthods中的优先级
+
+	代表，如果在这个key值在props中出现，那么data中的key值就不能定义了。
 
  四.知识点的总结
     1.导航栏使用了position 后在我的页面出现了最底下的内容被盖住   滑动也没有效果的情况时
