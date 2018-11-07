@@ -159,7 +159,7 @@
   //position: relative
   //width: 100%
   //height: 100%
-  border-bottom: 10px solid #ededed
+  border-bottom: 10px solid #f3f5f7
   font-size: 14px
   color: #383838
   background: #fff
@@ -192,7 +192,7 @@
     background: #ffc847
     padding-bottom: 10px
     padding-top: 60px
-    border-bottom: 10px solid #ededed
+    border-bottom: 10px solid #f3f5f7
     .avatar-content
       margin-left: 20px
       width: 85px
@@ -213,7 +213,7 @@
   .icon-wrapper
     width :100%
     height: 100%
-    border-bottom: 10px solid #ededed
+    border-bottom: 10px solid #f3f5f7
     .icon-content
       padding: 0px 10px 12px 10px
       .iconList
@@ -239,7 +239,7 @@
           line-height: 20px
   .img-content
     height: 92px
-    border-bottom: 10px solid #ededed
+    border-bottom: 10px solid #f3f5f7
     color: #8d5d41
     text-align: center
     line-height: 92px
@@ -265,7 +265,7 @@
         line-height: 40px
     .icon-wrapper1
       line-height: 20px
-      border-bottom: 10px solid #ededed
+      border-bottom: 10px solid #f3f5f7
       .iconList1
         display: inline-block
         flex: 1
@@ -297,7 +297,7 @@
         line-height: 40px
     .icon-wrapper2
       line-height: 20px
-      border-bottom: 10px solid #ededed
+      border-bottom: 10px solid #f3f5f7
       padding: 0px 10px 12px 20px
       display: flex
       .iconList2
@@ -330,7 +330,7 @@
         line-height: 40px
     .icon-wrapper3
       line-height: 20px
-      border-bottom: 10px solid #ededed
+      border-bottom: 10px solid #f3f5f7
       padding: 0px 10px 42px 20px//下的padding加上tab的高度 否则内容会被盖住
       display: flex
       justify-content: center

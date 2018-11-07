@@ -61,7 +61,7 @@
       left: 0px
       width: 100%
       padding-top: 15px
-      background: #fbfbfb
+      background: #f3f5f7
       color: #383838
       z-index: 10
       // border-bottom: 10px solid #ededed
@@ -120,4 +120,5 @@
       position: absolute
       top: 84px
       left: 0px
+      width: 100%
 </style> 

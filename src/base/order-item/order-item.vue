@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="describe-wrapper">
-      <div class="food">
+      <div class="describe">
         <span class="text">香辣爆炒牛肚煲仔饭</span>
         <span class="num">x1</span>
       </div>
@@ -45,7 +45,7 @@ export default {
   height: 210px
   flex-direction: column
   padding: 15px 5px
-  border-bottom: 10px solid #ededed;
+  border-bottom: 10px solid #f3f5f7;
   box-sizing: border-box
   color: #333
   background: #f9f9f39
@@ -89,7 +89,7 @@ export default {
     box-sizing: border-box
     font-size: 14px
     color: #666
-    .food
+    .describe
       width: 288px
       line-height: 25px
       font-size: 12px

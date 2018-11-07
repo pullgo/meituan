@@ -8,12 +8,11 @@ import Massage from 'components/Massage/massage';
 import MMassage from 'components/MMassage/mmassage';
 import Setting from 'components/Setting/setting';
 import Menu from 'components/Menu/menu';
-// import Food from 'components/food/food';
 import Seller from 'components/Seller/seller';
 import Ratings from 'components/Ratings/ratings';
 import ToBeEvaluated from 'components/ToBeEvaluated/toBeEvaluated';
 import Refund from 'components/Refund/refund';
-
+// import DialogueBox from 'components/DialogueBox/dialogueBox';
 Vue.use(VueRouter);
 
 export default new VueRouter({
@@ -31,13 +30,6 @@ export default new VueRouter({
 				{
 					path: '/home/menu',
 					component: Menu
-					/* children: [
-						{
-							path: '/home/menu/food',
-							component: Food
-						}
-					] */
-
 				},
 				{
 					path: '/home/seller',

@@ -71,9 +71,7 @@
 
   export default {
     props: {
-        /* seller: {
-          type: Array
-        } */
+
     },
   	data () {
   		return {
