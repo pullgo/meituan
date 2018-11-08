@@ -37,7 +37,7 @@
           </div>
           <!--活动页面-->
           <transition class="fold">
-            <div class="activity" v-show="listShow">
+            <div class="activity" v-show="listShow" ref="listShow">
               <!--隐藏活动页面-->
               <div class="icon-wrapper">
                 <ul>
@@ -123,6 +123,7 @@
     methods: {
       toggleList() {
         this.listShow = true;
+        this.$refs.listShow.style = 'z-index: 1';
       },
       hideList() {
         this.listShow = false;

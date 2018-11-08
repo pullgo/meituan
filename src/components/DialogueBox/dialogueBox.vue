@@ -1,6 +1,6 @@
 <template>
 	<!--点击消息弹出聊天页面-->
-	<div class="DialogueBox" v-show="showDialogueBox">
+	<div class="DialogueBox" v-show="showDialogueBox" ref="dialogueBox">
 		<div class="dialogueBox-wrapper">
 			<div class="wrapper-title">
 				<span class="iconfont return icon-fanhui" @click="hideDialogueBox"></span>
@@ -56,9 +56,11 @@
     methods: {
       showDialogueBox() {
         this.dialogueBoxShow = true;
+        this.$refs.dialogueBox.style = 'z-index:10';
       },
       hideDialogueBox() {
         this.dialogueBoxShow = false;
+        this.$refs.dialogueBox.style = 'z-index: -1';
       }
     },
     directives: {

@@ -7,7 +7,7 @@
             <span class="iconfont return icon-xiala" @click="closeDetail"></span>          
           </div>
           <div class="fr foodheader-right">
-            <span class="iconfont icons icon-xiaoxi"></span>
+            <span class="iconfont icons icon-xiaoxi"@click="showdialogueBox"></span>
             <span class="iconfont icons icon-fenxiang" @click="showList"></span>
             <span class="iconfont icons icon-gengduo"  @click="showBox"></span>
           </div>
@@ -36,9 +36,9 @@
           <Ratingselect :select-type="selectType" :only-content="onlyContent"></Ratingselect>
         </div>
       </div>
-      <!--点击消息弹出聊天页面 @click="showdialogueBox"  v-show="dialogueBoxShow" @click="hidedialogueBox"-->
-      <DialogueBox ref="dialogueBox"></DialogueBox>
-      <!--<div class="dialogueBox">
+      <!--点击消息弹出聊天页面<DialogueBox ref="dialogueBox"></DialogueBox>  -->
+      
+      <div class="dialogueBox" v-show="dialogueBoxShow" @click="hidedialogueBox">
         <div class="dialogueBox-wrapper">
           <div class="wrapper-title">
             <span class="iconfont return icon-fanhui"></span>
@@ -46,7 +46,7 @@
             <span class="iconfont telephone icon-dianhua"></span>
             <span class="text">进店</span>
           </div>
-          中心内容区域
+          <!--中心内容区域-->
           <div class="dialogueBox-content">
             <span class="content-warn">商家可能比较繁忙，若回复较慢，请电话联系</span>
             <div class="dialogueBox-info">                  
@@ -62,7 +62,7 @@
               </div>
             </div>
           </div>
-          输入框区域
+          <!--输入框区域-->
           <div class="dialogueBox-input">
             <span class="iconfont say icon-chakantiezimaikefeng"></span>
             <input v-focus type="text" class="input-box" placeholder="输入消息" v-focus="true">
@@ -70,7 +70,7 @@
             <span class="iconfont add-box icon-jia"></span>
           </div>
         </div>
-      </div>-->      
+      </div>     
       <!--点击分享弹出的对话框-->
       <div class="shareBox" v-show="listShow" ref="shareBox">
         <h1 class="top-title border-1px">商家配送范围有限，建议分享给您附近的朋友</h1>
@@ -121,7 +121,7 @@
   import Ratingselect from 'components/Ratingselect/ratingselect';
   import Split from 'base/Split/split';
   import Cartcontrol from 'base/Cartcontrol/cartcontrol';
-  import DialogueBox from 'components/DialogueBox/dialogueBox';
+  // import DialogueBox from 'components/DialogueBox/dialogueBox';
   const ALL = 2;
   export default {
     props: {
@@ -139,7 +139,7 @@
         onlyContent: true,
         listShow: false,
         boxShow: false,
-        // dialogueBoxShow: false,
+        dialogueBoxShow: false,
         desc: {
           all: '全部',
           positive: '推荐',
@@ -182,8 +182,8 @@
           }
           // console.log(this.scroll);
         });
-        this.$refs.dialogueBox.showDialogueBox();
-        this.$refs.dialogueBox.style = 'z-index:10';
+        // this.$refs.dialogueBox.showDialogueBox();
+        // this.$refs.dialogueBox.style = 'z-index:10';
       },
       showList() {
         this.listShow = true;
@@ -200,14 +200,14 @@
       },
       closeDetail() {
         this.showFlag = false;
-      }
+      },
       // 点击打开聊天页面
-      /* showdialogueBox() {
+      showdialogueBox() {
         this.dialogueBoxShow = true;
       },
       hidedialogueBox() {
         this.dialogueBoxShow = false;
-      } */
+      }
     },
     // 子----父 因为选择的都是基础类型改变不了父级的组件
     events: {
@@ -230,8 +230,8 @@
     components: {
       Cartcontrol,
       Split,
-      Ratingselect,
-      DialogueBox
+      Ratingselect
+      // DialogueBox
     }
   };
 </script>
@@ -398,10 +398,10 @@
       background: #fff
       font-size: 12px
       .box
-        padding: 5px
+        padding: 10px 5px 8px 10px
         .icons
           margin-right: 5px
-    /* .dialogueBox
+    .dialogueBox
       position: fixed
       top: 0
       left: 0
@@ -510,7 +510,7 @@
         .add-box
           padding-right: 10px
           font-size: 28px
-          color: #909090 */
+          color: #909090
     .list-mask
       position: fixed
       top: 0
