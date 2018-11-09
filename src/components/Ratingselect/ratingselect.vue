@@ -1,17 +1,18 @@
 <template>
   <div class="ratingselect">
     <div class="rating-type border-1px">
-      <span @click="select(2, event)" class="block positive" :class="{'active':selectType===2}">{{desc.all}}<span class="count ">{{ratings.length}}</span></span>
-      <span  @click="select(0, event)" class="block positive" :class="{'active':selectType===0}">{{desc.positive}}<span class="count">{{positives.length}}</span></span>
-      <span  @click="select(1, event)" class="block negetive" :class="{'active':selectType===1}">{{desc.negetive}}<span class="count">{{negetive.length}}</span></span>
+      <span @click="select(2, $event)" class="block positive" :class="{'active':selectType===2}">{{desc.all}}<span class="count">{{ratings.length}}</span></span>
+      <span  @click="select(0, $event)" class="block positive" :class="{'active':selectType===0}">{{desc.positive}}<span class="count">{{positives.length}}</span></span>
+      <span  @click="select(1, $event)" class="block negetive" :class="{'active':selectType===1}">{{desc.negetive}}<span class="count">{{negetive.length}}</span></span>
     </div>
     <div class="switch" :class="{'on':onlyContent}" @click="toggleContent">
-      <span></span>
+      <span class="iconfont icon-kuangxuanzhong icons"></span>
       <span class="text">只看有内容的评价</span>
     </div>
   </div>
 </template>
 <script type="text/ecmascript-6">
+  import axios from 'axios';
   const POSITIVE = 0;// 正
   const NEGATIVE = 1;// 负
   const ALL = 0;// 全部评价
@@ -42,6 +43,8 @@
         }
       }
     },
+    created() {
+    },
     methods: {
       select(type, event) {
         if (!event._constructed) {
@@ -49,7 +52,7 @@
         }
         this.selectType = type;
         // 点击更改按钮后告知父级 值告诉父的变化 父就可以监听组件
-        this.$emit('ratingtype.select', type);
+        // this.$emit('ratingtype.select', type);
       },
       toggleContent(event) {
         if (!event._constructed) {
@@ -57,20 +60,11 @@
         }
         this.onlyContent = !this.onlyContent;
         // 告诉content.toggle把onlyContent传出去
-        this.$emit('content.toggle', this.onlyContent);
+        // this.$emit('content.toggle', this.onlyContent);
       }
     },
     computed: {
-      positives() {
-        return this.ratings.filter((rating) => {
-          return rating.rateType === POSITIVE;
-        });
-      },
-      negetive() {
-        return this.ratings.filter((rating) => {
-          return rating.rateType === NEGATIVE;
-        });
-      }
+
     }
   };
 </script>
@@ -114,22 +108,17 @@
       border-bottom: rgba(7, 17, 27, 0.1)
       color: rgb(147, 153, 159)
       font-size: 0
+      margin-left: 10px
       &.on
-        .icon-check_circle
-          color: #00B43C
-      .icon-check_circle
-        margin-right: 4px
+        .icons
+          color: #ffc95d
+      .icons
+        margin-right: 8px
         display: inline-block
         vertical-align: top
-        font-size: 24px
+        font-size: 20px
       .text
         font-size: 12px
         display: inline-block
         vertical-align: top
-
-
-
-
-
-
 </style>

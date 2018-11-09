@@ -27,7 +27,7 @@
         </div>
       </div>
       <split></split>
-      <ratingselect></ratingselect> 
+      <ratingselect :ratings="ratings"></ratingselect> 
       <scroll ref="scroll">
         <div>
           <div class="ratings-wrapper">
@@ -44,7 +44,7 @@
                   </div>
                   <p class="text">{{rating.text}}</p>
                   <div class="recommend">
-                    <span class="icon-thumb_up"></span>
+                    <span class="iconfont icon-tuijian icon"></span>
                     <span class="item" v-for="item in rating.recommend" :value="item.code" :key="item.code" >{{item}}</span>
                   </div>
                   <div class="time"></div>
@@ -67,8 +67,6 @@
   import Ratingselect from 'components/Ratingselect/ratingselect';
 
   export default {
-    props: {
-    },
     data() {
       return {
         seller: [],
@@ -211,12 +209,13 @@
             .recommend
               line-height: 16px
               font-size: 0
-              .icon-thumb_up, .item
+              .icon, .item
                 display: inline-block
                 margin: 0 8px 4px 0
                 font-size: 9px
-              .icon-thumb_up
-                color: rgb(0, 160,220)
+              .icon
+                color: #ffc95d
+                font-size: 18px
               .item
                 padding: 0 6px
                 border: 1px solid rgba(7, 17, 27, 0.1)

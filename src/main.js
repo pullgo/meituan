@@ -4,7 +4,6 @@ import Axios from 'axios';
 import VueLazyLoad from 'Vue-lazyload';
 import store from './store';
 import App from './App';
-import $ from 'jquery';
 import 'common/stylus/index.styl';
 import fastClick from 'fastClick';
 /* eslint-disable no-new */
