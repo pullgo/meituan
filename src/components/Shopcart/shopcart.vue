@@ -54,7 +54,7 @@
       <div class="list-mask" @click="hideList" v-show="listShow"></div>
     </transition>    
   </div>
-</div>  
+</div> 
 </template>
 
 <script type="text/ecmascript-6">
@@ -264,7 +264,7 @@
     left: 0px
     width: 100%
     height: 58px
-    z-index: 33
+    // z-index: 33
     .shopcart-wrapper
       background: #404040
       display: flex

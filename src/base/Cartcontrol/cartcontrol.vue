@@ -21,11 +21,8 @@
       food: {}
     },
     watch: {
-      food: {
-        handler(v1) {
-          // console.log(v1);
-        },
-        deep: true// 深度观测
+      food(v1) {
+        // console.log(v1);
       }
     },
     methods: {
@@ -69,7 +66,7 @@
       display: inline-block
       padding: 6px//扩大点击区域
       font-size: 24px
-      color: #999999
+      color: #ffc95d
       transform: translate3d(0, 0, 0)//3D可以开起硬件加速 更加流畅
       .inner
         display: inline-block//否则动画做不起来 否则没有宽高 高度为0
@@ -98,7 +95,7 @@
     .cart-add
       display: inline-block//横向排列 用了inline-block 父需要加font0
       padding: 6px
-      line-height: 30px
+      line-height: 24px
       font-size: 24px
       color: #ffc95d
 

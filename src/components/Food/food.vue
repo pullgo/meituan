@@ -7,7 +7,7 @@
             <span class="iconfont return icon-xiala" @click="closeDetail"></span>          
           </div>
           <div class="fr foodheader-right">
-            <span class="iconfont icons icon-xiaoxi"@click="showdialogueBox"></span>
+            <span class="iconfont icons icon-xiaoxi" @click="showdialogueBox"></span>
             <span class="iconfont icons icon-fenxiang" @click="showList"></span>
             <span class="iconfont icons icon-gengduo"  @click="showBox"></span>
           </div>
@@ -22,10 +22,11 @@
             <span class="now">￥{{food.price}}</span><span v-show="food.oldPrice" class="old">￥{{food.oldPrice}}</span>
           </div>
           <Split></Split>
+          <!-- -->
           <div class="cartcontrol-wrapper">
             <Cartcontrol :food="food"></Cartcontrol>
           </div>
-          <div class="buy">加入购物车</div>
+          <div class="buy" @click="addFrist" v-show="!food.count || food.count ===0">加入购物车</div>
         </div>
         <div class="info">
           <h1 class="title">商品描述</h1>
@@ -36,12 +37,11 @@
           <Ratingselect :select-type="selectType" :only-content="onlyContent"></Ratingselect>
         </div>
       </div>
-      <!--点击消息弹出聊天页面<DialogueBox ref="dialogueBox"></DialogueBox>  -->
-      
-      <div class="dialogueBox" v-show="dialogueBoxShow" @click="hidedialogueBox">
+      <!--点击消息弹出聊天页面-->      
+      <div class="dialogueBox" v-show="dialogueBoxShow">
         <div class="dialogueBox-wrapper">
           <div class="wrapper-title">
-            <span class="iconfont return icon-fanhui"></span>
+            <span class="iconfont return icon-fanhui" @click="hidedialogueBox"></span>
             <h1 class="dialogueBox-title">{{seller.name}}</h1>
             <span class="iconfont telephone icon-dianhua"></span>
             <span class="text">进店</span>
@@ -65,14 +65,14 @@
           <!--输入框区域-->
           <div class="dialogueBox-input">
             <span class="iconfont say icon-chakantiezimaikefeng"></span>
-            <input v-focus type="text" class="input-box" placeholder="输入消息" v-focus="true">
+            <input v-focus v-if="dialogueBoxShow" type="text" class="input-box" placeholder="输入消息">
             <span class="iconfont  menu-icon icon-caidan1"></span>
             <span class="iconfont add-box icon-jia"></span>
           </div>
         </div>
       </div>     
       <!--点击分享弹出的对话框-->
-      <div class="shareBox" v-show="listShow" ref="shareBox">
+      <div class="shareBox" v-if="listShow" ref="shareBox">
         <h1 class="top-title border-1px">商家配送范围有限，建议分享给您附近的朋友</h1>
         <div class="box-content border-1px">
           <ul>
@@ -90,7 +90,7 @@
             </li>
           </ul>
         </div>
-        <div class="cancal">取消</div>
+        <div class="cancal" @click="hideList">取消</div>
       </div>
       <!--点击更多弹出的对话框-->
       <div class="moreBox" v-show="boxShow" @click="hideBox">
@@ -110,7 +110,14 @@
       <transition name="fade">
         <div class="list-mask" v-show="listShow" @click="hideList"></div>
       </transition>
-    </div>
+      <!--selectFoods传入购物车组件 实现联动 -->     
+      <Shopcart :select-foods="selectFoods"
+                :delivery-price="seller.deliveryPrice"
+                :min-price="seller.minPrice"
+                ref="shopcart"
+                >
+      </Shopcart> 
+    </div>    
   </transition>
 </template>
 
@@ -120,8 +127,8 @@
   import Vue from 'vue';
   import Ratingselect from 'components/Ratingselect/ratingselect';
   import Split from 'base/Split/split';
+  import Shopcart from 'components/Shopcart/shopcart';
   import Cartcontrol from 'base/Cartcontrol/cartcontrol';
-  // import DialogueBox from 'components/DialogueBox/dialogueBox';
   const ALL = 2;
   export default {
     props: {
@@ -131,8 +138,8 @@
     },
     data() {
       return {
-        goods: '',
-        seller: '',
+        goods: [],
+        seller: [],
         // food: {}, //会报重复定义的错 因为props里面已经定义过了
         showFlag: false, // 观测
         selectType: ALL, // 子传父
@@ -159,7 +166,7 @@
       axios.get('../data.json').then((res) => {
         this.goods = res.data.goods;
         this.seller = res.data.seller;
-        // console.log(this.seller);
+        console.log(this.food);
       });
     },
     watch: {
@@ -182,12 +189,18 @@
           }
           // console.log(this.scroll);
         });
-        // this.$refs.dialogueBox.showDialogueBox();
-        // this.$refs.dialogueBox.style = 'z-index:10';
+      },
+      addFrist(event) {
+        // console.log(this.event);
+        if (!event._constructed) {
+          return;
+        }
+        this.$emit('cart-add', event.target); // 父----子
+        Vue.set(this.food, 'count', 1);
       },
       showList() {
         this.listShow = true;
-        this.$refs.shareBox.style = 'z-index:35';
+        // this.$refs.shareBox.style = 'z-index:35';
       },
       hideList() {
         this.listShow = false;
@@ -209,6 +222,19 @@
         this.dialogueBoxShow = false;
       }
     },
+    computed: {
+      selectFoods() {
+        let foods = [];
+        this.goods.forEach((good) => {
+          good.foods.forEach((food) => {
+            if (food.count) {
+            foods.push(food);
+            }
+          });
+        });
+        return foods;
+      }
+    },
     // 子----父 因为选择的都是基础类型改变不了父级的组件
     events: {
     // TYPE里面的T是小写与$emit里面的评写一样
@@ -228,10 +254,10 @@
       }
     },
     components: {
+      Shopcart,
       Cartcontrol,
       Split,
       Ratingselect
-      // DialogueBox
     }
   };
 </script>
@@ -312,16 +338,21 @@
         .buy
           position: absolute
           right: 18px
-          bottom: 18px
+          bottom: 16px
           // z-index: 10
-          height: 24px
-          line-height: 24px
-          padding: 0 12px
+          height: 26px
+          line-height: 26px
+          padding: 0 10px
           box-sizing: border-box
           font-size: 10px
           border-radius: 12px
           color: #fff
           background: #ffc95d
+          &.fade-transition
+            transition: all 0.2s
+            opacity: 1
+          &.fade-enter, &.fade-leave
+            opacity: 0
       .info
         padding-top: 12px
         .title
@@ -351,11 +382,12 @@
       width: 100%
       // height: 150px
       position: fixed
-      bottom: 20px
+      bottom: 0px
       left: 0px
       background: #fff
       font-size: 12px
       color: #000
+      z-index: 1
       .top-title
         font-size: 15px
         text-align: center
@@ -385,10 +417,11 @@
             margin-top: 10px
             line-height: 20px
       .cancal
-        font-size: 16px;
+        font-size: 16px
         text-align: center
         height: 40px
         line-height: 40px
+        color: #5a5a5a
     .moreBox
       position: absolute
       top: 51px
@@ -483,15 +516,15 @@
               border: 1px solid #ffc95d
       .dialogueBox-input
         position: fixed
-        bottom: 40px
+        bottom: 0px
         left: 0px
         background: #fff
-        height: 48px
+        padding-bottom: 11px
+        height: 38px
         width: 100%
-        line-height: 48px
+        line-height: 38px
         .say
-          margin-left: 10px;
-          margin-right: 10px
+          padding: 10px
           font-size: 28px
           color: #909090
         .input-box

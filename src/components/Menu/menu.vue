@@ -53,9 +53,9 @@
               :min-price="seller.minPrice"
               ref="shopcart"
               >
-    </Shopcart>
+    </Shopcart> 
     <!--点击跳转到每个商品详情页面-->          
-    <Food :food="selectedFood" v-show="selectedFood" ref="food"></Food>
+    <Food :food="selectedFood" :select-foods="selectFoods" v-show="selectedFood" ref="food"></Food>
   </div>
 </template>
 <script type="text/ecmascript-6">
