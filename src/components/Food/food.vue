@@ -32,10 +32,27 @@
           <h1 class="title">商品描述</h1>
           <div class="text" v-show="food.info">{{food.info}}</div>
         </div>
-        <div class="ratings">
-          <h1 class="title">外卖评价</h1>
-          <Ratingselect :select-type="selectType" :only-content="onlyContent"></Ratingselect>
-        </div>
+        <div class="rating">
+          <h1 class="title">商品评价</h1>
+          <ratingselect :select-type="selectType" :only-content="onlyContent" :desc="desc" :ratings="food.ratings"></ratingselect>
+          <div class="rating-wrapper">
+            <ul v-show="food.ratings && food.ratings.length">
+              <!--评价的筛选needShow(rating.rateType,rating.text) 定义一个函数将所需要的返回值传入即可v-show也可以绑定一个函数的表达式-->
+              <li v-for="rating in food.ratings" class="rating-item border-1px">
+                <div class="user">
+                  <span class="name">{{rating.username}}</span>
+                  <img class="avatar" width="12" height="12" :src="rating.avatar">
+                </div>
+                <!--时间戳 转为字符串用formatDate 在定义一个方法 filters-->
+                <div class="time">{{rating.rateTime | formatDate}}</div>
+                <p class="text">
+                  <span :class="{'icon-thumb_up':rating.rateTyp===0,'icon-thumb_down':rating.rateTyp===1}"></span>{{rating.text}}
+                </p>
+              </li>
+            </ul>
+            <div class="no-rating" v-show="!food.ratings || !food.ratings.length">暂无评价</div>
+          </div>
+        </div> 
       </div>
       <!--点击消息弹出聊天页面-->      
       <div class="dialogueBox" v-show="dialogueBoxShow">
@@ -140,6 +157,7 @@
       return {
         goods: [],
         seller: [],
+        ratings: [],
         // food: {}, //会报重复定义的错 因为props里面已经定义过了
         showFlag: false, // 观测
         selectType: ALL, // 子传父
@@ -166,7 +184,8 @@
       axios.get('../data.json').then((res) => {
         this.goods = res.data.goods;
         this.seller = res.data.seller;
-        console.log(this.food);
+        this.ratings = res.data.ratings;
+        // console.log(this.food);
       });
     },
     watch: {
@@ -253,6 +272,12 @@
         });
       }
     },
+    filters: {
+      formatDate(time) {
+        let date = new Date(time);
+        return formatDate(date, 'yyyy-MM-dd hh:mm');
+      }
+    },
     components: {
       Shopcart,
       Cartcontrol,
@@ -275,6 +300,7 @@
     width: 100%
     height: 100%
     background: #fff
+    overflow: hidden
     &.move-transtion//最终状态
       transition: all 0.2s linear//晃动为线性移动
       transform: translate3d(0, 0, 0)
@@ -282,7 +308,7 @@
       transform: translate3d(100%, 0, 0)//X轴平移100%
     .food-content
       padding: 10px
-      background: #fff
+      // background: #fff
       .icon-wrapper
         width: 100%
         height: 40px
@@ -378,6 +404,46 @@
         font-size: 14px
         font-weight: 700
         color: #292d31
+      .rating-wrapper
+        padding: 0 18px
+        .rating-item
+          position: relative
+          padding: 16px 0
+          border-1px(rgba(7, 17, 27, 0.1))
+          .user
+            position: absolute
+            right: 0
+            top: 16px
+            line-height: 12px
+            font-size: 0
+            .name
+              display: inline-block
+              margin-right: 6px
+              vertical-align: top
+              font-size: 10px
+              color: rgb(147, 153, 159)
+            .avatar
+              border-radius: 50%
+          .time
+            margin-bottom: 6px
+            line-height: 12px
+            font-size: 10px
+            color: rgb(147, 153, 159)
+          .text
+            line-height: 16px
+            font-size: 12px
+            color: rgb(7, 17, 27)
+            .icon-thumb_up, .icon-thumb_down
+              margin-right: 4px
+              line-height: 24px
+              font-size: 12px
+              color: rgb(0, 160, 220)
+            .icon-thumb_down
+              color: rgb(147, 153, 159)
+        .no-rating
+          padding: 16px 0
+          font-size: 12px
+          color: rgb(147, 153, 159)
     .shareBox
       width: 100%
       // height: 150px
@@ -536,6 +602,7 @@
           padding: 4px;
           background: #fafcff
           border-radius: 6px
+          outline: none
         .menu-icon
           padding-right: 10px
           font-size: 28px

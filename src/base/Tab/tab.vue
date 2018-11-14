@@ -37,6 +37,7 @@
     background: #fff
     z-index: 100
     border-top: 1px solid (rgba(7, 17, 27, 0.1))
+    box-sizing: border-box
     a//子元素直接写a就可以了 
       display: flex
       flex: 1

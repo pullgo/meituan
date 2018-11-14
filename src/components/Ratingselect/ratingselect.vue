@@ -64,7 +64,16 @@
       }
     },
     computed: {
-
+      positives() {
+        return this.ratings.filter((rating) => {
+          return rating.rateType === POSITIVE;
+        });
+      },
+      negetive() {
+        return this.ratings.filter((rating) => {
+          return rating.rateType === NEGATIVE;
+        });
+      }
     }
   };
 </script>
@@ -97,7 +106,7 @@
           &.active
             background: #ffc95d
             color: #383838
-        &.negative
+        &.negetive
           background: rgba(77, 85, 93, 0.2)
           &.active
             background: #ffc95d

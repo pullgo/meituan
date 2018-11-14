@@ -20,7 +20,7 @@
           <div class="foods-wrapper" ref="foodsWrapper">
             <ul>
               <li v-for="(item,index) in goods" class="food-list food-list-hook">
-                <h1 class="title">{{item.name}}</h1>
+                <h1 class="title" :class="{'current':currentIndex === index}">{{item.name}}</h1>
                 <ul>
                   <li  @click="selectFood(food,$event)" v-for="food in item.foods" class="food-item border-1px">
                     <div class="icon" height="57" width="57">
@@ -55,7 +55,7 @@
               >
     </Shopcart> 
     <!--点击跳转到每个商品详情页面-->          
-    <Food :food="selectedFood" :select-foods="selectFoods" v-show="selectedFood" ref="food"></Food>
+    <Food :food="selectedFood" v-show="selectedFood" ref="food"></Food>
   </div>
 </template>
 <script type="text/ecmascript-6">
@@ -70,12 +70,8 @@
   import Food from 'components/food/food';
 
   export default {
-    props: {
-
-    },
   	data () {
   		return {
-        // items: [],
         goods: [], // 这里不定义就会报错
         seller: [],
         ListHeight: [], // 总区间的高度
@@ -165,9 +161,9 @@
           return;
         }
         // console.log(index);
-        let foodsList = this.$refs.foodsWrapper;
+        let foodsList = this.$refs.foodsWrapper.getElementsByClassName('food-list-hook');
         let el = foodsList[index];
-        // console.log(this.foodsList[index]);
+        // console.log(this.el);
         this.foodsScroll.scrollToElement(el, 300);
       },
       // 点击跳转到每个商品详情页面
