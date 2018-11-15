@@ -3,10 +3,10 @@
     <div class="rating-type border-1px">
       <span @click="select(2, $event)" class="block positive" :class="{'active':selectType===2}">{{desc.all}}<span class="count">{{ratings.length}}</span></span>
       <span  @click="select(0, $event)" class="block positive" :class="{'active':selectType===0}">{{desc.positive}}<span class="count">{{positives.length}}</span></span>
-      <span  @click="select(1, $event)" class="block negetive" :class="{'active':selectType===1}">{{desc.negetive}}<span class="count">{{negetive.length}}</span></span>
+      <span  @click="select(1, $event)" class="block negative" :class="{'active':selectType===1}">{{desc.negative}}<span class="count">{{negative.length}}</span></span>
     </div>
-    <div class="switch" :class="{'on':onlyContent}" @click="toggleContent">
-      <span class="iconfont icon-kuangxuanzhong icons"></span>
+    <div class="switch">
+      <span class="iconfont icon-kuangxuanzhong icons" :class="{'on':onlyContent}"  @click="toggleContent"></span>
       <span class="text">只看有内容的评价</span>
     </div>
   </div>
@@ -16,6 +16,7 @@
   const POSITIVE = 0;// 正
   const NEGATIVE = 1;// 负
   const ALL = 0;// 全部评价
+  
   export default {
     props: {
       ratings: {
@@ -37,8 +38,8 @@
         default() {
           return {
             all: '全部',
-            positive: '满意',
-            negetive: '不满意'
+            positive: '推荐',
+            negative: '不推荐'
           };
         }
       }
@@ -52,7 +53,7 @@
         }
         this.selectType = type;
         // 点击更改按钮后告知父级 值告诉父的变化 父就可以监听组件
-        // this.$emit('ratingtype.select', type);
+        this.$emit('ratingType.select', type);
       },
       toggleContent(event) {
         if (!event._constructed) {
@@ -60,7 +61,7 @@
         }
         this.onlyContent = !this.onlyContent;
         // 告诉content.toggle把onlyContent传出去
-        // this.$emit('content.toggle', this.onlyContent);
+        this.emit('content.toggle', this.onlyContent);
       }
     },
     computed: {
@@ -69,7 +70,7 @@
           return rating.rateType === POSITIVE;
         });
       },
-      negetive() {
+      negative() {
         return this.ratings.filter((rating) => {
           return rating.rateType === NEGATIVE;
         });
@@ -102,14 +103,14 @@
           font-size: 8px
           margin-left: 2px
         &.positive
-          background: #fff
+          background: #ffc95d
           &.active
             background: #ffc95d
-            color: #383838
-        &.negetive
+            color: #fff
+        &.negative
           background: rgba(77, 85, 93, 0.2)
           &.active
-            background: #ffc95d
+            background: #f7dca6
             color: #383838
     .switch
       //padding: 12px 18px
@@ -118,14 +119,13 @@
       color: rgb(147, 153, 159)
       font-size: 0
       margin-left: 10px
-      &.on
-        .icons
-          color: #ffc95d
       .icons
         margin-right: 8px
         display: inline-block
         vertical-align: top
-        font-size: 20px
+        font-size: 18px
+        &.on
+          color: #ffc95d
       .text
         font-size: 12px
         display: inline-block

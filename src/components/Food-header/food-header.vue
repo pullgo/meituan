@@ -78,10 +78,12 @@
           <div class="activityBg"></div>
         </div>      
       </div>
-        <router-view></router-view>      
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>    
     </div>
 
-    <div class="ttab">
+    <div class="ttab" ref="ttab">
       <span class="ttab-item active">
         <router-link to="/home/Menu">点菜</router-link>
       </span>
@@ -124,6 +126,7 @@
       toggleList() {
         this.listShow = true;
         this.$refs.listShow.style = 'z-index: 1';
+        this.$refs.ttab.style = 'z-index: 0';
       },
       hideList() {
         this.listShow = false;
@@ -218,6 +221,7 @@
             margin-top: 15px
             height: 100%
             background: #f3f5f7
+            z-index: 0
             .icon-wrapper
               //position: relative
               margin-bottom: 30px
@@ -292,7 +296,7 @@
         position: absolute
         right: 38px
         bottom: 10px
-        z-index: 10
+        z-index: 0
         height: 24px
         line-height: 24px
         padding: 0 12px

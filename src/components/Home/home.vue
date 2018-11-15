@@ -9,7 +9,7 @@
           <span class="iconfont icon-xiaoxi fr"></span>
         </router-link> 
         <transition name="hide">
-          <router-view></router-view>       
+          <keep-alive><router-view></router-view></keep-alive>   
         </transition> 
       </div>
       <div id="fixedSearch" :class="fixedSearch?isFixed:noFixed" ref="fixedSearch" >

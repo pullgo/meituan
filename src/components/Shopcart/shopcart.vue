@@ -172,7 +172,7 @@
         if (this.totalPrice < this.minPrice) {
           return;
         }
-        window.alert(`支付￥{this.totalPrice}元`);
+        window.alert(`支付${this.totalPrice}元`);
       },
       empty() {
         this.selectFoods.forEach((food) => {

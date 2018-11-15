@@ -38,7 +38,7 @@
           <div class="rating-wrapper">
             <ul v-show="food.ratings && food.ratings.length">
               <!--评价的筛选needShow(rating.rateType,rating.text) 定义一个函数将所需要的返回值传入即可v-show也可以绑定一个函数的表达式-->
-              <li v-for="rating in food.ratings" class="rating-item border-1px">
+              <li v-for="rating in food.ratings" class="rating-item border-1px" v-show="needShow(rating.rateType,rating.text)">
                 <div class="user">
                   <span class="name">{{rating.username}}</span>
                   <img class="avatar" width="12" height="12" :src="rating.avatar">
@@ -120,7 +120,7 @@
           <span>消息中心</span>
         </div>
         <div class="box">
-          <i class="iconfont icons icon-xiaoxi"></i>
+          <i class="iconfont icons icon-dianhua"></i>
           <span>联系商家</span>
         </div>
       </div>      
@@ -209,6 +209,16 @@
           // console.log(this.scroll);
         });
       },
+      needShow(type, text) {
+        if (this.onlyContent && !text) {
+          return false;
+        }
+        if (this.selectType === ALL) {
+          return true;
+        } else {
+          return type === this.selectType;
+        }
+      },
       addFrist(event) {
         // console.log(this.event);
         if (!event._constructed) {
@@ -275,7 +285,18 @@
     filters: {
       formatDate(time) {
         let date = new Date(time);
-        return formatDate(date, 'yyyy-MM-dd hh:mm');
+        let y = date.getFullYear();
+        let MM = date.getMonth() + 1;
+        MM = MM < 10 ? ('0' + MM) : MM;
+        let d = date.getDate();
+        d = d < 10 ? ('0' + d) : d;
+        let h = date.getHours();
+        h = h < 10 ? ('0' + h) : h;
+        let m = date.getMinutes();
+        m = m < 10 ? ('0' + m) : m;
+        let s = date.getSeconds();
+        s = s < 10 ? ('0' + s) : s;
+        return y + '-' + MM + '-' + d + ' ' + h + ':' + m + ':' + s;
       }
     },
     components: {
@@ -546,14 +567,14 @@
           background: #fff
           .icon
             flex: 0 0 57px//左右分栏布局
-            margin: 10px
+            margin: 30px 10px 10px 10px
           .info-content
             flex: 1//左右分栏布局
             position: relative
             text-align: left
             display: inline-bloc
             .name
-              // display: inline-block
+              display: inline-block
               margin: 15px 0 0px 0
               font-size: 14px
               height: 14px
@@ -572,14 +593,18 @@
                 font-size: 10px 
                 color: rgb(147, 153, 159)
             .info-text
+              position: absolute
+              top: 60px
               height: 24px
+              width: 110px
               line-height: 24px
-              padding: 3px 18px
+              // padding: 3px 18px
               box-sizing: border-box
               font-size: 14px
               border-radius: 12px
               color: #ffc95d
               border: 1px solid #ffc95d
+              text-align: center
       .dialogueBox-input
         position: fixed
         bottom: 0px

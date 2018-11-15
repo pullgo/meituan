@@ -1,5 +1,5 @@
 <template>
-  <div class="ratings">
+  <div class="ratings" ref="ratings">
     <FoodHeader></FoodHeader>      
     <div class="ratings-content">
       <div class="content-wrapper">
@@ -27,12 +27,12 @@
         </div>
       </div>
       <split></split>
-      <ratingselect :ratings="ratings"></ratingselect> 
+      <ratingselect :ratings="ratings" :select-type="selectType" :only-content="onlyContent"></ratingselect> 
       <scroll ref="scroll">
         <div>
           <div class="ratings-wrapper">
             <ul>
-              <li v-for="rating in ratings" :value="rating.code" :key="rating.code" class="item border-1px">
+              <li v-for="rating in ratings" :value="rating.code" :key="rating.code" v-show="needShow(rating.rateType,rating.text)" class="item border-1px">
                 <div class="avatar">
                   <img class="img" width="28" height="28" :src="rating.avatar">
                 </div>
@@ -65,23 +65,54 @@
   import star from 'base/star/star';
   import Split from 'base/Split/split';
   import Ratingselect from 'components/Ratingselect/ratingselect';
-
+  import BScroll from 'better-scroll';
+  const ALL = 2;
   export default {
     data() {
       return {
         seller: [],
-        ratings: []
+        ratings: [],
+        onlyContent: true,
+        selectType: ALL
       };
     },
     created() {
       axios.get('../data.json').then((res) => {
         this.seller = res.data.seller;
         this.ratings = res.data.ratings;
-        // console.log(this.ratings)
+        this.$nextTick(() => {
+          this.scroll = new BScroll(this.$refs.ratings, {
+            click: true
+          });
+        });
       });
     },
-    // methods: {
-    // },
+    methods: {
+      needShow(type, text) {
+        if (this.onlyContent && !text) {
+          return false;
+        }
+        if (this.selectType === ALL) {
+          return true;
+        } else {
+          return type === this.selectType;
+        }
+      }
+    },
+    events: {
+      'ratingType.select'(type) {
+        this.selectType = type;
+        this.$nextTick(() => {
+          this.scroll.refresh();
+        });
+      },
+      'content.toggle'(onlyContent) {
+        this.onlyContent = onlyContent;
+        this.$nextTick(() => {
+          this.scroll.refresh();
+        });
+      }
+    },
     components: {
       FoodHeader,
       star,

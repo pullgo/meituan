@@ -22,6 +22,9 @@ export default new VueRouter({
 		{
 			path: '/home',
 			component: Home,
+			meta: {
+				keepAlive: true
+			},
 			children: [
 				{
 					path: '/home/massage',
@@ -29,7 +32,10 @@ export default new VueRouter({
 				},
 				{
 					path: '/home/menu',
-					component: Menu
+					component: Menu,
+					meta: {
+						keepAlive: true
+					}
 				},
 				{
 					path: '/home/seller',
@@ -43,7 +49,10 @@ export default new VueRouter({
 		},
 		{
 			path: '/findList',
-			component: FindList
+			component: FindList,
+			meta: {
+				keepAlive: true
+			}
 		},
 		{
 			path: '/order',
