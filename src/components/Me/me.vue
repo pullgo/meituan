@@ -6,9 +6,6 @@
         <div class="head_address fr">
           <span class="iconfont setting icon-iconfonticonfontjixieqimo" @click="toSetting"></span>
           <span class="iconfont icon-xiaoxi massage" @click="toMassage"></span>
-          <transition name="hide">
-            <router-view></router-view>       
-          </transition> 
         </div>
       </div>
       <!--头像部分-->
@@ -41,6 +38,9 @@
       <!--我的资产/我的服务/更多推荐-->
       <marginItem :data='items'></marginItem>
     </div>
+    <transition name="hide">
+      <router-view></router-view>       
+    </transition> 
   </div>
 </template>
 
@@ -65,7 +65,8 @@
               },
               {
                 icon: '\ue60e',
-                text: '我的钱包'
+                text: '我的钱包',
+                hight: '赢现金'
               },
               {
                 icon: '\ue651',
@@ -99,7 +100,8 @@
             children: [
               {
                 icon: '\ue6c7',
-                text: '商家入驻'
+                text: '邀请有奖',
+                hight: '五元现金'
               },
               {
                 icon: '\ue68d',
@@ -190,10 +192,6 @@
         .massage
           margin-right: 12px
           font-size: 18px
-        .hide-enter-active, .hide-leave-active 
-          transition: opacity .5s
-        .hide-enter, .hide-leave-active
-          opacity: 0
     .avatar
       display: flex
       height: 84px
@@ -260,4 +258,9 @@
       .next
         font-size: 16px
         margin-left: 30px
+.hide-enter-active, .hide-leave-active 
+  transition: opacity .5s
+.hide-enter, .hide-leave-active
+  opacity: 0
+
 </style> 

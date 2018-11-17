@@ -69,7 +69,8 @@
           margin-left: 14px
           color: #727272
           font-size: 20px
-          padding: 6px
+          line-height: 48px;
+          padding-right: 6px
         .title
           display: flex
           font-size: 18px

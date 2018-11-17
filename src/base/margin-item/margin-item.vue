@@ -6,9 +6,10 @@
         </div>
         <div class="item-wrapper">
           <ul class="item-list">
-            <li class="item" v-for="(list,index) in item.children">
+            <li class="item" v-for="(list, index) in item.children" :key="list.code">
               <span class="iconfont icons">{{list.icon}}</span>
               <p class="text">{{list.text}}</p>
+              <p v-show="list.hight" class="hight-text">{{list.hight}}</p>
             </li>
           </ul>
         </div>
@@ -65,6 +66,7 @@
           display: flex
           .item
             display: inline-block
+            position: relative
             flex: 1
             width: 70px
             margin-right: 13px
@@ -80,4 +82,14 @@
               flex-direction: column
               align-items: center
               margin-top: 10px
+            .hight-text
+              position: absolute
+              top: -10px
+              right: -15px
+              background: #ff4f33
+              color: #fff
+              border-radius: 12px
+              padding: 2px
+              font-size: 6px
+              list-style-type : disc
 </style> 
