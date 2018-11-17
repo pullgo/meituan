@@ -55,7 +55,7 @@
               >
     </Shopcart> 
     <!--点击跳转到每个商品详情页面-->          
-    <Food :food="selectedFood" v-show="selectedFood" ref="food"></Food>
+    <Food @add="addFood" :food="selectedFood" v-show="selectedFood" ref="food"></Food>
   </div>
 </template>
 <script type="text/ecmascript-6">
@@ -128,13 +128,16 @@
       }
     },
     methods: {
+      addFood(target) {
+        this._drop(target);
+      },
       // 同时开启2个动画比较卡 放在回调里面执行
       _drop(target) {
         this.$nextTick(() => {
           this.$refs.shopcart.drop(target);
         });
       },
-      _initScroll() {
+      _initScroll(event) {
         this.menuScroll = new BScroll(this.$refs.menuWrapper, {
           click: true
           /* 这样才可以点击BScroll实现原理是监听star与end阻止了默认事件

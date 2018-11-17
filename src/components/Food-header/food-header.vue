@@ -154,7 +154,9 @@
         line-height: 40px
         font-size: 20px
         .foodheader-left
-          margin-left: 15px
+          margin-left: 9px
+          .return
+            padding: 6px
         .foodheader-right
           margin-right: 25px
           .icons

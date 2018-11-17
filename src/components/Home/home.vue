@@ -9,7 +9,7 @@
           <span class="iconfont icon-xiaoxi fr"></span>
         </router-link> 
         <transition name="hide">
-          <keep-alive><router-view></router-view></keep-alive>   
+          <router-view></router-view> 
         </transition> 
       </div>
       <div id="fixedSearch" :class="fixedSearch?isFixed:noFixed" ref="fixedSearch" >
@@ -52,17 +52,17 @@
         </div>
       </div>
       <div class="sellPic">
-        <ul class="clearfix">
-          <li class="fl">
+        <ul class="sell-list">
+          <li class="list">
             <img src="../../common/image/sellPic4.png" width="78" height="98px">
           </li>
-          <li class="fl">
+          <li class="list">
             <img src="../../common/image/sellPic4.png" width="78" height="98px">
           </li>
-          <li class="fl">
+          <li class="list">
             <img src="../../common/image/sellPic4.png" width="78" height="98px">
           </li>
-          <li class="fl">
+          <li class="list">
             <img src="../../common/image/sellPic4.png" width="78" height="98px">
           </li>
         </ul>
@@ -408,9 +408,12 @@
   .sellPic
     width: 100%
     padding: 10px
-    ul li
-      width: 78px
-      margin-right: 13px
+    .sell-list
+      display: flex
+      .list
+        flex: 1
+        width: 78px
+        margin-right: 13px
   .sell-title
     width: 100%
     margin-left: 10px

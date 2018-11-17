@@ -26,15 +26,11 @@
                     <span class="charging">{{item.min_price_tip}}</span>∣
                     <span class="average">{{item.average_price_tip}}</span>
                   </div>
-                  <div class="goods-type">
-                    <ul v-if="item.discounts2" class="supports">
-                      <li class="support-supp" v-for="supp
+                  <!--<div class="goods-type" v-for="supp
              in item.discounts2[0]">
                         <span class="iconfont icon-store icon"></span>
-                        <!--<span class="text border-1px">{{item.discounts2[0].info}}</span>--> 
-                      </li>
-                    </ul>
-                  </div>
+                        <span class="text border-1px">{{item.discounts2[0].info}}</span> 
+                  </div>-->
                 </div>
               </li>
             </router-link>  

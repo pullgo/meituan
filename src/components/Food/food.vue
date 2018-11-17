@@ -1,4 +1,4 @@
-﻿<template><!--点击跳到单个商品页面"-->
+<template><!--点击跳到单个商品页面"-->
   <transition class="move">
     <div class="food" v-show="showFlag" ref="food">
       <div class="food-content">
@@ -24,9 +24,9 @@
           <Split></Split>
           <!-- -->
           <div class="cartcontrol-wrapper">
-            <Cartcontrol :food="food"></Cartcontrol>
+            <Cartcontrol :food="food" @add="addFood"></Cartcontrol>
           </div>
-          <div class="buy" @click="addFrist" v-show="!food.count || food.count ===0">加入购物车</div>
+          <div class="buy" @click.stop.prevent="addFrist" v-show="!food.count || food.count ===0">加入购物车</div>
         </div>
         <div class="info">
           <h1 class="title">商品描述</h1>
@@ -34,7 +34,7 @@
         </div>
         <div class="rating">
           <h1 class="title">商品评价</h1>
-          <ratingselect :select-type="selectType" :only-content="onlyContent" :desc="desc" :ratings="food.ratings"></ratingselect>
+          <ratingselect @select="selectRating" :select-type="selectType" :only-content="onlyContent" :desc="desc" :ratings="food.ratings"></ratingselect>
           <div class="rating-wrapper">
             <ul v-show="food.ratings && food.ratings.length">
               <!--评价的筛选needShow(rating.rateType,rating.text) 定义一个函数将所需要的返回值传入即可v-show也可以绑定一个函数的表达式-->
@@ -92,7 +92,7 @@
       <div class="shareBox" v-if="listShow" ref="shareBox">
         <h1 class="top-title border-1px">商家配送范围有限，建议分享给您附近的朋友</h1>
         <div class="box-content border-1px">
-          <ul>
+          <ul class="box-list">
             <li class="box">
               <span class="iconfont icons icon-pengyouquan"></span>
               <span class="text">微信朋友圈</span>
@@ -219,6 +219,9 @@
           return type === this.selectType;
         }
       },
+      addFood(target) {
+        this.$emit('add', target);
+      },
       addFrist(event) {
         // console.log(this.event);
         if (!event._constructed) {
@@ -230,6 +233,12 @@
       showList() {
         this.listShow = true;
         // this.$refs.shareBox.style = 'z-index:35';
+      },
+      selectRating(type) {
+        this.selectType = type;
+        this.$nextTick(() => {
+          this.scroll.refresh();
+        });
       },
       hideList() {
         this.listShow = false;
@@ -335,11 +344,13 @@
         height: 40px
         line-height: 40px
         .foodheader-left
-          margin-left: 5px
+          margin-left: 1px
+          .return
+            padding: 6px
         .foodheader-right
           margin-right: 25px
           .icons
-            margin-right: 8px         
+            padding: 6px         
       .image-wrapper
         border-radius: 10px
         .img
@@ -482,27 +493,28 @@
         padding-bottom: 10px
         border-bottom: 1px solid (rgba(7, 17, 27, 0.1))
       .box-content
-        padding: 10px 10px 20px 31px
+        padding: 5px 0px 10px 0px
         border-bottom: 1px solid (rgba(7, 17, 27, 0.1))
-        .box
-          display: inline-block
-          flex: 1
-          margin-right: 55px
-          flex-direction: column
-          align-items: center
-          .icons
-            display: flex
+        .box-list
+          display: flex
+          .box
+            display: inline-block
+            flex: 1
             flex-direction: column
             align-items: center
-            font-size: 50px
-            margin-top: 16px
-            color: #ffc95d
-          .text
-            display: flex
-            flex-direction: column
-            align-items: center
-            margin-top: 10px
-            line-height: 20px
+            .icons
+              display: flex
+              flex-direction: column
+              align-items: center
+              font-size: 50px
+              margin-top: 16px
+              color: #ffc95d
+            .text
+              display: flex
+              flex-direction: column
+              align-items: center
+              margin-top: 10px
+              line-height: 20px
       .cancal
         font-size: 16px
         text-align: center

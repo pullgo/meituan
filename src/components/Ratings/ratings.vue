@@ -27,7 +27,7 @@
         </div>
       </div>
       <split></split>
-      <ratingselect :ratings="ratings" :select-type="selectType" :only-content="onlyContent"></ratingselect> 
+      <ratingselect @click="selectRating" :ratings="ratings" :select-type="selectType" :only-content="onlyContent"></ratingselect> 
       <scroll ref="scroll">
         <div>
           <div class="ratings-wrapper">
@@ -97,6 +97,12 @@
         } else {
           return type === this.selectType;
         }
+      },
+      selectRating(type) {
+        this.selectType = type;
+        this.$nextTick(() => {
+          this.scroll.refresh();
+        });
       }
     },
     events: {

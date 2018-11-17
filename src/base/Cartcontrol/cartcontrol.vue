@@ -33,19 +33,16 @@
         if (!event._constructed) {
           return;
         }
-        // console.log('click');// 一次
-        // set用于添加和删除不存在属性
+        // console.log('click'); // 一次
+        // console.log(this.food.count);
         if (!this.food.count) {
           Vue.set(this.food, 'count', 1);
-          this.food.count = 1;
         } else {
           this.food.count ++;
         }
         // 往购物车添加商品时 派发事件 将event.target dom对象作为参数传给购物车组件 在父组件menu里面定义event事件 接收cart.add事件 参数为target
-
-        this.$emit('cart.add', event.target);
+        this.$emit('add', event.target);
       },
-      // -的时候 需要传入event 否则就没有效果
       decreaseCart(event) {
         if (!event._constructed) {
           return;
