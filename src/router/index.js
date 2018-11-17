@@ -5,7 +5,7 @@ import FindList from 'components/FindList/findList';
 import Order from 'components/Order/order';
 import Me from 'components/Me/me';
 import Massage from 'components/Massage/massage';
-import MMassage from 'components/MMassage/mmassage';
+// import MMassage from 'components/MMassage/mmassage';
 import Setting from 'components/Setting/setting';
 import Menu from 'components/Menu/menu';
 import Seller from 'components/Seller/seller';
@@ -73,8 +73,8 @@ export default new VueRouter({
 			component: Me,
 			children: [
 				{
-					path: 'mmassage',
-					component: MMassage
+					path: 'massage',
+					component: Massage
 				},
 				{
 					path: 'setting',
