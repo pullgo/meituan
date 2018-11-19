@@ -26,19 +26,20 @@
         </div>
 
         <div class="icon-wrapper" v-if="seller.supports">
-          <!--共多少活动页面-->
-          <div class="Nactivity"  @click="toggleList"  v-show="!listShow">
+          <!--共多少活动页面  @click="toggleList"  v-show="!listShow"-->
+          <div class="Nactivity">
             <icon class="icons" :size="16" :class="classMap[seller.supports[0].type]"></icon>
             <span class="text">{{seller.supports[0].description}}</span>
-            <div class="listBox">
+            <div class="listBox" @click="toFoodHeaderActivity">
               <span>5个活动</span>
               <span class="iconfont icon-shangla list"></span>
             </div>
           </div>
-          <!--活动页面-->
+            <router-view></router-view>
+          <!--活动页面
           <transition class="fold">
             <div class="activity" v-show="listShow" ref="listShow">
-              <!--隐藏活动页面-->
+              <!--隐藏活动页面
               <div class="icon-wrapper">
                 <ul>
                   <li v-for="(item, index) in seller.supports">
@@ -47,7 +48,7 @@
                   </li>
                 </ul>
               </div>
-              <!--印象-->
+              <!--印象
               <div class="info-wrapper">
                 <p class="title">印象墙</p>
                 <span class="text">服务好<span class="delimiter">∣</span></span>
@@ -68,12 +69,12 @@
                   <span class="text">所有美好的记忆和爱都应该被珍藏，用心为你。</span>
                 </div>
               </div>
-              <!--印象-->
+              <!--印象
               <div class="pullUp">
                 <span class="iconfont icon-shangla-yuan pullUpIcon" @click="hideList"></span>
               </div>    
             </div>
-          </transition>
+          </transition>-->
           <!--点击活动页面后面的遮罩层-->
           <div class="activityBg"></div>
         </div>      
@@ -82,8 +83,7 @@
         <router-view></router-view>
       </keep-alive>    
     </div>
-
-    <div class="ttab" ref="ttab">
+    <!--<div class="ttab" ref="ttab">
       <span class="ttab-item active">
         <router-link to="/home/Menu">点菜</router-link>
       </span>
@@ -97,11 +97,11 @@
     </div>
     <keep-alive>
       <router-view :seller="seller"></router-view>
-    </keep-alive>
+    </keep-alive> -->
     <!--模糊的背景层-->
     <div class="background">
       <img :src="seller.avatar" class="img">
-    </div> 
+    </div>
 
 
   </div>
@@ -109,11 +109,12 @@
 <script type='text/ecmascript-6'>
   import axios from 'axios';
   import Icon from 'base/Icon/icon';
+  // import Title from 'components/Title/title';
   export default {
     data() {
       return {
-        seller: [],
-        listShow: false
+        seller: []
+        // listShow: false
       };
     },
     created() {
@@ -123,17 +124,21 @@
       this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
     },
     methods: {
-      toggleList() {
+      /* toggleList() {
         this.listShow = true;
         this.$refs.listShow.style = 'z-index: 1';
         this.$refs.ttab.style = 'z-index: 0';
-      },
+      }, */
       hideList() {
-        this.listShow = false;
+        // this.listShow = false;
+      },
+      toFoodHeaderActivity() {
+        this.$router.push('/home/menu/foodHeaderActivity');
       }
     },
     components: {
       Icon
+      // Title
     }
   };
 </script>
@@ -215,7 +220,7 @@
                   //transform-origin: center center
                   //transform: rotate(180deg)
                   //transition: tranform 0.2s
-          .activity
+          /* .activity
             //padding: 2px
             height: 20px
             //overflow: hidden
@@ -263,16 +268,16 @@
                 position: absolute
                 left: 50%
                 transform: translateX(-50%)
-                color: #343434
+                color: #343434*/
           .activityBg
             position: absolute
             top: 0
             left: 0
             width: 100%
-            height: 131px
+            height: 91px
             background: rgba(255, 255, 255, 0.9)
             z-index: -2          
-    .ttab
+    /* .ttab
       width: 100%
       height: 40px
       position: relative
@@ -306,7 +311,7 @@
         font-size: 10px
         border-radius: 12px
         color: #ffc95d
-        border: 1px solid #ffc95d
+        border: 1px solid #ffc95d */
     .background
       position: absolute
       top: 0

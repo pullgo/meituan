@@ -5,13 +5,13 @@ import FindList from 'components/FindList/findList';
 import Order from 'components/Order/order';
 import Me from 'components/Me/me';
 import Massage from 'components/Massage/massage';
-// import MMassage from 'components/MMassage/mmassage';
 import Setting from 'components/Setting/setting';
 import Menu from 'components/Menu/menu';
 import Seller from 'components/Seller/seller';
 import Ratings from 'components/Ratings/ratings';
 import ToBeEvaluated from 'components/ToBeEvaluated/toBeEvaluated';
 import Refund from 'components/Refund/refund';
+import FoodHeaderActivity from 'components/foodHeaderActivity/foodHeaderActivity';
 // import DialogueBox from 'components/DialogueBox/dialogueBox';
 Vue.use(VueRouter);
 
@@ -35,7 +35,13 @@ export default new VueRouter({
 					component: Menu,
 					meta: {
 						keepAlive: true
-					}
+					},
+					children: [
+						{
+							path: '/home/menu/foodHeaderActivity',
+							component: FoodHeaderActivity
+						}
+					]
 				},
 				{
 					path: '/home/seller',

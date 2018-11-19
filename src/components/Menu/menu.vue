@@ -1,6 +1,7 @@
 <template>
   <div class="menu">
     <FoodHeader></FoodHeader> 
+    <Classify></Classify>
     <div class="menu-content">
       <!--左边-->
       <div class="menu-wrapper" ref="menuWrapper">
@@ -51,6 +52,7 @@
     <Shopcart :select-foods="selectFoods"
               :delivery-price="seller.deliveryPrice"
               :min-price="seller.minPrice"
+              :hide-shopcart="hideShopcart"
               ref="shopcart"
               >
     </Shopcart> 
@@ -60,6 +62,7 @@
 </template>
 <script type="text/ecmascript-6">
   import FoodHeader from 'components/food-header/food-header';
+  import Classify from 'components/Classify/classify';
   import axios from 'axios';
   import loading from 'base/loading/loading';
   import Scroll from 'base/Scroll/scroll';
@@ -195,10 +198,14 @@
         let menuList = this.$refs.menuList;
         let el = menuList[index];
         this.menuScroll.scrollToElement(el, 300, 0, -100);
+      },
+      hideShopcart() {
+        this.$refs.shopcart.style = 'z-index:-1';
       }
     },
     components: {
       FoodHeader,
+      Classify,
       loading,
       Scroll,
       Icon,
@@ -210,6 +217,9 @@
     events: {
       'cart.add'(target) {
         this._drop(target); // 定义方法处理target
+      },
+      'hideCart'(target) {
+        this.hideShopcart(target);
       }
     }
   };
@@ -224,7 +234,7 @@
     top: 0
     left: 0
     background: #fff
-    z-index: 110    
+    z-index: 110   
     .menu-content
       width: 100%
       height: 100%

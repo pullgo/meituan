@@ -117,7 +117,7 @@
     methods: {
       // 小球动画
       drop(el) {
-        console.log(el); // 此处没有反应
+        // console.log(el); // 此处没有反应
         for (let i = 0; i < this.balls.length; i++) {
           let ball = this.balls[i];
           if (!ball.show) {
@@ -264,7 +264,7 @@
     left: 0px
     width: 100%
     height: 58px
-    // z-index: 33
+    z-index: 33
     .shopcart-wrapper
       background: #404040
       display: flex

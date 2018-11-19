@@ -127,13 +127,13 @@
       <transition name="fade">
         <div class="list-mask" v-show="listShow" @click="hideList"></div>
       </transition>
-      <!--selectFoods传入购物车组件 实现联动 -->     
+      <!--selectFoods传入购物车组件 实现联动    
       <Shopcart :select-foods="selectFoods"
                 :delivery-price="seller.deliveryPrice"
                 :min-price="seller.minPrice"
                 ref="shopcart"
                 >
-      </Shopcart> 
+      </Shopcart>  --> 
     </div>    
   </transition>
 </template>
@@ -144,7 +144,7 @@
   import Vue from 'vue';
   import Ratingselect from 'components/Ratingselect/ratingselect';
   import Split from 'base/Split/split';
-  import Shopcart from 'components/Shopcart/shopcart';
+  // import Shopcart from 'components/Shopcart/shopcart';
   import Cartcontrol from 'base/Cartcontrol/cartcontrol';
   const ALL = 2;
   export default {
@@ -255,13 +255,14 @@
       // 点击打开聊天页面
       showdialogueBox() {
         this.dialogueBoxShow = true;
+        this.$emit('hideCart', event.target);
       },
       hidedialogueBox() {
         this.dialogueBoxShow = false;
       }
     },
     computed: {
-      selectFoods() {
+      /* selectFoods() {
         let foods = [];
         this.goods.forEach((good) => {
           good.foods.forEach((food) => {
@@ -271,10 +272,10 @@
           });
         });
         return foods;
-      }
+      } */
     },
     // 子----父 因为选择的都是基础类型改变不了父级的组件
-    events: {
+    /* events: {
     // TYPE里面的T是小写与$emit里面的评写一样
       'ratingtype.select'(type) {
         // 把子组件的type赋值给父组件selectType
@@ -290,7 +291,7 @@
           this.scroll.refresh();
         });
       }
-    },
+    }, */
     filters: {
       formatDate(time) {
         let date = new Date(time);
@@ -309,7 +310,7 @@
       }
     },
     components: {
-      Shopcart,
+      // Shopcart,
       Cartcontrol,
       Split,
       Ratingselect
