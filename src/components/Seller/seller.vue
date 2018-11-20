@@ -135,10 +135,10 @@
       .address-wrapper
         display: flex
         border-bottom: 1px solid rgba(7, 17, 27, 0.1)
-        padding: 0px 0px 10px 0px
+        padding: 0px 0px 10px 5px
         .address-left
           flex: 0 0 320px
-          padding: 0px 6px
+          padding: 0px 0px 0px 10px
           width: 320px
           border-right: 1px solid rgba(7, 17, 27, 0.1)
           @media only screen and (max-width: 320px)
@@ -161,6 +161,7 @@
           .pic-item
             display: inline-block
             margin-right: 6px
+            margin-left: 5px
             width: 120px
             height: 90px
             &:last-child
@@ -170,7 +171,7 @@
         .item
           width: 100%
           height: 40px
-          margin-left: 15px
+          margin-left: 10px
           line-height: 40px
           display: -webkit-inline-box
           border-bottom: 1px solid rgba(7, 17, 27, 0.1)

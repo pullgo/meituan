@@ -255,7 +255,7 @@
       // 点击打开聊天页面
       showdialogueBox() {
         this.dialogueBoxShow = true;
-        this.$emit('hideCart', event.target);
+        this.$emit('hideShopcart', event.target);
       },
       hidedialogueBox() {
         this.dialogueBoxShow = false;
