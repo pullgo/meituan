@@ -1,5 +1,27 @@
 <template>
   <div class="goods">
+    <h1 class="h1">附近商家</h1>
+    <div class="goods-title clearfix">
+      <select name="select" class="select fl">
+        <option class="option" value="综合排序" selected>综合排序</option>
+        <option class="option" value="速度最快">速度最快</option>
+        <option class="option" value="评分最高">评分最高</option>
+        <option class="option" value="起送价最低">起送价最低</option>
+        <option class="option"  value="配送费最低">配送费最低</option>
+        <option class="option"  value="人均高到低">人均高到低</option>
+        <option class="option"  value="人均低到高">人均低到高</option>
+      </select>
+      <div class="list1">
+        <span>销量最高</span>
+      </div> 
+      <div class="list2">
+        <span>离我最近</span>
+      </div> 
+      <div class="list3">
+        <span>筛选</span>
+        <i class="iconfont icon-shaixuan i" width="15" height="15"></i>
+      </div>
+    </div>  
   	<div class="goods-wrapper">
       <scroll ref="scroll" class="goods-content" :data="poilist">
         <div>
@@ -79,6 +101,37 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
+  .goods-title
+    width: 100%
+    margin-left: 10px
+    height: 20px
+    line-height: 20px 
+    display: flex
+    margin-top: 10px
+    .select
+      flex: 1
+      border: none
+      margin-right: 15px
+      height: 20px
+      line-height: 20px 
+    .list1
+      flex: 1
+      font-size: 12px
+      line-height: 20px
+      height: 20px
+      margin-right: 15px
+    .list2
+      flex: 1
+      font-size: 12px
+      line-height: 20px
+      margin-right: 15px
+      height: 20px
+      border-right: 1px solid #ccc
+    .list3
+      flex: 1
+      font-size: 12px
+      height: 20px
+      line-height: 20px
   .goods-wrapper	
    	margin: 10px
     background: #fff

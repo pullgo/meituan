@@ -89,8 +89,9 @@
         </div>
       </div>
     </div>
+    <goods></goods>
     <!--为你优选end--> 
-    <!--商家start--> 
+    <!--商家start
     <h1 class="h1">附近商家</h1>
     <div class="sell-title clearfix">
       <select name="select" class="select fl">
@@ -112,16 +113,9 @@
         <span>筛选</span>
         <i class="iconfont icon-shaixuan i" width="15" height="15"></i>
       </div>
-    </div>
-    <div class="goods-box">
-      <goods></goods>
-    </div>
+    </div>--> 
     <!--商家end--> 
-    <!--购物车start
-    <shopcart ref="shopcart"></shopcart>-->
-    <!--购物车end-->
-    <!--店铺页面start-->
-    <!--店铺页面start-->
+
   </div>
 </template>
 
@@ -414,7 +408,7 @@
         flex: 1
         width: 78px
         margin-right: 13px
-  .sell-title
+  /*.sell-title
     width: 100%
     margin-left: 10px
     height: 20px
@@ -444,10 +438,8 @@
       flex: 1
       font-size: 12px
       height: 20px
-      line-height: 20px
+      line-height: 20px */
   //打开massgae消息页面的动画 因为是属于路由里面的动画 应该在router-view外一层做 否则无效果
-  .goods-box
-    position: absulote
   .hide-enter-active, .hide-leave-active 
     transition: opacity .5s
   .hide-enter, .hide-leave-active
