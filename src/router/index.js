@@ -41,6 +41,10 @@ export default new VueRouter({
 							path: '/home/menu/foodHeaderActivity',
 							component: FoodHeaderActivity
 						}
+						/* {
+							path: '/home/menu/food/dialogueBox',
+							component: DialogueBox
+						} */
 					]
 				},
 				{

@@ -83,7 +83,7 @@
         <router-view></router-view>
       </keep-alive>    
     </div>
-    <!--<div class="ttab" ref="ttab">
+    <div class="ttab" ref="ttab">
       <span class="ttab-item active">
         <router-link to="/home/Menu">点菜</router-link>
       </span>
@@ -97,7 +97,7 @@
     </div>
     <keep-alive>
       <router-view :seller="seller"></router-view>
-    </keep-alive> -->
+    </keep-alive>
     <!--模糊的背景层-->
     <div class="background">
       <img :src="seller.avatar" class="img">
@@ -277,7 +277,7 @@
             height: 91px
             background: rgba(255, 255, 255, 0.9)
             z-index: -2          
-    /* .ttab
+    .ttab
       width: 100%
       height: 40px
       position: relative
@@ -311,7 +311,7 @@
         font-size: 10px
         border-radius: 12px
         color: #ffc95d
-        border: 1px solid #ffc95d */
+        border: 1px solid #ffc95d
     .background
       position: absolute
       top: 0

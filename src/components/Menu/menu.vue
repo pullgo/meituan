@@ -1,7 +1,6 @@
 <template>
   <div class="menu">
     <FoodHeader></FoodHeader> 
-    <Classify></Classify>
     <div class="menu-content">
       <!--左边-->
       <div class="menu-wrapper" ref="menuWrapper">
@@ -62,7 +61,7 @@
 </template>
 <script type="text/ecmascript-6">
   import FoodHeader from 'components/food-header/food-header';
-  import Classify from 'components/Classify/classify';
+  // import Classify from 'components/Classify/classify';
   import axios from 'axios';
   import loading from 'base/loading/loading';
   import Scroll from 'base/Scroll/scroll';
@@ -205,7 +204,7 @@
     },
     components: {
       FoodHeader,
-      Classify,
+      // Classify,
       loading,
       Scroll,
       Icon,

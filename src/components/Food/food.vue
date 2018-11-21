@@ -1,4 +1,4 @@
-<template><!--点击跳到单个商品页面"-->
+<template><!--点击跳到单个商品页面" @click="toDialogueBox" -->
   <transition class="move">
     <div class="food" v-show="showFlag" ref="food">
       <div class="food-content">
@@ -7,7 +7,7 @@
             <span class="iconfont return icon-xiala" @click="closeDetail"></span>          
           </div>
           <div class="fr foodheader-right">
-            <span class="iconfont icons icon-xiaoxi" @click="showdialogueBox"></span>
+            <span class="iconfont icons icon-xiaoxi"@click="showdialogueBox"></span>
             <span class="iconfont icons icon-fenxiang" @click="showList"></span>
             <span class="iconfont icons icon-gengduo"  @click="showBox"></span>
           </div>
@@ -54,7 +54,7 @@
           </div>
         </div> 
       </div>
-      <!--点击消息弹出聊天页面-->      
+      <!--点击消息弹出聊天页面 -->     
       <div class="dialogueBox" v-show="dialogueBoxShow">
         <div class="dialogueBox-wrapper">
           <div class="wrapper-title">
@@ -63,7 +63,7 @@
             <span class="iconfont telephone icon-dianhua"></span>
             <span class="text">进店</span>
           </div>
-          <!--中心内容区域-->
+          <!--中心内容区域--> 
           <div class="dialogueBox-content">
             <span class="content-warn">商家可能比较繁忙，若回复较慢，请电话联系</span>
             <div class="dialogueBox-info">                  
@@ -79,7 +79,7 @@
               </div>
             </div>
           </div>
-          <!--输入框区域-->
+         <!-- 输入框区域--> 
           <div class="dialogueBox-input">
             <span class="iconfont say icon-chakantiezimaikefeng"></span>
             <input v-focus v-if="dialogueBoxShow" type="text" class="input-box" placeholder="输入消息">
@@ -87,7 +87,7 @@
             <span class="iconfont add-box icon-jia"></span>
           </div>
         </div>
-      </div>     
+      </div>-->  
       <!--点击分享弹出的对话框-->
       <div class="shareBox" v-if="listShow" ref="shareBox">
         <h1 class="top-title border-1px">商家配送范围有限，建议分享给您附近的朋友</h1>
@@ -134,7 +134,8 @@
                 ref="shopcart"
                 >
       </Shopcart>  --> 
-    </div>    
+    </div>
+    <router-view></router-view>    
   </transition>
 </template>
 
@@ -252,6 +253,9 @@
       closeDetail() {
         this.showFlag = false;
       },
+      /* toDialogueBox() {
+        this.$router.push('/home/menu/food/dialogueBox');
+      } */
       // 点击打开聊天页面
       showdialogueBox() {
         this.dialogueBoxShow = true;
