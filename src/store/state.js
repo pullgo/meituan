@@ -1,5 +1,6 @@
+// 需要管理的状态
 const state = {
-	good: {}
+	showShopCart : true
 };
 
 export default state;

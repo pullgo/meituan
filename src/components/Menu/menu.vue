@@ -48,7 +48,8 @@
       </scroll>
     </div>
     <!--selectFoods传入购物车组件 实现联动 -->     
-    <Shopcart :select-foods="selectFoods"
+    <Shopcart  v-if="$store.state.showShopCart"
+              :select-foods="selectFoods"
               :delivery-price="seller.deliveryPrice"
               :min-price="seller.minPrice"
               :hide-shopcart="hideShopcart"

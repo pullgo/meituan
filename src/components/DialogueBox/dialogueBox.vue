@@ -52,6 +52,7 @@
         this.seller = res.data.seller;
         // console.log(this.seller);
       });
+      this.$store.state.showShopCart = false;
     },
     methods: {
       showDialogueBox() {

@@ -1,1 +1,1 @@
-export const SET_GOOD = 'SET_GOOD';
+// 控制状态转变的方法

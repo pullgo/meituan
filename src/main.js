@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import router from './router';
-import Axios from 'axios';
 import VueLazyLoad from 'Vue-lazyload';
 import store from './store';
 import App from './App';
