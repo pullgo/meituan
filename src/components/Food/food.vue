@@ -1,4 +1,4 @@
-<template><!--点击跳到单个商品页面" @click="toDialogueBox" -->
+<template><!--点击跳到单个商品页面" @click="showdialogueBox"  -->
   <transition class="move">
     <div class="food" v-show="showFlag" ref="food">
       <div class="food-content">
@@ -7,7 +7,7 @@
             <span class="iconfont return icon-xiala" @click="closeDetail"></span>          
           </div>
           <div class="fr foodheader-right">
-            <span class="iconfont icons icon-xiaoxi"@click="showdialogueBox"></span>
+            <span class="iconfont icons icon-xiaoxi"@click="toDialogueBox"></span>
             <span class="iconfont icons icon-fenxiang" @click="showList"></span>
             <span class="iconfont icons icon-gengduo"  @click="showBox"></span>
           </div>
@@ -54,7 +54,7 @@
           </div>
         </div> 
       </div>
-      <!--点击消息弹出聊天页面 -->     
+      <!--点击消息弹出聊天页面     
       <div class="dialogueBox" v-show="dialogueBoxShow">
         <div class="dialogueBox-wrapper">
           <div class="wrapper-title">
@@ -63,7 +63,7 @@
             <span class="iconfont telephone icon-dianhua"></span>
             <span class="text">进店</span>
           </div>
-          <!--中心内容区域--> 
+          中心内容区域 
           <div class="dialogueBox-content">
             <span class="content-warn">商家可能比较繁忙，若回复较慢，请电话联系</span>
             <div class="dialogueBox-info">                  
@@ -79,7 +79,7 @@
               </div>
             </div>
           </div>
-         <!-- 输入框区域--> 
+         输入框区域 
           <div class="dialogueBox-input">
             <span class="iconfont say icon-chakantiezimaikefeng"></span>
             <input v-focus v-if="dialogueBoxShow" type="text" class="input-box" placeholder="输入消息">
@@ -88,6 +88,41 @@
           </div>
         </div>
       </div>-->  
+      <!--备份 点击消息弹出聊天页面     
+      <div class="dialogueBox" v-show="dialogueBoxShow">
+        <div class="dialogueBox-wrapper">
+          <div class="wrapper-title">
+            <span class="iconfont return icon-fanhui" @click="hidedialogueBox"></span>
+            <h1 class="dialogueBox-title">{{seller.name}}</h1>
+            <span class="iconfont telephone icon-dianhua"></span>
+            <span class="text">进店</span>
+          </div>
+          中心内容区域 
+          <div class="dialogueBox-content">
+            <span class="content-warn">商家可能比较繁忙，若回复较慢，请电话联系</span>
+            <div class="dialogueBox-info">                  
+              <div class="icon" height="57" width="57">
+                <img :src="food.icon" height="57" width="57">
+              </div>
+              <div class="info-content">
+                <h2 class="name">{{food.name}}</h2>
+                <div class="price">
+                  <span class="now">￥{{food.price}}</span><span class="old" v-show="food.oldPrice">￥{{food.oldPrice}}</span>
+                </div>
+                <span class="info-text">发送商品链接</span>
+              </div>
+            </div>
+          </div>
+          输入框区域
+          <div class="dialogueBox-input">
+            <span class="iconfont say icon-chakantiezimaikefeng"></span>
+            <input v-focus v-if="dialogueBoxShow" type="text" class="input-box" placeholder="输入消息">
+            <span class="iconfont  menu-icon icon-caidan1"></span>
+            <span class="iconfont add-box icon-jia"></span>
+          </div>
+        </div>
+      </div>--> 
+
       <!--点击分享弹出的对话框-->
       <div class="shareBox" v-if="listShow" ref="shareBox">
         <h1 class="top-title border-1px">商家配送范围有限，建议分享给您附近的朋友</h1>
@@ -134,8 +169,8 @@
                 ref="shopcart"
                 >
       </Shopcart>  --> 
+      <router-view :food="food"></router-view>
     </div>
-    <router-view></router-view>    
   </transition>
 </template>
 
@@ -143,6 +178,7 @@
   import axios from 'axios';
   import BScroll from 'better-scroll';
   import Vue from 'vue';
+  // import DialogueBox from 'components/DialogueBox/dialogueBox'
   import Ratingselect from 'components/Ratingselect/ratingselect';
   import Split from 'base/Split/split';
   // import Shopcart from 'components/Shopcart/shopcart';
@@ -253,17 +289,17 @@
       closeDetail() {
         this.showFlag = false;
       },
-      /* toDialogueBox() {
-        this.$router.push('/home/menu/food/dialogueBox');
-      } */
+      toDialogueBox() {
+        this.$router.push('/home/menu/dialogueBox');
+      }
       // 点击打开聊天页面
-      showdialogueBox() {
+      /* showdialogueBox() {
         this.dialogueBoxShow = true;
         this.$emit('hideShopcart', event.target);
       },
       hidedialogueBox() {
         this.dialogueBoxShow = false;
-      }
+      } */
     },
     computed: {
       /* selectFoods() {
@@ -314,6 +350,7 @@
       }
     },
     components: {
+      // DialogueBox,
       // Shopcart,
       Cartcontrol,
       Split,

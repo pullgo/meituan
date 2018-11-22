@@ -12,7 +12,7 @@ import Ratings from 'components/Ratings/ratings';
 import ToBeEvaluated from 'components/ToBeEvaluated/toBeEvaluated';
 import Refund from 'components/Refund/refund';
 import FoodHeaderActivity from 'components/foodHeaderActivity/foodHeaderActivity';
-// import DialogueBox from 'components/DialogueBox/dialogueBox';
+import DialogueBox from 'components/DialogueBox/dialogueBox';
 Vue.use(VueRouter);
 
 export default new VueRouter({
@@ -40,11 +40,11 @@ export default new VueRouter({
 						{
 							path: '/home/menu/foodHeaderActivity',
 							component: FoodHeaderActivity
-						}
-						/* {
-							path: '/home/menu/food/dialogueBox',
+						},
+						{
+							path: '/home/menu/dialogueBox',
 							component: DialogueBox
-						} */
+						}
 					]
 				},
 				{

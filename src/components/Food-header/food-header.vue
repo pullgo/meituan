@@ -28,14 +28,13 @@
         <div class="icon-wrapper" v-if="seller.supports">
           <!--共多少活动页面  @click="toggleList"  v-show="!listShow"-->
           <div class="Nactivity">
-            <icon class="icons" :size="16" :class="classMap[seller.supports[0].type]"></icon>
-            <span class="text">{{seller.supports[0].description}}</span>
+            <span class="iconfont icon-shijian1 icons"></span>
+            <span class="time">配送时间{{seller.deliveryTime}}分钟</span>
             <div class="listBox" @click="toFoodHeaderActivity">
               <span>5个活动</span>
               <span class="iconfont icon-shangla list"></span>
             </div>
           </div>
-            <router-view></router-view>
           <!--活动页面
           <transition class="fold">
             <div class="activity" v-show="listShow" ref="listShow">
@@ -207,10 +206,14 @@
             display: inline-block
             margin-top: 10px
             font-size: 10px
+            margin-left: 10px
             .icons
-              margin: 0px 5px 0px 10px
-            .text
+              display: inline-block
+              font-size: 18px
+              color: #ffc95d
+            .time
               font-size: 10px
+              margin-left: 4px
             .listBox
               float: right
               margin-right: 15px

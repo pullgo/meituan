@@ -1,11 +1,9 @@
 <template>
-	<!--点击消息弹出聊天页面 v-show="showDialogueBox" @click="hideDialogueBox"-->
+	<!--点击消息弹出聊天页面 v-show="showDialogueBox" -->
 	<div class="DialogueBox" ref="dialogueBox">
 		<div class="dialogueBox-wrapper">
 			<div class="wrapper-title">
-      <router-link :to="{path:'/home/menu'}">
-        <span class="iconfont return icon-fanhui"></span>
-      </router-link>
+        <span class="iconfont return icon-fanhui"@click="hideDialogueBox"></span>
 				<h1 class="dialogueBox-title">{{seller.name}}</h1>
 				<span class="iconfont telephone icon-dianhua"></span>
 				<span class="text">进店</span>
@@ -15,12 +13,12 @@
 				<span class="content-warn">商家可能比较繁忙，若回复较慢，请电话联系</span>
 				<div class="dialogueBox-info">                  
 					<div class="icon" height="57" width="57">
-						<img :src="food.icon" height="57" width="57">
+						<img :src="goods[0].foods[0].icon" height="57" width="57">
 					</div>
 					<div class="info-content">
-						<h2 class="name">{{food.name}}</h2>
+						<h2 class="name">{{goods[0].foods[0].name}}</h2>
 						<div class="price">
-							<span class="now">￥{{food.price}}</span><span class="old" v-show="food.oldPrice">￥{{food.oldPrice}}</span>
+							<span class="now">￥{{goods[0].foods[0].price}}</span><span class="old" v-show="goods[0].foods[0].oldPrice">￥{{goods[0].foods[0].oldPrice}}</span>
 						</div>
 						<span class="info-text">发送商品链接</span>
 					</div>
@@ -34,32 +32,25 @@
 				<span class="iconfont add-box icon-jia"></span>
 			</div>
 		</div>
-    <router-view></router-view>
 	</div>  
 </template>
 <script type="text/ecmascript-6">
   import axios from 'axios';
-  // import DialogueBox from 'components/DialogueBox/dialogueBox';
   export default {
-    props: {
-      food: {
-        type: Object
-      }
-    },
     data() {
       return {
-        // dialogueBoxShow: true,
-        seller: []
-        // goods: [],
-        // foods: []
+        dialogueBoxShow: true,
+        seller: [],
+        goods: [],
+        foods: []
       };
     },
     created() {
       axios.get('../data.json').then((res) => {
-        // this.goods = res.data.goods;
-        // this.foods = res.data.foods;
+        this.goods = res.data.goods;
+        this.foods = res.data.foods;
         this.seller = res.data.seller;
-        // console.log(this.food);
+        // console.log(this.seller);
       });
       this.$store.state.showShopCart = false;
     },
@@ -67,14 +58,11 @@
       /* showDialogueBox() {
         this.dialogueBoxShow = true;
         this.$refs.dialogueBox.style = 'z-index:10';
-      },
+      }, */
       hideDialogueBox() {
         this.dialogueBoxShow = false;
         // this.$refs.dialogueBox.style = 'z-index: -1';
-      } */
-    },
-    components: {
-      // DialogueBox
+      }
     },
     directives: {
       focus: {
