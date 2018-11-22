@@ -1,13 +1,12 @@
-<template>
-<!--活动页面-->
-<transition class="fold" v-show="listShow">
+<template><!--活动页面-->
+<transition class="fold">
     <div class="foodHeaderActivity">		
 		<!--隐藏活动页面-->
 		<div class="icon-wrapper">
 			<ul>
-				<li v-for="(item, index) in seller.supports">
-				<icon class="icons" :size="16" :class="classMap[seller.supports[index].type]"></icon>
-				<span class="text">{{seller.supports[index].description}}</span>
+				<li class="item" v-for="(item, index) in seller.supports">
+					<icon class="icons" :size="16" :class="classMap[seller.supports[index].type]"></icon>
+					<span class="text">{{seller.supports[index].description}}</span>
 				</li>
 			</ul>
 		</div>
@@ -33,8 +32,8 @@
 			</div>
 		</div>
 		<!--印象-->
-		<div class="pullUp" @click="hideList">
-			<span class="iconfont icon-shangla-yuan pullUpIcon" ></span>
+		<div class="pullUp" @click="hideFoodHeaderActivity">
+			<span class="iconfont icon-shangla-yuan"></span>
 		</div>    
     </div>
 </transition>		
@@ -45,8 +44,7 @@ import Icon from 'base/Icon/icon';
 export default {
     data() {
       return {
-        seller: [],
-        listShow: false
+        seller: []
       };
     },
     created() {
@@ -56,9 +54,9 @@ export default {
         this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
 	},
      methods: {
-        hideList() {
-			this.listShow = false;
-        }
+		hideFoodHeaderActivity() {
+			this.$router.push('/home/menu');
+		}
 	},
     components: {
       Icon
@@ -67,23 +65,22 @@ export default {
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
 	.foodHeaderActivity
-		//padding: 2px
-		//height: 20px
-		//overflow: hidden
+		position: relative
 		padding-bottom: 30px
-		margin-top: 15px
+		margin-top: 5px
 		padding: 0px 10px 0px 10px;
 		height: 100%
 		background: #f3f5f7
-		z-index: 0
+		z-index: 300
 		.icon-wrapper
-			//position: relative
 			margin-bottom: 30px
 			color: #343434
-			.icons
-				margin-bottom: 10px
-			.text
-				font-size: 10px
+			.item
+				maigin-top: 5px
+				.icons
+					margin-bottom: 10px
+				.text
+					font-size: 10px
 		.info-wrapper
 			margin-bottom: 30px
 			.title
@@ -108,12 +105,12 @@ export default {
 		.pullUp
 			text-align: center
 			position: relative
-			padding-bottom: 30px
+			padding-bottom: 60px
     		margin-top: 130px
-			.pullUpIcon
-				font-size: 24px
+			.icon-shangla-yuan
 				position: absolute
 				left: 50%
 				transform: translateX(-50%)
+				font-size: 24px
 				color: #343434
 </style> 
