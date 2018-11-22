@@ -1,6 +1,6 @@
 <template><!--点击跳到单个商品页面" @click="showdialogueBox"  -->
   <transition class="move">
-    <div class="food" v-show="showFlag" ref="food">
+    <div class="food" v-show="showFlag" ref="food" >
       <div class="food-content">
         <div class="icon-wrapper">
           <div class="fl foodheader-left">
@@ -13,16 +13,15 @@
           </div>
         </div>
         <!--中心内容-->
-        <div class="image-wrapper">
+        <div class="image-wrapper" @click="hideBox">
           <img class="img" :src="food.image"/>
         </div>
-        <div class="content">
+        <div class="content" @click="hideBox">
           <h1 class="title">{{food.name}}</h1>
           <div class="price">
             <span class="now">￥{{food.price}}</span><span v-show="food.oldPrice" class="old">￥{{food.oldPrice}}</span>
           </div>
           <Split></Split>
-          <!-- -->
           <div class="cartcontrol-wrapper">
             <Cartcontrol :food="food" @add="addFood"></Cartcontrol>
           </div>
