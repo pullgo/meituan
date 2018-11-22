@@ -171,7 +171,7 @@
               border: 1px solid #ffc95d
       .dialogueBox-input
         position: fixed
-        bottom: 40px
+        bottom: 4px
         left: 0px
         background: #fff
         height: 48px
@@ -191,6 +191,7 @@
           padding: 4px;
           background: #fafcff
           border-radius: 6px
+          outline: none
         .menu-icon
           padding-right: 10px
           font-size: 28px
