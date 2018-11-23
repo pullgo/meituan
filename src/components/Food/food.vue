@@ -1,6 +1,6 @@
 <template><!--点击跳到单个商品页面" @click="showdialogueBox"  -->
   <transition class="move">
-    <div class="food" v-show="showFlag" ref="food" >
+    <div class="food" v-show="showFlag" ref="food">
       <div class="food-content">
         <div class="icon-wrapper">
           <div class="fl foodheader-left">
@@ -53,75 +53,6 @@
           </div>
         </div> 
       </div>
-      <!--点击消息弹出聊天页面     
-      <div class="dialogueBox" v-show="dialogueBoxShow">
-        <div class="dialogueBox-wrapper">
-          <div class="wrapper-title">
-            <span class="iconfont return icon-fanhui" @click="hidedialogueBox"></span>
-            <h1 class="dialogueBox-title">{{seller.name}}</h1>
-            <span class="iconfont telephone icon-dianhua"></span>
-            <span class="text">进店</span>
-          </div>
-          中心内容区域 
-          <div class="dialogueBox-content">
-            <span class="content-warn">商家可能比较繁忙，若回复较慢，请电话联系</span>
-            <div class="dialogueBox-info">                  
-              <div class="icon" height="57" width="57">
-                <img :src="food.icon" height="57" width="57">
-              </div>
-              <div class="info-content">
-                <h2 class="name">{{food.name}}</h2>
-                <div class="price">
-                  <span class="now">￥{{food.price}}</span><span class="old" v-show="food.oldPrice">￥{{food.oldPrice}}</span>
-                </div>
-                <span class="info-text">发送商品链接</span>
-              </div>
-            </div>
-          </div>
-         输入框区域 
-          <div class="dialogueBox-input">
-            <span class="iconfont say icon-chakantiezimaikefeng"></span>
-            <input v-focus v-if="dialogueBoxShow" type="text" class="input-box" placeholder="输入消息">
-            <span class="iconfont  menu-icon icon-caidan1"></span>
-            <span class="iconfont add-box icon-jia"></span>
-          </div>
-        </div>
-      </div>-->  
-      <!--备份 点击消息弹出聊天页面     
-      <div class="dialogueBox" v-show="dialogueBoxShow">
-        <div class="dialogueBox-wrapper">
-          <div class="wrapper-title">
-            <span class="iconfont return icon-fanhui" @click="hidedialogueBox"></span>
-            <h1 class="dialogueBox-title">{{seller.name}}</h1>
-            <span class="iconfont telephone icon-dianhua"></span>
-            <span class="text">进店</span>
-          </div>
-          中心内容区域 
-          <div class="dialogueBox-content">
-            <span class="content-warn">商家可能比较繁忙，若回复较慢，请电话联系</span>
-            <div class="dialogueBox-info">                  
-              <div class="icon" height="57" width="57">
-                <img :src="food.icon" height="57" width="57">
-              </div>
-              <div class="info-content">
-                <h2 class="name">{{food.name}}</h2>
-                <div class="price">
-                  <span class="now">￥{{food.price}}</span><span class="old" v-show="food.oldPrice">￥{{food.oldPrice}}</span>
-                </div>
-                <span class="info-text">发送商品链接</span>
-              </div>
-            </div>
-          </div>
-          输入框区域
-          <div class="dialogueBox-input">
-            <span class="iconfont say icon-chakantiezimaikefeng"></span>
-            <input v-focus v-if="dialogueBoxShow" type="text" class="input-box" placeholder="输入消息">
-            <span class="iconfont  menu-icon icon-caidan1"></span>
-            <span class="iconfont add-box icon-jia"></span>
-          </div>
-        </div>
-      </div>--> 
-
       <!--点击分享弹出的对话框-->
       <div class="shareBox" v-if="listShow" ref="shareBox">
         <h1 class="top-title border-1px">商家配送范围有限，建议分享给您附近的朋友</h1>
@@ -161,7 +92,7 @@
       <transition name="fade">
         <div class="list-mask" v-show="listShow" @click="hideList"></div>
       </transition>
-      <router-view :food="food" v-show="!food></router-view>
+      <router-view :food="food"></router-view>
     </div>
   </transition>
 </template>
@@ -311,7 +242,6 @@
 
 <style lang="stylus" rel="stylesheet/stylus">
   @import "../../common/stylus/mixin";
-
   .food
     // touch-action: none
     position: fixed//屏幕定位
@@ -525,121 +455,6 @@
         padding: 10px 5px 8px 10px
         .icons
           margin-right: 5px
-    .dialogueBox
-      position: fixed
-      top: 0
-      left: 0
-      width 100%
-      height: 100%
-      background: #f3f5f7
-      z-index: 1
-      .wrapper-title
-        width: 100%
-        height: 50px
-        line-height: 50px
-        font-size: 20px
-        background: #fff
-        .return
-          margin-left 10px
-        .dialogueBox-title
-          display: inline-block
-          font-size: 18px
-          margin-left: 60px
-        .telephone
-          font-size: 22px
-          margin-right: 10px
-          margin-left: 20px
-          color: #909090
-        .text
-          border: 1px solid #909090
-          font-size: 10px
-          padding: 4px
-          color: #909090
-      .dialogueBox-content
-        height: 80px
-        line-height: 80px
-        text-align: center
-        .content-warn
-          color: #cdd0d2
-          font-size: 12px
-        .dialogueBox-info
-          display: flex
-          margin: 10px
-          padding-bottom: 18px//描边不紧贴底部
-          border-1px(rgba(7, 17, 27, 0.1))
-          height: 80px
-          background: #fff
-          .icon
-            flex: 0 0 57px//左右分栏布局
-            margin: 30px 10px 10px 10px
-          .info-content
-            flex: 1//左右分栏布局
-            position: relative
-            text-align: left
-            display: inline-bloc
-            .name
-              display: inline-block
-              margin: 15px 0 0px 0
-              font-size: 14px
-              height: 14px
-              line-height: 18px
-              color: rgb(7, 17, 27)
-            .price
-              font-weight: 700
-              line-height: 24px
-              display: inline-block
-              .now
-                margin-right: 8px
-                font-size: 14px 
-                color: rgb(240, 20, 20) 
-              .old
-                text-decoration: line-through
-                font-size: 10px 
-                color: rgb(147, 153, 159)
-            .info-text
-              position: absolute
-              top: 60px
-              height: 24px
-              width: 110px
-              line-height: 24px
-              // padding: 3px 18px
-              box-sizing: border-box
-              font-size: 14px
-              border-radius: 12px
-              color: #ffc95d
-              border: 1px solid #ffc95d
-              text-align: center
-      .dialogueBox-input
-        position: fixed
-        bottom: 0px
-        left: 0px
-        background: #fff
-        padding-bottom: 11px
-        height: 38px
-        width: 100%
-        line-height: 38px
-        .say
-          padding: 10px
-          font-size: 28px
-          color: #909090
-        .input-box
-          width: 60%;
-          margin-right: 10px;
-          border: 1px solid #dcdcdc;
-          height: 25px;
-          font-size: 14px;
-          padding: 4px;
-          background: #fafcff
-          border-radius: 6px
-          outline: none
-        .menu-icon
-          padding-right: 10px
-          font-size: 28px
-          color: #909090
-        .add-box
-          padding-right: 10px
-          font-size: 28px
-          color: #909090
     .list-mask
       position: fixed
       top: 0
@@ -653,6 +468,6 @@
       &.fade-enter-active, &.fade-leave-active
         transition: all 0.5s
       &.fade-enter, &.fade-leave-active
-        opacity: 0
-        background: rgba(7, 17, 27, 0)
+       opacity: 0
+       background: rgba(7, 17, 27, 0)
 </style>
