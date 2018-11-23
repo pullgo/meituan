@@ -1,5 +1,5 @@
 <template>
-	<!--点击消息弹出聊天页面 v-show="showDialogueBox" @click="hideDialogueBox"-->
+	<!--点击消息弹出聊天页面-->
 	<div class="DialogueBox" ref="dialogueBox">
 		<div class="dialogueBox-wrapper">
 			<div class="wrapper-title">
@@ -39,7 +39,6 @@
 </template>
 <script type="text/ecmascript-6">
   import axios from 'axios';
-  // import DialogueBox from 'components/DialogueBox/dialogueBox';
   export default {
     props: {
       food: {
@@ -48,10 +47,7 @@
     },
     data() {
       return {
-        // dialogueBoxShow: true,
         seller: []
-        // goods: [],
-        // foods: []
       };
     },
     created() {
@@ -62,19 +58,6 @@
         // console.log(this.food);
       });
       this.$store.state.showShopCart = false;
-    },
-    methods: {
-      /* showDialogueBox() {
-        this.dialogueBoxShow = true;
-        this.$refs.dialogueBox.style = 'z-index:10';
-      },
-      hideDialogueBox() {
-        this.dialogueBoxShow = false;
-        // this.$refs.dialogueBox.style = 'z-index: -1';
-      } */
-    },
-    components: {
-      // DialogueBox
     },
     directives: {
       focus: {

@@ -161,14 +161,7 @@
       <transition name="fade">
         <div class="list-mask" v-show="listShow" @click="hideList"></div>
       </transition>
-      <!--selectFoods传入购物车组件 实现联动    
-      <Shopcart :select-foods="selectFoods"
-                :delivery-price="seller.deliveryPrice"
-                :min-price="seller.minPrice"
-                ref="shopcart"
-                >
-      </Shopcart>  --> 
-      <router-view :food="food"></router-view>
+      <router-view :food="food" v-show="!food></router-view>
     </div>
   </transition>
 </template>
@@ -177,10 +170,8 @@
   import axios from 'axios';
   import BScroll from 'better-scroll';
   import Vue from 'vue';
-  // import DialogueBox from 'components/DialogueBox/dialogueBox'
   import Ratingselect from 'components/Ratingselect/ratingselect';
   import Split from 'base/Split/split';
-  // import Shopcart from 'components/Shopcart/shopcart';
   import Cartcontrol from 'base/Cartcontrol/cartcontrol';
   const ALL = 2;
   export default {
@@ -268,7 +259,6 @@
       },
       showList() {
         this.listShow = true;
-        // this.$refs.shareBox.style = 'z-index:35';
       },
       selectRating(type) {
         this.selectType = type;
@@ -291,46 +281,9 @@
       toDialogueBox() {
         this.$router.push('/home/menu/dialogueBox');
       }
-      // 点击打开聊天页面
-      /* showdialogueBox() {
-        this.dialogueBoxShow = true;
-        this.$emit('hideShopcart', event.target);
-      },
-      hidedialogueBox() {
-        this.dialogueBoxShow = false;
-      } */
     },
     computed: {
-      /* selectFoods() {
-        let foods = [];
-        this.goods.forEach((good) => {
-          good.foods.forEach((food) => {
-            if (food.count) {
-            foods.push(food);
-            }
-          });
-        });
-        return foods;
-      } */
     },
-    // 子----父 因为选择的都是基础类型改变不了父级的组件
-    /* events: {
-    // TYPE里面的T是小写与$emit里面的评写一样
-      'ratingtype.select'(type) {
-        // 把子组件的type赋值给父组件selectType
-        this.selectType = type;
-        // 选择筛选后窗口的高度会更改 需要进行下一步的操作this.scroll.refresh()但是没有效果 因为DOM没有更新还是需要nexttick 异步更新DOM
-        this.$nextTick(() => {
-          this.scroll.refresh();
-        });
-      },
-      'content.toggle'(onlyContent) {
-        this.onlyContent = onlyContent;
-        this.$nextTick(() => {
-          this.scroll.refresh();
-        });
-      }
-    }, */
     filters: {
       formatDate(time) {
         let date = new Date(time);
@@ -349,8 +302,6 @@
       }
     },
     components: {
-      // DialogueBox,
-      // Shopcart,
       Cartcontrol,
       Split,
       Ratingselect
