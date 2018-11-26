@@ -1,4 +1,4 @@
-<template>
+<template><!-- @selectSort="selectSort"-->
   <div class="goods">
     <h1 class="h1">附近商家</h1>
     <div class="goods-title clearfix">
@@ -37,9 +37,9 @@
                     <span class="iconfont icon-gengduo fr"></span>
                   </div>
                   <!--star行-->
-                  <div class="description">
+                  <div class="description" >
                     <star :size="36" :score="item.wm_poi_score" class="star fl"></star>
-                    <span class="score">{{item.wm_poi_score}}
+                    <span ref="sortList" class="score">{{item.wm_poi_score}}
                     </span>
                     <span class="btext">月售{{item.month_sale_num}}</span>
                   </div> 
@@ -89,8 +89,38 @@
         this.goods = res.data.goods;
         this.seller = res.data.seller;
         this.items = res.data.poilist;
-        // console.log(this.items)
+        // console.log(this.items);
       });
+    },
+    computed: {
+      selectItem() {
+        let itemList = [];
+        console.log(this.items);
+        this.items.forEach((item) => {
+          itemList.push(item);
+        });
+        console.log(this.itemList);
+        return itemList;
+      }
+      /* selectSort(item) {
+        console.log(this.item);
+        let sortList = this.items.wm_poi_score;
+        let len = sortList.length;
+        var minIndex;
+        var temp;
+        for (i = 0; i< len; i ++) {
+          minIndex = i;
+          for (j = i+1; j < len; j ++) {
+            if(arr[j] < arr[minIndex]) {
+              minIndex = j;
+            }
+          }
+          temp = arr[i];
+          arr[i] = arr[minIndex];
+          arr[minIndex] = temp;
+        }
+        return arr;
+      } */
     },
     components: {
       star,
