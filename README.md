@@ -20,8 +20,8 @@ closed_book 收获
     体会到将对象封装成类(ES6 class) 的便捷性，以及利用工厂方式初始化类实例
     学会利用过渡效果及动画效果制作良好的用户交互体验
     
-    项目展示：
-    ![Image text](https://github.com/pullgo/meituan/blob/master/src/GIF.gif)
+项目展示：
+    ![Image text](https://github.com/pullgo/meituan/blob/master/demoShow/GIF.gif)
 
 Summary of project questions 项目问题点总结：
 
