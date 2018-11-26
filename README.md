@@ -21,7 +21,7 @@ closed_book 收获
     学会利用过渡效果及动画效果制作良好的用户交互体验
     
     项目展示：
-    https://github.com/pullgo/meituan/blob/master/src/GIF.gif
+    ![Image text](https://github.com/pullgo/meituan/blob/master/src/GIF.gif)
 
 Summary of project questions 项目问题点总结：
 
