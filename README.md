@@ -19,6 +19,9 @@ closed_book 收获
     体会到组件化、模块化开发带来的便捷
     体会到将对象封装成类(ES6 class) 的便捷性，以及利用工厂方式初始化类实例
     学会利用过渡效果及动画效果制作良好的用户交互体验
+    
+    项目展示：
+    ![image](https://github.com/pullgo/meituan.git/GIF.gif)
 
 Summary of project questions 项目问题点总结：
 
