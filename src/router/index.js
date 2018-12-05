@@ -23,6 +23,8 @@ export default new VueRouter({
 			path: '/home',
 			component: Home,
 			meta: {
+				index: 0,
+				showTab: true,
 				keepAlive: true
 			},
 			children: [
@@ -61,12 +63,19 @@ export default new VueRouter({
 			path: '/findList',
 			component: FindList,
 			meta: {
+				index: 0,
+				showTab: true,
 				keepAlive: true
 			}
 		},
 		{
 			path: '/order',
 			component: Order,
+			meta: {
+				index: 0,
+				showTab: true,
+				keepAlive: true
+			},
 			children: [
 				{
 					path: '/order/toBeEvaluated',
@@ -81,6 +90,11 @@ export default new VueRouter({
 		{
 			path: '/me',
 			component: Me,
+			// 配置导航栏是否显示
+			meta: {
+				index: 0,
+				showTab: true
+			},
 			children: [
 				{
 					path: 'massage',
@@ -88,7 +102,11 @@ export default new VueRouter({
 				},
 				{
 					path: 'setting',
-					component: Setting
+					component: Setting,
+					meta: {
+						index: -1,
+						showTab: false
+					}
 				}
 			]
 		}

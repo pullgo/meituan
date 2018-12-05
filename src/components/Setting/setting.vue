@@ -39,6 +39,9 @@
   import lableb from 'base/lableb/lableb';
 
   export default {
+    /* created() {
+      his.$store.state.tabShow = false;
+    }, */
     components: {
       lableb
     }

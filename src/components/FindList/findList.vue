@@ -1,6 +1,6 @@
 <template>
   <div class="FindList">
-    <div class="findList-wrapper" v-for="item in findList">
+    <div class="findList-wrapper" v-for="item in findList" :key="item.code">
       <FindItem :data="item"></FindItem>
     </div>
   </div>
@@ -31,6 +31,6 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  .order
+  .FindList
     color: #ccc
 </style> 
