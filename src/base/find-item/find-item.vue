@@ -4,9 +4,9 @@
       <img v-lazy="data.img">
     </div>
     <div class="bottom">
-      <div class="title">{{data.title}}</div>
-      <div class="writer">周边生活</div>
-      <div class="view">{{data.view}}人看过</div>
+      <h4 class="title">{{data.title}}</h4>
+      <span class="writer">周边生活</span>
+      <span class="view">{{data.view}}人看过</span>
     </div>
   </div>
 </template>
@@ -26,15 +26,16 @@ export default {
 
 <style lang="stylus" rel="stylesheet/stylus">
 .FindItem
-  display: flex
-  flex-direction: column
+  //display: flex
+  //flex-direction: column
   width: 100%
-  height: 300px
+  height: 270px
   color: #333
-  background-color: #fff
-  padding: 15px
+  background: #fff
+  padding: 0px 10px 0px 10px
   box-sizing: border-box
-  margin-bottom: 10px
+  //margin-bottom: 10px
+  //z-index: -1
   .top
     width: 100%
     height: 160px
@@ -45,18 +46,19 @@ export default {
   .bottom
     width: 100%
     height: 100px
-    position: relative
+    //position: relative
     margin-top: 10px
     .title
       font-size: 18px
       font-weight: bold
+      margin-bottom: 10px
     .writer
       color: #999
       font-size: 14px
       margin-top: 10px
     .view
-      position: absolute
-      bottom: 0
       color: #999
       font-size: 14px
+      float: right
+      margin-right: 10px
 </style> 
