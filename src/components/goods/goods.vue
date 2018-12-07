@@ -93,7 +93,7 @@
       });
     },
     computed: {
-      selectItem() {
+      /* selectItem() {
         let itemList = [];
         console.log(this.items);
         this.items.forEach((item) => {
@@ -102,7 +102,7 @@
         console.log(this.itemList);
         return itemList;
       }
-      /* selectSort(item) {
+       selectSort(item) {
         console.log(this.item);
         let sortList = this.items.wm_poi_score;
         let len = sortList.length;

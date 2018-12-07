@@ -2,25 +2,21 @@
   <div class="FindList">
     <div class="nav-wrapper">
       <div class="nav">
-        <span class="nav-item">
-          <router-link to="/order">发现全部</router-link>
+        <span class="nav-item">发现全部
         </span>
-        <span class="nav-item">
-          <router-link to="/order/toBeEvaluated">附近</router-link>
+        <span class="nav-item">附近
         </span>
-        <span class="nav-item">
-          <router-link to="/order/refund">美食</router-link>
+        <span class="nav-item">美食
         </span>
       </div>      
     </div>
-    <keep-alive>
-      <router-view></router-view>
-    </keep-alive>    
     <div class="findList-wrapper" v-for="item in findList" :key="item.code">
       <FindItem :data="item"></FindItem>
     </div>
-    <!--没有更多 v-if="touchend"-->
-    <p class="emptyData">我是有底线的~~~~</p>
+    <!--没有更多v-if="touchend"-->
+    <div class="emptyDataWrapper">
+      <p class="emptyData">我是有底线的~~~~</p>
+    </div>
   </div>
 </template>
 
@@ -32,12 +28,17 @@
     data() {
       return {
         findList: []
+        // touchend: false
       };
     },
     created() {
       axios.get('../data.json').then((res) => {
         this.findList = res.data.findList;
         // console.log(this.findList);
+        console.log(this.findList);
+        /* if (this.findList.length < 20) {
+          this.touchend = true;
+        } */
       });
     },
     // methods: {
@@ -51,6 +52,7 @@
 <style scoped lang="stylus" rel="stylesheet/stylus">
   .FindList
     color: #ccc
+    padding-bottom: 50px
     .nav-wrapper
       width: 100%
       height: 100%
@@ -79,7 +81,7 @@
             font-size: 16px
             color: #7c7f82
             &.active
-              color: #000
+              color: #ffc847
               border-bottom: 3px solid #ffc847
         .text
           position: absolute
@@ -96,8 +98,13 @@
           border: 1px solid #ffc95d      
     .findList-wrapper
       background: #fff
-    .emptyData
-      position: fixed
-      bottom: 80px
-      right: 20px
+    .emptyDataWrapper
+        height: 20px
+        width: 100%
+        margin-bottom: 50px
+        line-height: 20px
+        text-align: center
+        color: #0c0d0c
+      .emptyData
+        font-size: 16px
 </style> 

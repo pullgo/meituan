@@ -22,11 +22,11 @@ export default new VueRouter({
 		{
 			path: '/home',
 			component: Home,
-			meta: {
+			/* meta: {
 				index: 0,
 				showTab: true,
 				keepAlive: true
-			},
+			}, */
 			children: [
 				{
 					path: '/home/massage',
@@ -61,21 +61,21 @@ export default new VueRouter({
 		},
 		{
 			path: '/findList',
-			component: FindList,
-			meta: {
+			component: FindList
+			/* meta: {
 				index: 0,
 				showTab: true,
 				keepAlive: true
-			}
+			} */
 		},
 		{
 			path: '/order',
 			component: Order,
-			meta: {
+			/* meta: {
 				index: 0,
 				showTab: true,
 				keepAlive: true
-			},
+			}, */
 			children: [
 				{
 					path: '/order/toBeEvaluated',
@@ -91,10 +91,10 @@ export default new VueRouter({
 			path: '/me',
 			component: Me,
 			// 配置导航栏是否显示
-			meta: {
+			/* meta: {
 				index: 0,
 				showTab: true
-			},
+			}, */
 			children: [
 				{
 					path: 'massage',

@@ -23,9 +23,9 @@ time, mark, audio, video, input {
     vertical-align: baseline;
 }
 
-/* *{
+*{
     touch-action: none;
-} */
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, menu, nav, section {
