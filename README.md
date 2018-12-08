@@ -63,6 +63,7 @@ Summary of project questions 项目问题点总结：
 
 	手指在滑动整个屏幕时，会影响浏览器的行为，比如滚动和缩放。 
 	所以在调用touch事件时，要注意禁止缩放和滚动。
+	参考文章：http://www.jintiankansha.me/t/llgywQvL2V
 
 
 二、VUEX的学习  2018-6-16
@@ -205,6 +206,7 @@ Summary of project questions 项目问题点总结：
 	props的优先级 > data中的优先级 > menthods中的优先级
 
 	代表，如果在这个key值在props中出现，那么data中的key值就不能定义了。
+
 
  四.知识点的总结
     1.导航栏使用了position 后在我的页面出现了最底下的内容被盖住   滑动也没有效果的情况时

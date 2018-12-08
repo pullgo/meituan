@@ -39,9 +39,6 @@
   import lableb from 'base/lableb/lableb';
 
   export default {
-    /* created() {
-      his.$store.state.tabShow = false;
-    }, */
     components: {
       lableb
     }
@@ -56,7 +53,7 @@
       position: fixed//如果不用这个定位则会出现滚动无限制情况
       width: 100%
       height: 100%
-      // z-index: 100
+      z-index: 100
       background: #f6f6f6
       // overflow-y: auto
       top: 0px

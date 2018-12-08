@@ -13,7 +13,7 @@
     <div class="findList-wrapper" v-for="item in findList" :key="item.code">
       <FindItem :data="item"></FindItem>
     </div>
-    <!--没有更多v-if="touchend"-->
+    <!--没有更多-->
     <div class="emptyDataWrapper">
       <p class="emptyData">我是有底线的~~~~</p>
     </div>
@@ -28,21 +28,14 @@
     data() {
       return {
         findList: []
-        // touchend: false
       };
     },
     created() {
       axios.get('../data.json').then((res) => {
         this.findList = res.data.findList;
-        // console.log(this.findList);
-        console.log(this.findList);
-        /* if (this.findList.length < 20) {
-          this.touchend = true;
-        } */
+        console.log(this.findList.length);
       });
     },
-    // methods: {
-    // },
     components: {
       FindItem
     }

@@ -1,5 +1,4 @@
 <template>
-<!-- v-show="$route.meta.showTab"-->
   <div id="app">
     <tab></tab>
     <keep-alive>
