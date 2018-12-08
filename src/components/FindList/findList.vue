@@ -33,7 +33,6 @@
     created() {
       axios.get('../data.json').then((res) => {
         this.findList = res.data.findList;
-        console.log(this.findList.length);
       });
     },
     components: {
@@ -44,7 +43,6 @@
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   .FindList
-    color: #ccc
     padding-bottom: 50px
     .nav-wrapper
       width: 100%

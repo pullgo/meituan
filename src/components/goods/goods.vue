@@ -1,16 +1,23 @@
-<template><!-- @selectSort="selectSort"-->
+<template>
   <div class="goods">
     <h1 class="h1">附近商家</h1>
     <div class="goods-title clearfix">
-      <select name="select" class="select fl">
+      <div class="selectWrapper" :data="lists">
+        <ul class="selectList">
+          <li class="list" v-for="list in lists" :key="list.code">
+            <span>{{lists.text}}</span>
+          </li>
+        </ul>
+      </div>
+      <!--<select name="select" class="select fl">
         <option class="option" value="综合排序" selected>综合排序</option>
-        <option class="option" value="速度最快">速度最快</option>
-        <option class="option" value="评分最高">评分最高</option>
+        <option class="option" value="速度最快" @click="selectSort">速度最快</option>
+        <option class="option" value="评分最高" @click="selectSort">评分最高</option>
         <option class="option" value="起送价最低">起送价最低</option>
-        <option class="option"  value="配送费最低">配送费最低</option>
-        <option class="option"  value="人均高到低">人均高到低</option>
-        <option class="option"  value="人均低到高">人均低到高</option>
-      </select>
+        <option class="option" value="配送费最低">配送费最低</option>
+        <option class="option" value="人均高到低">人均高到低</option>
+        <option class="option" value="人均低到高">人均低到高</option>
+      </select>-->
       <div class="list1">
         <span>销量最高</span>
       </div> 
@@ -22,14 +29,14 @@
         <i class="iconfont icon-shaixuan i" width="15" height="15"></i>
       </div>
     </div>  
-  	<div class="goods-wrapper">
-      <scroll ref="scroll" class="goods-content" :data="poilist">
+  	<div class="goods-wrapper" :data="poilist">
+      <scroll ref="scroll" class="goods-content">
         <div>
           <ul>
             <router-link  :to="{path:'/home/menu'}">
-              <li v-for="item in items" class="item">
+              <li v-for="item in items" class="item" :key="item.code">
                 <div class="icon">
-                    <img v-lazy="item.pic_url" height="100" width="114">
+                  <img v-lazy="item.pic_url" height="100" width="114">
                 </div>
                 <div class="text-wrapper">
                   <div class="title">
@@ -48,11 +55,6 @@
                     <span class="charging">{{item.min_price_tip}}</span>∣
                     <span class="average">{{item.average_price_tip}}</span>
                   </div>
-                  <!--<div class="goods-type" v-for="supp
-             in item.discounts2[0]">
-                        <span class="iconfont icon-store icon"></span>
-                        <span class="text border-1px">{{item.discounts2[0].info}}</span> 
-                  </div>-->
                 </div>
               </li>
             </router-link>  
@@ -81,7 +83,30 @@
     },
   	data() {
   		return {
-        items: []
+        items: [],
+        lists: [
+          {
+            text: '综合排序'
+          },
+          {
+            text: '速度最快'
+          },
+          {
+            text: '评分最高'
+          },
+          {
+            text: '起送价最低'
+          },
+          {
+            text: '配送费最低'
+          },
+          {
+            text: '人均高到低'
+          },
+          {
+            text: '人均低到高'
+          }
+        ]
   		};
   	},
     created() {
@@ -89,38 +114,20 @@
         this.goods = res.data.goods;
         this.seller = res.data.seller;
         this.items = res.data.poilist;
-        // console.log(this.items);
+        // console.log(this.items.length);
       });
     },
     computed: {
-      selectItem() {
-        let itemList = [];
-        console.log(this.items);
-        this.items.forEach((item) => {
-          itemList.push(item);
-        });
-        console.log(this.itemList);
-        return itemList;
-      }
-      /* selectSort(item) {
-        console.log(this.item);
-        let sortList = this.items.wm_poi_score;
-        let len = sortList.length;
-        var minIndex;
-        var temp;
-        for (i = 0; i< len; i ++) {
-          minIndex = i;
-          for (j = i+1; j < len; j ++) {
-            if(arr[j] < arr[minIndex]) {
-              minIndex = j;
-            }
-          }
-          temp = arr[i];
-          arr[i] = arr[minIndex];
-          arr[minIndex] = temp;
+      selectSort() {
+        console.log(this.click);
+        var len = this.items.length;
+        for (var i = 0; i < len; i++) {
+          // alert('123');
         }
-        return arr;
-      } */
+      }
+    },
+    mothods: {
+
     },
     components: {
       star,
@@ -138,7 +145,7 @@
     line-height: 20px 
     display: flex
     margin-top: 10px
-    .select
+    .selectWrapper
       flex: 1
       border: none
       margin-right: 15px
