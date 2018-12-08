@@ -21,7 +21,29 @@ closed_book 收获
     学会利用过渡效果及动画效果制作良好的用户交互体验
     
 项目展示：
-    <img src="https://github.com/pullgo/meituan/blob/master/demoShow/GIF.gif"/>
+    完整页面：
+	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/GIF.gif"/>
+
+	四个主页面index.vue：
+	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/index.gif"/>
+
+	首页页面 home.vue：
+	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/home.gif"/>		
+	发现页面 findList.vue：
+	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/findlist.gif"/>
+
+	订单页面 menu.vue：
+	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/order.gif"/>
+
+	我的页面 me.vue：
+	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/me.gif"/>
+
+	商家页面 good.vue：
+	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/good.gif"/>	
+
+	商品页面 menu.vue：
+	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/menu.gif"/>
+
 
 Summary of project questions 项目问题点总结：
 
