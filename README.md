@@ -23,14 +23,12 @@ closed_book 收获
 项目展示：
     完整页面：
 	<div><img align=center src="https://github.com/pullgo/meituan/blob/master/demoShow/GIF.gif"/></div>
-	
 	<div align=left><h1>四个主页面：</h1>
 	<ul>
 	<li>用router路由控制的跳转</li>
 	<li>keep-alive节省了浏览器下载时间</li>
 	</ul></div>
 	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/index.gif"/></div>
-
 	在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件 
 	布局上采用嵌套 Flex 布局
 	首页页面：
