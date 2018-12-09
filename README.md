@@ -28,7 +28,7 @@ closed_book 收获
 	<li>用router路由控制的跳转</li>
 	<li>keep-alive节省了浏览器下载时间</li>
 	</ul></span>
-	<span align=right ><img src="https://github.com/pullgo/meituan/blob/master/demoShow/index.gif"/></span></div>
+	<span align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/index.gif"/></span></div>
 	在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件 
 	布局上采用嵌套 Flex 布局
 	首页页面：
