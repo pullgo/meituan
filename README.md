@@ -6,8 +6,8 @@ sketch 概述
 	Vue 2.x + vue-router + axios + vue-lazyload + better-scroll + ES6 + stylus + Node.js + Express + ESLint
      
 项目展示：
-    <div display:flex>
-	<div flex:1><h3>完整页面：</h3>
+    <div>
+	<h3>完整页面：</h3>
 	<ul>
 	<li>对 vue 的组件、指令、选项、模版渲染、事件绑定、计算属性等有了一定了解</li>
 	<li>了解了 vue 组件之间的交互、传值</li>
@@ -18,50 +18,49 @@ sketch 概述
 	<li>总结了一套常用的 stylus mixin 库</li>
 	<li>学会利用过渡效果及动画效果制作良好的用户交互体验 </li>
 	</ul>
-	</div>
-	<div align=right flex:1><img src="https://github.com/pullgo/meituan/blob/master/demoShow/GIF.gif"/></div></div>
+	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/GIF.gif"/></div></div>
 	<div align=left><h3>四个主页面：</h3>
 	<span><ul>
 	<li>用router路由控制的跳转</li>
 	<li>keep-alive节省了浏览器下载时间</li>
 	</ul></span>
-	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/index.gif"/></div></div>
+	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/index.gif"/></div></div>
 	<div align=left><h3>首页页面：</h3>
 	<span><ul>
 	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
 	<li>布局上采用嵌套 Flex 布局</li>
 	</ul></span>		 	
-	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/home.gif"/></div></div>
+	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/home.gif"/></div></div>
 	<div align=left><h3>发现页面</h3>
 	<span><ul>
 	<li>抽象了一个findItem基础组件 利用一个for循环 完成数据渲染</li>
 	<li>布局上采用嵌套 Flex 布局</li>
 	</ul></span>		 	
-	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/findlist.gif"/></div></div>
+	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/findlist.gif"/></div></div>
 	<div align=left><h3>订单页面：</h3>
 	<span><ul>
 	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
 	<li>布局上采用嵌套 Flex 布局</li>
 	</ul></span>		 	
-	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/order.gif"/></div></div>
+	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/order.gif"/></div></div>
 	<div align=left><h3>我的页面:</h3>
 	<span><ul>
 	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
 	<li>布局上采用嵌套 Flex 布局</li>
 	</ul></span>		 	
-	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/me.gif"/></div></div>
+	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/me.gif"/></div></div>
 	<div align=left><h3>商家页面：</h3>
 	<span><ul>
 	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
 	<li>布局上采用嵌套 Flex 布局</li>
 	</ul></span>		 	
-	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/good.gif"/></div></div>	
+	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/good.gif"/></div></div>	
 	<div align=left><h3>商品页面：</h3>
 	<span><ul>
 	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
 	<li>布局上采用嵌套 Flex 布局</li>
 	</ul></span>		 	
-	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/menu.gif"/></div></div>
+	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/menu.gif"/></div></div>
 
 
 Summary of project questions 项目问题点总结：
