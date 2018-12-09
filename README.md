@@ -6,7 +6,8 @@ sketch 概述
 	Vue 2.x + vue-router + axios + vue-lazyload + better-scroll + ES6 + stylus + Node.js + Express + ESLint
      
 项目展示：
-    <div><h3>完整页面：</h3>
+    <div display:flex>
+	<div flex:1><h3>完整页面：</h3>
 	<ul>
 	<li>对 vue 的组件、指令、选项、模版渲染、事件绑定、计算属性等有了一定了解</li>
 	<li>了解了 vue 组件之间的交互、传值</li>
@@ -17,7 +18,8 @@ sketch 概述
 	<li>总结了一套常用的 stylus mixin 库</li>
 	<li>学会利用过渡效果及动画效果制作良好的用户交互体验 </li>
 	</ul>
-	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/GIF.gif"/></div></div>
+	</div>
+	<div align=right flex:1><img src="https://github.com/pullgo/meituan/blob/master/demoShow/GIF.gif"/></div></div>
 	<div align=left><h3>四个主页面：</h3>
 	<span><ul>
 	<li>用router路由控制的跳转</li>
