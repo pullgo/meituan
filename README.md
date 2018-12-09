@@ -19,43 +19,43 @@ sketch 概述
 	<li>学会利用过渡效果及动画效果制作良好的用户交互体验 </li>
 	</ul>
 	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/GIF.gif"/></div></div>
-	<div align=left><h3>四个主页面：</h3>
+	<div><h3>四个主页面：</h3>
 	<span><ul>
 	<li>用router路由控制的跳转</li>
 	<li>keep-alive节省了浏览器下载时间</li>
 	</ul></span>
 	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/index.gif"/></div></div>
-	<div align=left><h3>首页页面：</h3>
+	<div><h3>首页页面：</h3>
 	<span><ul>
 	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
 	<li>布局上采用嵌套 Flex 布局</li>
 	</ul></span>		 	
 	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/home.gif"/></div></div>
-	<div align=left><h3>发现页面</h3>
+	<div><h3>发现页面</h3>
 	<span><ul>
 	<li>抽象了一个findItem基础组件 利用一个for循环 完成数据渲染</li>
 	<li>布局上采用嵌套 Flex 布局</li>
 	</ul></span>		 	
 	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/findlist.gif"/></div></div>
-	<div align=left><h3>订单页面：</h3>
+	<div><h3>订单页面：</h3>
 	<span><ul>
 	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
 	<li>布局上采用嵌套 Flex 布局</li>
 	</ul></span>		 	
 	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/order.gif"/></div></div>
-	<div align=left><h3>我的页面:</h3>
+	<div><h3>我的页面:</h3>
 	<span><ul>
 	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
 	<li>布局上采用嵌套 Flex 布局</li>
 	</ul></span>		 	
 	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/me.gif"/></div></div>
-	<div align=left><h3>商家页面：</h3>
+	<div><h3>商家页面：</h3>
 	<span><ul>
 	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
 	<li>布局上采用嵌套 Flex 布局</li>
 	</ul></span>		 	
 	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/good.gif"/></div></div>	
-	<div align=left><h3>商品页面：</h3>
+	<div><h3>商品页面：</h3>
 	<span><ul>
 	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
 	<li>布局上采用嵌套 Flex 布局</li>
