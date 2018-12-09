@@ -1,11 +1,11 @@
-2018版最新美团外卖APP
+<h1>2018版最新美团外卖APP</h1>
 
-sketch 概述
+<h2>sketch 概述</h2>
 
 	技术栈：
 	Vue 2.x + vue-router + axios + vue-lazyload + better-scroll + ES6 + stylus + Node.js + Express + ESLint
      
-项目展示：
+<h2>showDemo 项目展示</h2>
     <div>
 	<h3>完整页面：</h3>
 	<ul>
@@ -28,42 +28,46 @@ sketch 概述
 	<div><h3>首页页面：</h3>
 	<span><ul>
 	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
-	<li>布局上采用嵌套 Flex 布局</li>
+	<li>布局上采用Flex布局</li>
 	</ul></span>		 	
 	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/home.gif"/></div></div>
 	<div><h3>发现页面</h3>
 	<span><ul>
-	<li>抽象了一个findItem基础组件 利用一个for循环 完成数据渲染</li>
-	<li>布局上采用嵌套 Flex 布局</li>
+	<li>抽象了一个findItem基础组件 利用一个for循环 完成数据渲染 减少代码量</li>
+	<li>设定每次加载20个 然后刷新 在这里竟然遇到了touch事件与阻止默认事件冲突问题 目前也还是没有解决  ...........</li>
+	<li>返回顶部效果</li>
 	</ul></span>		 	
 	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/findlist.gif"/></div></div>
 	<div><h3>订单页面：</h3>
 	<span><ul>
-	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
-	<li>布局上采用嵌套 Flex 布局</li>
+	<li>也是抽象出一个组件 减少代码量</li>
+	<li>fixedTop布局</li>
 	</ul></span>		 	
 	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/order.gif"/></div></div>
 	<div><h3>我的页面:</h3>
 	<span><ul>
-	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
-	<li>布局上采用嵌套 Flex 布局</li>
+	<li>fixedTop布局</li>
+	<li>刚刚开始页面所有布局采用div ul li来实现 后面改进优化代码 采用return data 搭配v-for循环 且抽象了组件 缩减代码量 达到相同效果</li>
+	<li>抽象化一个按钮开关组件 以备后用</li>
+	<li>抽象化经典图片 文字垂直居中组件 丰富自己组件库</li>
 	</ul></span>		 	
 	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/me.gif"/></div></div>
 	<div><h3>商家页面：</h3>
 	<span><ul>
-	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
-	<li>布局上采用嵌套 Flex 布局</li>
+	<li>better-scroll插件使用</li>
+	<li>shopCart组件 menu组件与cartcontrol组件通讯</li>
+	<li>编程式路由 导航式路由 镶套路由的认识也使用</li>
 	</ul></span>		 	
 	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/good.gif"/></div></div>	
 	<div><h3>商品页面：</h3>
 	<span><ul>
-	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
+	<li>利用Vuex隐藏不需要出现组件的效果</li>
 	<li>布局上采用嵌套 Flex 布局</li>
 	</ul></span>		 	
 	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/menu.gif"/></div></div>
 
 
-Summary of project questions 项目问题点总结：
+<h2>Summary of project questions 项目问题点总结：</h2>
 
 一,touch的使用
 
