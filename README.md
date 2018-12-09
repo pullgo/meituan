@@ -22,8 +22,11 @@ closed_book 收获
     
 项目展示：
     完整页面：
+	```
 	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/GIF.gif"/>
+	```
 	四个主页面：
+	```
 	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/index.gif"/>
 	首页页面：
 	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/home.gif"/>	
