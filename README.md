@@ -23,28 +23,20 @@ closed_book 收获
 项目展示：
     完整页面：
 	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/GIF.gif"/>
-
 	四个主页面：
 	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/index.gif"/>
-
 	首页页面：
-	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/home.gif"/>		
+	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/home.gif"/>	
 	发现页面：
 	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/findlist.gif"/>
-
 	订单页面：
 	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/order.gif"/>
-
 	我的页面：
 	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/me.gif"/>
-
 	商家页面：
 	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/good.gif"/>	
-
 	商品页面：
 	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/menu.gif"/>
-
-
 Summary of project questions 项目问题点总结：
 
 一,touch的使用
