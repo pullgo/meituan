@@ -5,7 +5,7 @@
       <div class="selectWrapper" :data="lists">
         <ul class="selectList">
           <li class="list" v-for="list in lists" :key="list.code">
-            <span>{{lists.text}}</span>
+            <span>{{lists.text}}00112</span>
           </li>
         </ul>
       </div>
