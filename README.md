@@ -3,26 +3,21 @@
 sketch 概述
 
 	技术栈：
-	Vue 2.x + vue-clivue-router + axios + vue-lazyload + better-scroll + ES6 + stylus + Node.js + Express + ESLint
-
-closed_book 收获
-
-    对 vue 的组件、指令、选项、模版渲染、事件绑定、计算属性等有了一定了解
-    了解了 vue 组件之间的交互、传值
-    熟悉了在 vue 项目中使用第三方插件（组件）
-    熟悉了组件化、模块化的开发思维
-    熟悉了 vue-router 控制路由和子路由的方式
-    再次熟悉项目开发流程：项目分析设计 -> 项目环境搭建 -> 依赖安装 -> 页面架构设计 -> 组件开发 -> 测试联调 -> 发布上线
-    总结了一套 Vue 通用组件，可以在其它项目中复用的 10+ 个基础组件、15+ 个业务组件
-    总结了一套常用的 stylus mixin 库
-    总结了一套常用的 JS 工具函数库
-    体会到组件化、模块化开发带来的便捷
-    体会到将对象封装成类(ES6 class) 的便捷性，以及利用工厂方式初始化类实例
-    学会利用过渡效果及动画效果制作良好的用户交互体验
-    
+	Vue 2.x + vue-router + axios + vue-lazyload + better-scroll + ES6 + stylus + Node.js + Express + ESLint
+     
 项目展示：
-    完整页面：
-	<div align=left><img src="https://github.com/pullgo/meituan/blob/master/demoShow/GIF.gif"/></div>
+    <div><h3>完整页面：</h3>
+	<ul>
+	<li>对 vue 的组件、指令、选项、模版渲染、事件绑定、计算属性等有了一定了解</li>
+	<li>了解了 vue 组件之间的交互、传值</li>
+	<li>熟悉了在 vue 项目中使用第三方插件（组件）</li>
+	<li>熟悉了组件化、模块化的开发思维</li>
+	<li>熟悉了 vue-router 控制路由和子路由的方式</li>
+	<li>体会到组件化、模块化开发带来的便捷</li>
+	<li>总结了一套常用的 stylus mixin 库</li>
+	<li>学会利用过渡效果及动画效果制作良好的用户交互体验 </li>
+	</ul>
+	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/GIF.gif"/></div></div>
 	<div align=left><h3>四个主页面：</h3>
 	<span><ul>
 	<li>用router路由控制的跳转</li>
@@ -37,7 +32,7 @@ closed_book 收获
 	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/home.gif"/></div></div>
 	<div align=left><h3>发现页面</h3>
 	<span><ul>
-	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
+	<li>抽象了一个findItem基础组件 利用一个for循环 完成数据渲染</li>
 	<li>布局上采用嵌套 Flex 布局</li>
 	</ul></span>		 	
 	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/findlist.gif"/></div></div>
