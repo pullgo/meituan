@@ -22,27 +22,51 @@ closed_book 收获
     
 项目展示：
     完整页面：
-	<div align=center><img src="https://github.com/pullgo/meituan/blob/master/demoShow/GIF.gif"/></div>
-	<div align=left><span>四个主页面：</span>
+	<div align=left><img src="https://github.com/pullgo/meituan/blob/master/demoShow/GIF.gif"/></div>
+	<div align=left><h3>四个主页面：</h3>
 	<span><ul>
 	<li>用router路由控制的跳转</li>
 	<li>keep-alive节省了浏览器下载时间</li>
 	</ul></span>
-	<span align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/index.gif"/></span></div>
-	在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件 
-	布局上采用嵌套 Flex 布局
-	首页页面：
-	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/home.gif"/>	
-	发现页面：
-	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/findlist.gif"/>
-	订单页面：
-	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/order.gif"/>
-	我的页面：
-	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/me.gif"/>
-	商家页面：
-	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/good.gif"/>	
-	商品页面：
-	<img src="https://github.com/pullgo/meituan/blob/master/demoShow/menu.gif"/>
+	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/index.gif"/></div></div>
+	<div align=left><h3>首页页面：</h3>
+	<span><ul>
+	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
+	<li>布局上采用嵌套 Flex 布局</li>
+	</ul></span>		 	
+	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/home.gif"/></div></div>
+	<div align=left><h3>发现页面</h3>
+	<span><ul>
+	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
+	<li>布局上采用嵌套 Flex 布局</li>
+	</ul></span>		 	
+	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/findlist.gif"/></div></div>
+	<div align=left><h3>订单页面：</h3>
+	<span><ul>
+	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
+	<li>布局上采用嵌套 Flex 布局</li>
+	</ul></span>		 	
+	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/order.gif"/></div></div>
+	<div align=left><h3>我的页面:</h3>
+	<span><ul>
+	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
+	<li>布局上采用嵌套 Flex 布局</li>
+	</ul></span>		 	
+	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/me.gif"/></div></div>
+	<div align=left><h3>商家页面：</h3>
+	<span><ul>
+	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
+	<li>布局上采用嵌套 Flex 布局</li>
+	</ul></span>		 	
+	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/good.gif"/></div></div>	
+	<div align=left><h3>商品页面：</h3>
+	<span><ul>
+	<li>在这个页面中图片轮播、菜单栏轮播、商家列表使用了better-scroll插件</li>
+	<li>布局上采用嵌套 Flex 布局</li>
+	</ul></span>		 	
+	<div align=right><img src="https://github.com/pullgo/meituan/blob/master/demoShow/menu.gif"/></div></div>
+
+
 Summary of project questions 项目问题点总结：
 
 一,touch的使用
