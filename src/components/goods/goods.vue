@@ -4,8 +4,8 @@
     <div class="goods-title clearfix">
       <div class="selectWrapper" :data="lists">
         <ul class="selectList">
-          <li class="list" v-for="list in lists" :key="list.code">
-            <span>{{lists.text}}00112</span>
+          <li class="list" v-for="list in lists" :key="list.code" @click="selectSort">
+            <span>{{list.text}}</span>
           </li>
         </ul>
       </div>
@@ -119,10 +119,11 @@
     },
     computed: {
       selectSort() {
-        console.log(this.click);
+        // console.log(this.click);
         var len = this.items.length;
         for (var i = 0; i < len; i++) {
-          // alert('123');
+          var itemsSores = this.items.wm_poi_score[0];
+          console.log(itemsSores.length);
         }
       }
     },

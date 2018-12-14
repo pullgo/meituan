@@ -91,31 +91,6 @@
     </div>
     <goods></goods>
     <!--为你优选end--> 
-    <!--商家start
-    <h1 class="h1">附近商家</h1>
-    <div class="sell-title clearfix">
-      <select name="select" class="select fl">
-        <option class="option" value="综合排序" selected>综合排序</option>
-        <option class="option" value="速度最快">速度最快</option>
-        <option class="option" value="评分最高">评分最高</option>
-        <option class="option" value="起送价最低">起送价最低</option>
-        <option class="option"  value="配送费最低">配送费最低</option>
-        <option class="option"  value="人均高到低">人均高到低</option>
-        <option class="option"  value="人均低到高">人均低到高</option>
-      </select>
-      <div class="list1">
-        <span>销量最高</span>
-      </div> 
-      <div class="list2">
-        <span>离我最近</span>
-      </div> 
-      <div class="list3">
-        <span>筛选</span>
-        <i class="iconfont icon-shaixuan i" width="15" height="15"></i>
-      </div>
-    </div>--> 
-    <!--商家end--> 
-
   </div>
 </template>
 
